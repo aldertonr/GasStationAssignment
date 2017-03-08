@@ -39,7 +39,7 @@ namespace GasStation
                      pumpEightFuel,
                      pumpNineFuel;
 
-        public static int vehServiced = 0;
+        public static int vehServiced { get; set;}
 
         /// <summary>
         /// Prints and updates the gas station on the screen

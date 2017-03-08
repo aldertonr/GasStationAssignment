@@ -4,3 +4,9 @@ C:\Users\Ryan\Documents\University\GasStation\GasStation\bin\Debug\GasStation.pd
 C:\Users\Ryan\Documents\University\GasStation\GasStation\obj\Debug\GasStation.csprojResolveAssemblyReference.cache
 C:\Users\Ryan\Documents\University\GasStation\GasStation\obj\Debug\GasStation.exe
 C:\Users\Ryan\Documents\University\GasStation\GasStation\obj\Debug\GasStation.pdb
+C:\Users\Ryan\Documents\GasStationAssignment\GasStation\obj\Debug\GasStation.csprojResolveAssemblyReference.cache
+C:\Users\Ryan\Documents\GasStationAssignment\GasStation\obj\Debug\GasStation.exe
+C:\Users\Ryan\Documents\GasStationAssignment\GasStation\obj\Debug\GasStation.pdb
+C:\Users\Ryan\Documents\GasStationAssignment\GasStation\bin\Debug\GasStation.exe.config
+C:\Users\Ryan\Documents\GasStationAssignment\GasStation\bin\Debug\GasStation.exe
+C:\Users\Ryan\Documents\GasStationAssignment\GasStation\bin\Debug\GasStation.pdb

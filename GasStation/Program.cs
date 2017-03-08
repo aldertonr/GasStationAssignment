@@ -34,7 +34,7 @@ namespace GasStation
 
 #pragma warning disable 0168
         // Var Declarations
-        static string userIn;
+        static int userIn;
         static int litresDispensed;
         static int takings;
         static int commission;
@@ -63,21 +63,22 @@ namespace GasStation
 
             // Prompt user for staff number
             Console.WriteLine("Staff ID:");
-            userIn = Console.ReadLine();
+            string staffID = Console.ReadLine();
 
             // Print staff number
-            Console.WriteLine("Welcome {0}, the Gas Station will load in two seconds.", userIn);
+            Console.WriteLine("Welcome {0}, the Gas Station will load in two seconds.", staffID);
             System.Threading.Thread.Sleep(2000); // Sleep the thread for 2000 milliseconds
             Console.Clear(); // Clear the console window
+
+            // First bit - TODO: Testing
+            Display display = new Display();
+
+            runtimeTimer.Enabled = true;
+            Display.Update();
 
             // Program running do loop
             do
             {
-
-                Display display = new Display();
-
-                runtimeTimer.Enabled = true;
-                Display.Update();
                 carSpawner.Enabled = true;
 
                 Console.ReadLine();
@@ -86,7 +87,7 @@ namespace GasStation
                 #region Switch to handle pump selection
                 switch (userIn)
                 {
-                    case "1":
+                    case 1:
                         if (CheckPumpBusy(Display.pumpOne))
                         {
                             Console.WriteLine("This pump is occupied! Please choose another.");
@@ -104,11 +105,8 @@ namespace GasStation
 
                         break;
 
-                    case "2":
-                        if (CheckPumpBusy(Display.pumpTwo))
-                        {
-                            Console.WriteLine("This pump is occupied! Please choose another.");
-                        } else
+                    case 2:
+                        if (!CheckPumpBusy(Display.pumpTwo))
                         {
                             Display.pumpTwo = "Occupied";
                             Display.Update();
@@ -116,11 +114,14 @@ namespace GasStation
 
                             pumpTwoTimer.Enabled = true;
                             pumpTwoTimer.Elapsed += new ElapsedEventHandler(onCarFilledEventPumpTwo);
+                        } else
+                        {
+                            Console.WriteLine("This pump is occupied! Please choose another.");
                         }
 
                         break;
 
-                    case "3":
+                    case 3:
                         if (CheckPumpBusy(Display.pumpThree))
                         {
                             Console.WriteLine("This pump is occupied! Please choose another.");
@@ -136,7 +137,7 @@ namespace GasStation
 
                         break;
 
-                    case "4":
+                    case 4:
                         if (CheckPumpBusy(Display.pumpFour))
                         {
                             Console.WriteLine("This pump is occupied! Please choose another.");
@@ -151,7 +152,7 @@ namespace GasStation
                         }
                         break;
 
-                    case "5":
+                    case 5:
                         if (CheckPumpBusy(Display.pumpFive))
                         {
                             Console.WriteLine("This pump is occupied! Please choose another.");
@@ -168,7 +169,7 @@ namespace GasStation
                         
                         break;
 
-                    case "6":
+                    case 6:
                         if (CheckPumpBusy(Display.pumpSix))
                         {
                             Console.WriteLine("This pump is occupied! Please choose another.");
@@ -184,7 +185,7 @@ namespace GasStation
                         
                         break;
 
-                    case "7":
+                    case 7:
                         if (CheckPumpBusy(Display.pumpSeven))
                         {
                             Console.WriteLine("This pump is occupied! Please choose another.");
@@ -200,7 +201,7 @@ namespace GasStation
                         
                         break;
 
-                    case "8":
+                    case 8:
                         if (CheckPumpBusy(Display.pumpEight))
                         {
                             Console.WriteLine("This pump is occupied! Please choose another.");
@@ -216,7 +217,7 @@ namespace GasStation
                         
                         break;
 
-                    case "9":
+                    case 9:
                         if (CheckPumpBusy(Display.pumpNine))
                         {
                             Console.WriteLine("This pump is occupied! Please choose another.");
@@ -268,9 +269,9 @@ namespace GasStation
         {
             pumpOneTimer.Enabled = false; // https://tinyurl.com/zza3zh3
             Display.pumpOne = "Available";
-            Display.vehServiced += 1;
-            Display.Update();
+            Display.vehServiced++;
             Display.pumpOneAvail = true;
+            Display.Update();
             
         }
 
@@ -364,7 +365,7 @@ namespace GasStation
         private static void SpawnCar(object source, ElapsedEventArgs e)
         {
             Console.WriteLine("A blue Ford Fiesta just pulled up. What pump should it go to?");
-            userIn = Console.ReadLine();
+            userIn = Int32.Parse(Console.ReadLine());
             Display.Update();
         }
         #endregion
