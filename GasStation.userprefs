@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{117E33AB-1D99-41DE-9C75-549E3D6023D3}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GasStation/Program.cs">
+    <Files>
+      <File FileName="GasStation/Display.cs" Line="25" Column="37" />
+      <File FileName="GasStation/Program.cs" Line="58" Column="13" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.GasStation PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
