@@ -25,3 +25,9 @@ C:\Users\Ryan\Documents\GasStationAssignment\GasStation\bin\Debug\GasStation.exe
 C:\Users\Ryan\Documents\GasStationAssignment\GasStation\bin\Debug\GasStation.exe
 C:\Users\Ryan\Documents\GasStationAssignment\GasStation\bin\Debug\GasStation.pdb
 >>>>>>> 727246e5edcef8db61805f7847b5531c0028223c
+C:\Users\Ryan\Documents\Coding\UNIWORK\GasStationAssignment\GasStation\bin\Debug\GasStation.exe.config
+C:\Users\Ryan\Documents\Coding\UNIWORK\GasStationAssignment\GasStation\obj\Debug\GasStation.exe
+C:\Users\Ryan\Documents\Coding\UNIWORK\GasStationAssignment\GasStation\obj\Debug\GasStation.pdb
+C:\Users\Ryan\Documents\Coding\UNIWORK\GasStationAssignment\GasStation\bin\Debug\GasStation.exe
+C:\Users\Ryan\Documents\Coding\UNIWORK\GasStationAssignment\GasStation\bin\Debug\GasStation.pdb
+C:\Users\Ryan\Documents\Coding\UNIWORK\GasStationAssignment\GasStation\obj\Debug\GasStation.csprojResolveAssemblyReference.cache

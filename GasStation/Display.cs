@@ -2,12 +2,15 @@
 // SID: 1609275
 
 using System;
+using System.Threading;
 
 namespace GasStation
 {
     class Display
     {
         const string TITLE = "Petrol Somewhat Unlimited LTD M25";
+
+        public static bool carIsSpawned { get; set; } = false;
 
         public static string pumpOne = "Available",
               pumpTwo = "Available",
@@ -39,7 +42,9 @@ namespace GasStation
                      pumpEightFuel,
                      pumpNineFuel;
 
+        // Public int
         public static int vehServiced { get; set;}
+        public static int pumpChoice { get; set; }
 
         /// <summary>
         /// Prints and updates the gas station on the screen
@@ -56,6 +61,23 @@ namespace GasStation
             Console.WriteLine("-----7:{0}-----8:{1}-----9:{2}-----", pumpSeven, pumpEight, pumpNine);
 
             Console.WriteLine("Vehicles Serviced: {0}", vehServiced);
+
+            if (carIsSpawned)
+            {
+                Console.WriteLine("A blue Ford Fiesta just pulled up. What pump should it go to?");
+                try
+                {
+                    pumpChoice = Int32.Parse(Console.ReadLine());
+                } catch (Exception e)
+                {
+                    Console.WriteLine("That wasn't the correct format!\n");
+                    Console.WriteLine(e);
+                    Thread.Sleep(2000);
+
+                }
+            }
+
+            carIsSpawned = false;
         }
 
     }
