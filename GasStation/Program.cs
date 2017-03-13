@@ -270,6 +270,16 @@ namespace GasStation
             }
         }
 
+        /// <summary>
+        /// A method for incrementing the vehServiced integer
+        /// </summary>
+        /// <returns>vehServiced</returns>
+        static int VehicleServiced()
+        {
+            vehServiced = vehServiced + 1;
+            return vehServiced;
+        }
+
         // TODO: Method for adding cars and money
 
         #region UPDATE:TESTING
@@ -328,7 +338,7 @@ namespace GasStation
         {
             pumpOneTimer.Enabled = false; // https://tinyurl.com/zza3zh3
              pumpOne = "Available";
-             vehServiced++;
+             VehicleServiced();
              pumpOneAvail = true;
              Update();
         }
@@ -337,7 +347,7 @@ namespace GasStation
         {
             pumpTwoTimer.Enabled = false;
              pumpTwo = "Available";
-             vehServiced += 1;
+             VehicleServiced();
              pumpTwoAvail = true;
              Update();
         }
@@ -346,7 +356,7 @@ namespace GasStation
         {
             pumpThreeTimer.Enabled = false;
              pumpThree = "Available";
-             vehServiced += 1;
+             VehicleServiced();
              pumpThreeAvail = true;
              Update();
         }
@@ -355,7 +365,7 @@ namespace GasStation
         {
             pumpFourTimer.Enabled = false;
              pumpFour = "Available";
-             vehServiced += 1;
+             VehicleServiced();
              pumpFourAvail = true;
              Update();
         }
@@ -364,7 +374,7 @@ namespace GasStation
         {
             pumpFiveTimer.Enabled = false;
              pumpFive = "Available";
-             vehServiced += 1;
+             VehicleServiced();
              pumpFiveAvail = true;
              Update();
         }
@@ -373,7 +383,7 @@ namespace GasStation
         {
             pumpSixTimer.Enabled = false;
              pumpSix = "Available";
-             vehServiced += 1;
+             VehicleServiced();
              pumpSixAvail = true;
              Update();
         }
@@ -382,7 +392,7 @@ namespace GasStation
         {
             pumpSevenTimer.Enabled = false;
              pumpSeven = "Available";
-             vehServiced += 1;
+             VehicleServiced();
              pumpFiveAvail = true;
              Update();
         }
@@ -391,7 +401,7 @@ namespace GasStation
         {
             pumpEightTimer.Enabled = false;
              pumpEight = "Available";
-             vehServiced += 1;
+             VehicleServiced();
              pumpEightAvail = true;
              Update();
         }
@@ -400,7 +410,7 @@ namespace GasStation
         {
             pumpNineTimer.Enabled = false;
              pumpNine = "Available";
-             vehServiced += 1;
+             VehicleServiced();
              pumpNineAvail = true;
              Update();
         }
