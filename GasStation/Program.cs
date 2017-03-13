@@ -75,7 +75,7 @@ namespace GasStation
             //Display display = new Display();
 
             runtimeTimer.Enabled = true;
-            Update();
+            Display.Update();
 
             // Program running do loop
             do
@@ -84,7 +84,7 @@ namespace GasStation
 
                 try
                 {
-                    pumpChoice = Int32.Parse(Console.ReadLine());
+                    Display.pumpChoice = Int32.Parse(Console.ReadLine());
                 }
                 catch (Exception e)
                 {
@@ -95,14 +95,14 @@ namespace GasStation
 
                 // Switch statement to handle pump selection
                 #region Switch to handle pump selection
-                switch ( pumpChoice)
+                switch (Display.pumpChoice)
                 {
                     case 1:
-                        if (!CheckPumpBusy(pumpOneAvail))
+                        if (!CheckPumpBusy(Display.pumpOneAvail))
                         {
-                            pumpOne = "Occupied";
-                            Update();
-                            pumpOneAvail = false;
+                            Display.pumpOne = "Occupied";
+                            Display.Update();
+                            Display.pumpOneAvail = false;
 
                             pumpOneTimer.Enabled = true;
                             pumpOneTimer.Elapsed += new ElapsedEventHandler(onCarFilledEventPumpOne);
@@ -110,17 +110,17 @@ namespace GasStation
                         else
                         {
                             Console.WriteLine("This pump is occupied! Please choose another.");
-                            pumpOneAvail = false;
+                            Display.pumpOneAvail = false;
                         }
 
                         break;
 
                     case 2:
-                        if (!CheckPumpBusy( pumpTwoAvail))
+                        if (!CheckPumpBusy(Display.pumpTwoAvail))
                         {
-                             pumpTwo = "Occupied";
-                             Update();
-                             pumpTwoAvail = false;
+                            Display.pumpTwo = "Occupied";
+                            Display.Update();
+                            Display.pumpTwoAvail = false;
 
                             pumpTwoTimer.Enabled = true;
                             pumpTwoTimer.Elapsed += new ElapsedEventHandler(onCarFilledEventPumpTwo);
@@ -132,14 +132,14 @@ namespace GasStation
                         break;
 
                     case 3:
-                        if (CheckPumpBusy( pumpThreeAvail))
+                        if (CheckPumpBusy(Display.pumpThreeAvail))
                         {
                             Console.WriteLine("This pump is occupied! Please choose another.");
                         } else
                         {
-                             pumpThree = "Occupied";
-                             Update();
-                             pumpThreeAvail = false;
+                            Display.pumpThree = "Occupied";
+                            Display.Update();
+                            Display.pumpThreeAvail = false;
 
                             pumpThreeTimer.Enabled = true;
                             pumpThreeTimer.Elapsed += new ElapsedEventHandler(onCarFilledEventPumpThree);
@@ -148,14 +148,14 @@ namespace GasStation
                         break;
 
                     case 4:
-                        if (CheckPumpBusy( pumpFourAvail))
+                        if (CheckPumpBusy(Display.pumpFourAvail))
                         {
                             Console.WriteLine("This pump is occupied! Please choose another.");
                         } else
                         {
-                             pumpFour = "Occupied";
-                             Update();
-                             pumpFourAvail = false;
+                            Display.pumpFour = "Occupied";
+                            Display.Update();
+                            Display.pumpFourAvail = false;
 
                             pumpFourTimer.Enabled = true;
                             pumpFourTimer.Elapsed += new ElapsedEventHandler(onCarFilledEventPumpFour);
@@ -163,15 +163,15 @@ namespace GasStation
                         break;
 
                     case 5:
-                        if (CheckPumpBusy( pumpFiveAvail))
+                        if (CheckPumpBusy(Display.pumpFiveAvail))
                         {
                             Console.WriteLine("This pump is occupied! Please choose another.");
                         }
                         else
                         {
-                             pumpFive = "Occupied";
-                             Update();
-                             pumpFiveAvail = false;
+                            Display.pumpFive = "Occupied";
+                            Display.Update();
+                            Display.pumpFiveAvail = false;
 
                             pumpFiveTimer.Enabled = true;
                             pumpFiveTimer.Elapsed += new ElapsedEventHandler(onCarFilledEventPumpFive);
@@ -180,14 +180,14 @@ namespace GasStation
                         break;
 
                     case 6:
-                        if (CheckPumpBusy( pumpSixAvail))
+                        if (CheckPumpBusy(Display.pumpSixAvail))
                         {
                             Console.WriteLine("This pump is occupied! Please choose another.");
                         } else
                         {
-                             pumpSix = "Occupied";
-                             Update();
-                             pumpSixAvail = false;
+                            Display.pumpSix = "Occupied";
+                            Display.Update();
+                            Display.pumpSixAvail = false;
 
                             pumpSixTimer.Enabled = true;
                             pumpSixTimer.Elapsed += new ElapsedEventHandler(onCarFilledEventPumpSix);
@@ -196,14 +196,14 @@ namespace GasStation
                         break;
 
                     case 7:
-                        if (CheckPumpBusy( pumpSevenAvail))
+                        if (CheckPumpBusy(Display.pumpSevenAvail))
                         {
                             Console.WriteLine("This pump is occupied! Please choose another.");
                         } else
                         {
-                             pumpSeven = "Occupied";
-                             Update();
-                             pumpSevenAvail = false;
+                            Display.pumpSeven = "Occupied";
+                            Display.Update();
+                            Display.pumpSevenAvail = false;
 
                             pumpSevenTimer.Enabled = true;
                             pumpSevenTimer.Elapsed += new ElapsedEventHandler(onCarFilledEventPumpSeven);
@@ -212,14 +212,14 @@ namespace GasStation
                         break;
 
                     case 8:
-                        if (CheckPumpBusy( pumpEightAvail))
+                        if (CheckPumpBusy(Display.pumpEightAvail))
                         {
                             Console.WriteLine("This pump is occupied! Please choose another.");
                         } else
                         {
-                             pumpEight = "Occupied";
-                             Update();
-                             pumpEightAvail = false;
+                            Display.pumpEight = "Occupied";
+                            Display.Update();
+                            Display.pumpEightAvail = false;
 
                             pumpEightTimer.Enabled = true;
                             pumpEightTimer.Elapsed += new ElapsedEventHandler(onCarFilledEventPumpEight);
@@ -228,14 +228,14 @@ namespace GasStation
                         break;
 
                     case 9:
-                        if (CheckPumpBusy( pumpNineAvail))
+                        if (CheckPumpBusy(Display.pumpNineAvail))
                         {
                             Console.WriteLine("This pump is occupied! Please choose another.");
                         } else
                         {
-                             pumpNine = "Occupied";
-                             Update();
-                             pumpNineAvail = false;
+                            Display.pumpNine = "Occupied";
+                            Display.Update();
+                            Display.pumpNineAvail = false;
 
                             pumpNineTimer.Enabled = true;
                             pumpNineTimer.Elapsed += new ElapsedEventHandler(onCarFilledEventPumpNine);
@@ -270,149 +270,89 @@ namespace GasStation
             }
         }
 
-        /// <summary>
-        /// A method for incrementing the vehServiced integer
-        /// </summary>
-        /// <returns>vehServiced</returns>
-        static int VehicleServiced()
-        {
-            vehServiced = vehServiced + 1;
-            return vehServiced;
-        }
-
         // TODO: Method for adding cars and money
-
-        #region UPDATE:TESTING
-
-        public static bool pumpOneAvail = true,
-           pumpTwoAvail = true,
-           pumpThreeAvail = true,
-           pumpFourAvail = true,
-           pumpFiveAvail = true,
-           pumpSixAvail = true,
-           pumpSevenAvail = true,
-           pumpEightAvail = true,
-           pumpNineAvail = true;
-
-        // Public int
-        public static int vehServiced { get; set; }
-        public static int pumpChoice { get; set; } = 0;
-
-        public static bool carIsSpawned { get; set; } = false;
-
-        public static string pumpOne = "Available",
-              pumpTwo = "Available",
-              pumpThree = "Available",
-              pumpFour = "Available",
-              pumpFive = "Available",
-              pumpSix = "Available",
-              pumpSeven = "Available",
-              pumpEight = "Available",
-              pumpNine = "Available";
-
-        public static void Update()
-        {
-            Console.Clear();
-            Console.WriteLine(TITLE);
-
-            // Print the gas station
-            Console.WriteLine();
-            Console.WriteLine("-----1:{0}-----2:{1}-----3:{2}-----", pumpOne, pumpTwo, pumpThree);
-            Console.WriteLine("-----4:{0}-----5:{1}-----6:{2}-----", pumpFour, pumpFive, pumpSix);
-            Console.WriteLine("-----7:{0}-----8:{1}-----9:{2}-----", pumpSeven, pumpEight, pumpNine);
-
-            Console.WriteLine("Vehicles Serviced: {0}", vehServiced);
-
-            if (carIsSpawned)
-            {
-                Console.WriteLine("A blue Ford Fiesta just pulled up. What pump should it go to?");
-            }
-
-            carIsSpawned = false;
-        }
-        #endregion
 
         #region onCarFilledEvent methods
 
         private static void onCarFilledEventPumpOne(object source, ElapsedEventArgs e)
         {
             pumpOneTimer.Enabled = false; // https://tinyurl.com/zza3zh3
-             pumpOne = "Available";
-             VehicleServiced();
-             pumpOneAvail = true;
-             Update();
+            Display.pumpOne = "Available";
+            Display.vehServiced++;
+            Display.pumpOneAvail = true;
+            Display.Update();
         }
 
         private static void onCarFilledEventPumpTwo(object source, ElapsedEventArgs e)
         {
             pumpTwoTimer.Enabled = false;
-             pumpTwo = "Available";
-             VehicleServiced();
-             pumpTwoAvail = true;
-             Update();
+            Display.pumpTwo = "Available";
+            Display.vehServiced++;
+            Display.pumpTwoAvail = true;
+            Display.Update();
         }
 
         private static void onCarFilledEventPumpThree(object source, ElapsedEventArgs e)
         {
             pumpThreeTimer.Enabled = false;
-             pumpThree = "Available";
-             VehicleServiced();
-             pumpThreeAvail = true;
-             Update();
+            Display.pumpThree = "Available";
+            Display.vehServiced++;
+            Display.pumpThreeAvail = true;
+            Display.Update();
         }
 
         private static void onCarFilledEventPumpFour(object source, ElapsedEventArgs e)
         {
             pumpFourTimer.Enabled = false;
-             pumpFour = "Available";
-             VehicleServiced();
-             pumpFourAvail = true;
-             Update();
+            Display.pumpFour = "Available";
+            Display.vehServiced++;
+            Display.pumpFourAvail = true;
+            Display.Update();
         }
 
         private static void onCarFilledEventPumpFive(object source, ElapsedEventArgs e)
         {
             pumpFiveTimer.Enabled = false;
-             pumpFive = "Available";
-             VehicleServiced();
-             pumpFiveAvail = true;
-             Update();
+            Display.pumpFive = "Available";
+            Display.vehServiced++;
+            Display.pumpFiveAvail = true;
+            Display.Update();
         }
 
         private static void onCarFilledEventPumpSix(object source, ElapsedEventArgs e)
         {
             pumpSixTimer.Enabled = false;
-             pumpSix = "Available";
-             VehicleServiced();
-             pumpSixAvail = true;
-             Update();
+            Display.pumpSix = "Available";
+            Display.vehServiced++;
+            Display.pumpSixAvail = true;
+            Display.Update();
         }
 
         private static void onCarFilledEventPumpSeven(object source, ElapsedEventArgs e)
         {
             pumpSevenTimer.Enabled = false;
-             pumpSeven = "Available";
-             VehicleServiced();
-             pumpFiveAvail = true;
-             Update();
+            Display.pumpSeven = "Available";
+            Display.vehServiced++;
+            Display.pumpFiveAvail = true;
+            Display.Update();
         }
 
         private static void onCarFilledEventPumpEight(object source, ElapsedEventArgs e)
         {
             pumpEightTimer.Enabled = false;
-             pumpEight = "Available";
-             VehicleServiced();
-             pumpEightAvail = true;
-             Update();
+            Display.pumpEight = "Available";
+            Display.vehServiced++;
+            Display.pumpEightAvail = true;
+            Display.Update();
         }
 
         private static void onCarFilledEventPumpNine(object source, ElapsedEventArgs e)
         {
             pumpNineTimer.Enabled = false;
-             pumpNine = "Available";
-             VehicleServiced();
-             pumpNineAvail = true;
-             Update();
+            Display.pumpNine = "Available";
+            Display.vehServiced++;
+            Display.pumpNineAvail = true;
+            Display.Update();
         }
 
         #endregion
@@ -441,8 +381,8 @@ namespace GasStation
 
         private static void SpawnCar(object source, ElapsedEventArgs e)
         {
-             carIsSpawned = true;
-             Update();
+            Display.carIsSpawned = true;
+            Display.Update();
         }
 
         #endregion
