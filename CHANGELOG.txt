@@ -1,0 +1,11 @@
+GasStationForms V2 - 1609275
+
+v0.0.1 -
+- Changed background colour of form
+- Changed the StartPosition of the window to be center screen
+- Created a basic GUI
+
+
+private string[] manufacturer { get; set; } = { "Ford", "Vauxhall", "BMW", "Scania", "Volvo", "Iveco" };
+
+        private int[] fuel { get; set; } = { -1, 0, 1 }; // Unleaded: 0 - Diesel: 1 - LPG: -1 

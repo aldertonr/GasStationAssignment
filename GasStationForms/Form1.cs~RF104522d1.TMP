@@ -11,8 +11,7 @@ namespace GasStationForms
 
         // Declaration of variables
         int vehServiced = 0;
-        Vehicle vehicle = new Vehicle();
-
+        
         private static bool pumpOneAvail,
             pumpTwoAvail,
             pumpThreeAvail,
@@ -353,7 +352,6 @@ namespace GasStationForms
         {
             DisplayRefresh();
             runtimeTimer.Start();
-            carSpawnedTimer.Start();
         }
 
         /// <summary>
@@ -377,9 +375,8 @@ namespace GasStationForms
 
         private string GenerateCar()
         {
-            string brand = RandomManufacturer();
-            Console.WriteLine(brand);
-            
+            Vehicle vehicle = new Vehicle();
+
             return "Ok";
         }
 
@@ -399,49 +396,6 @@ namespace GasStationForms
                 return false;
             }
         }
-
-        /// <summary>
-        /// Generates a random number and matches that with the manufacturer type
-        /// </summary>
-        /// <returns></returns>
-        static string RandomManufacturer()
-        {
-            string decidedManufacturer = null;
-            int randomNum;
-
-            Vehicle vehicle = new Vehicle();
-
-            Random random = new Random();
-            randomNum = random.Next(5);
-
-            switch (randomNum)
-            {
-                case 0:
-                    decidedManufacturer = vehicle.manufacturer[0]; // Ford
-                    break;
-                case 1:
-                    decidedManufacturer = vehicle.manufacturer[1]; // Vauxhall
-                    break;
-                case 2:
-                    decidedManufacturer = vehicle.manufacturer[2]; // BMW
-                    break;
-                case 3:
-                    decidedManufacturer = vehicle.manufacturer[3]; // Scania HGV
-                    break;
-                case 4:
-                    decidedManufacturer = vehicle.manufacturer[4]; // Volvo HGV
-                    break;
-                case 5:
-                    decidedManufacturer = vehicle.manufacturer[5]; // Iveco HGV
-                    break;
-                default:
-                    Console.WriteLine("Random Number generated {0}, not valid response", randomNum);
-                    break;
-            }
-
-            return decidedManufacturer;
-        }
-
 
     }
 }

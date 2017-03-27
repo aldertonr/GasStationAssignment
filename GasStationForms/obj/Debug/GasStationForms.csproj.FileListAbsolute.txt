@@ -1,1 +1,9 @@
 C:\Users\Ryan\Documents\University\GasStationForms\GasStationForms\bin\Debug\GasStationForms.exe.config
+C:\Users\Ryan\Documents\University\GasStationForms\GasStationForms\bin\Debug\GasStationForms.exe
+C:\Users\Ryan\Documents\University\GasStationForms\GasStationForms\bin\Debug\GasStationForms.pdb
+C:\Users\Ryan\Documents\University\GasStationForms\GasStationForms\obj\Debug\GasStationForms.csprojResolveAssemblyReference.cache
+C:\Users\Ryan\Documents\University\GasStationForms\GasStationForms\obj\Debug\GasStationForms.Form1.resources
+C:\Users\Ryan\Documents\University\GasStationForms\GasStationForms\obj\Debug\GasStationForms.Properties.Resources.resources
+C:\Users\Ryan\Documents\University\GasStationForms\GasStationForms\obj\Debug\GasStationForms.csproj.GenerateResource.Cache
+C:\Users\Ryan\Documents\University\GasStationForms\GasStationForms\obj\Debug\GasStationForms.exe
+C:\Users\Ryan\Documents\University\GasStationForms\GasStationForms\obj\Debug\GasStationForms.pdb

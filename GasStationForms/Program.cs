@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿// Author: Ryan Alderton
+// SID: 1609275
+ 
+using System;
 using System.Windows.Forms;
 
 namespace GasStationForms
@@ -18,5 +18,8 @@ namespace GasStationForms
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
+
+
+
     }
 }
