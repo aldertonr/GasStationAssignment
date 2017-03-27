@@ -1,5 +1,0 @@
-C:\Users\Ryan\Documents\Coding\UNIWORK\GasStationAssignment\gasstationassignment\GasStation\bin\Debug\GasStation.exe.config
-C:\Users\Ryan\Documents\Coding\UNIWORK\GasStationAssignment\gasstationassignment\GasStation\bin\Debug\GasStation.exe
-C:\Users\Ryan\Documents\Coding\UNIWORK\GasStationAssignment\gasstationassignment\GasStation\bin\Debug\GasStation.pdb
-C:\Users\Ryan\Documents\Coding\UNIWORK\GasStationAssignment\gasstationassignment\GasStation\obj\Debug\GasStation.exe
-C:\Users\Ryan\Documents\Coding\UNIWORK\GasStationAssignment\gasstationassignment\GasStation\obj\Debug\GasStation.pdb
