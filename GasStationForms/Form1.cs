@@ -10,9 +10,10 @@ namespace GasStationForms
     {
 
         // Declaration of variables
-        int vehServiced = 0;
+        static int vehServiced = 0;
+        static string vehicleType = "";
         Vehicle vehicle = new Vehicle();
-
+        
         private static bool pumpOneAvail,
             pumpTwoAvail,
             pumpThreeAvail,
@@ -22,6 +23,7 @@ namespace GasStationForms
             pumpSevenAvail,
             pumpEightAvail,
             pumpNineAvail;
+        
 
 
         #region TickEvents
@@ -378,9 +380,12 @@ namespace GasStationForms
         private string GenerateCar()
         {
             string brand = RandomManufacturer();
+            string vehType = VehicleType(brand);
+           
             Console.WriteLine(brand);
             
-            return "Ok";
+            return "A " + brand + "  " + vehType + " with " + vehicle.fuel + "go? Please" +
+                "click the pump number.";
         }
 
         /// <summary>
@@ -409,6 +414,7 @@ namespace GasStationForms
             string decidedManufacturer = null;
             int randomNum;
 
+            
             Vehicle vehicle = new Vehicle();
 
             Random random = new Random();
@@ -440,6 +446,50 @@ namespace GasStationForms
             }
 
             return decidedManufacturer;
+        }
+
+        /// <summary>
+        /// Generates a random number and then matches it with Car, Van or HGV
+        /// </summary>
+        /// <param name="brand">The manufacturer of the Vehicle</param>
+        /// <returns></returns>
+        static string VehicleType(string brand)
+        {
+
+            Random rand = new Random();
+
+            int random = rand.Next(2);
+            Console.WriteLine(random);
+
+            switch (brand)
+            {
+                case "Ford":
+                    if (random == 0) vehicleType = "Car";
+                    if (random == 1) vehicleType = "Van";
+                    break;
+                case "Vauxhall":
+                    if (random == 0) vehicleType = "Car";
+                    if (random == 1) vehicleType = "Van";
+                    break;
+                case "BMW":
+                    if (random == 0) vehicleType = "Car";
+                    if (random == 1) vehicleType = "Van";
+                    break;
+                case "Scania":
+                    vehicleType = "HGV";
+                    break;
+                case "Volvo":
+                    vehicleType = "HGV";
+                    break;
+                case "Iveco":
+                    vehicleType = "HGV";
+                    break;
+                default:
+                    Console.WriteLine("Brand {0} is not recognised - Error", brand);
+                    break;
+            }
+
+            return vehicleType;
         }
 
 
