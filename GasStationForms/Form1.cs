@@ -171,6 +171,17 @@ namespace GasStationForms
             // Updates the screen
             DisplayRefresh();
         }
+
+        private void runtimeTimer_Tick(object sender, EventArgs e)
+        {
+            runtimeTimer.Dispose();
+            Console.WriteLine("Runtime Tick - Demo Complete");
+
+            // TODO: Create EndDemo form and implement here 
+            //this.Visible = false;
+            //EndDemo.Visible = true;
+        }
+
         #endregion
 
         #region ButtonClickEvents
@@ -187,6 +198,7 @@ namespace GasStationForms
                 btnPumpOne.Text = "Occupied";
                 // Start the timer
                 pumpOneTimer.Start();
+                DisablePumps();
                 lblCarInfo.Text = "Waiting for a car to arrive...";
                 carWaiting = false;
             } else
@@ -211,7 +223,14 @@ namespace GasStationForms
                 btnPumpTwo.Text = "Occupied";
                 // Start the timer
                 pumpTwoTimer.Start();
+                DisablePumps();
+                lblCarInfo.Text = "Waiting for a car to arrive...";
                 carWaiting = false;
+            }
+            else
+            {
+                curlblCarInfo = lblCarInfo.Text;
+                lblCarInfo.Text = "That pump is occupied! Please choose another";
             }
         }
 
@@ -229,7 +248,14 @@ namespace GasStationForms
                 btnPumpThree.Text = "Occupied";
                 // Start the timer
                 pumpThreeTimer.Start();
+                DisablePumps();
+                lblCarInfo.Text = "Waiting for a car to arrive...";
                 carWaiting = false;
+            }
+            else
+            {
+                curlblCarInfo = lblCarInfo.Text;
+                lblCarInfo.Text = "That pump is occupied! Please choose another";
             }
         }
 
@@ -247,7 +273,14 @@ namespace GasStationForms
                 btnPumpFour.Text = "Occupied";
                 // Start the timer
                 pumpFourTimer.Start();
+                DisablePumps();
+                lblCarInfo.Text = "Waiting for a car to arrive...";
                 carWaiting = false;
+            }
+            else
+            {
+                curlblCarInfo = lblCarInfo.Text;
+                lblCarInfo.Text = "That pump is occupied! Please choose another";
             }
         }
 
@@ -265,7 +298,14 @@ namespace GasStationForms
                 btnPumpFive.Text = "Occupied";
                 // Start the timer
                 pumpFiveTimer.Start();
+                DisablePumps();
+                lblCarInfo.Text = "Waiting for a car to arrive...";
                 carWaiting = false;
+            }
+            else
+            {
+                curlblCarInfo = lblCarInfo.Text;
+                lblCarInfo.Text = "That pump is occupied! Please choose another";
             }
         }
 
@@ -283,20 +323,17 @@ namespace GasStationForms
                 btnPumpSix.Text = "Occupied";
                 // Start the timer
                 pumpSixTimer.Start();
+                DisablePumps();
+                lblCarInfo.Text = "Waiting for a car to arrive...";
                 carWaiting = false;
+            }
+            else
+            {
+                curlblCarInfo = lblCarInfo.Text;
+                lblCarInfo.Text = "That pump is occupied! Please choose another";
             }
         }
         
-        private void runtimeTimer_Tick(object sender, EventArgs e)
-        {
-            runtimeTimer.Dispose();
-            Console.WriteLine("Runtime Tick - Demo Complete");
-
-            // TODO: Create EndDemo form and implement here 
-            //this.Visible = false;
-            //EndDemo.Visible = true;
-        }
-
         /// <summary>
         /// Pump Seven Clicked event handler
         /// </summary>
@@ -311,7 +348,14 @@ namespace GasStationForms
                 btnPumpSeven.Text = "Occupied";
                 // Start the timer
                 pumpSevenTimer.Start();
+                DisablePumps();
+                lblCarInfo.Text = "Waiting for a car to arrive...";
                 carWaiting = false;
+            }
+            else
+            {
+                curlblCarInfo = lblCarInfo.Text;
+                lblCarInfo.Text = "That pump is occupied! Please choose another";
             }
         }
 
@@ -329,7 +373,14 @@ namespace GasStationForms
                 btnPumpEight.Text = "Occupied";
                 // Start the timer
                 pumpEightTimer.Start();
+                DisablePumps();
+                lblCarInfo.Text = "Waiting for a car to arrive...";
                 carWaiting = false;
+            }
+            else
+            {
+                curlblCarInfo = lblCarInfo.Text;
+                lblCarInfo.Text = "That pump is occupied! Please choose another";
             }
         }
 
@@ -347,7 +398,14 @@ namespace GasStationForms
                 btnPumpNine.Text = "Occupied";
                 // Start the timer
                 pumpNineTimer.Start();
+                DisablePumps();
+                lblCarInfo.Text = "Waiting for a car to arrive...";
                 carWaiting = false;
+            }
+            else
+            {
+                curlblCarInfo = lblCarInfo.Text;
+                lblCarInfo.Text = "That pump is occupied! Please choose another";
             }
         }
         #endregion
@@ -364,10 +422,10 @@ namespace GasStationForms
             carSpawnedTimer.Start();
         }
 
-        /// <summary>
-        /// Update method to refresh certain text variables on the form itself
-        /// </summary>
-        private void DisplayRefresh()
+    /// <summary>
+    /// Update method to refresh certain text variables on the form itself
+    /// </summary>
+    private void DisplayRefresh()
         {
             lblVehServiced.Text = "Vehicles Serviced: " + vehServiced;
         }
@@ -382,6 +440,12 @@ namespace GasStationForms
         {
             lblCarInfo.Text = GenerateCar();
             carWaiting = true;
+
+            if (carWaiting)
+            {
+                EnablePumps();
+            }
+
         }
 
         /// <summary>
@@ -513,5 +577,32 @@ namespace GasStationForms
 
             return vehicleType;
         }
+
+        void EnablePumps()
+        {
+            btnPumpOne.Enabled = true;
+            btnPumpTwo.Enabled = true;
+            btnPumpThree.Enabled = true;
+            btnPumpFour.Enabled = true;
+            btnPumpFive.Enabled = true;
+            btnPumpSix.Enabled = true;
+            btnPumpSeven.Enabled = true;
+            btnPumpEight.Enabled = true;
+            btnPumpNine.Enabled = true;
+        }
+        
+        void DisablePumps()
+        {
+            btnPumpOne.Enabled = false;
+            btnPumpTwo.Enabled = false;
+            btnPumpThree.Enabled = false;
+            btnPumpFour.Enabled = false;
+            btnPumpFive.Enabled = false;
+            btnPumpSix.Enabled = false;
+            btnPumpSeven.Enabled = false;
+            btnPumpEight.Enabled = false;
+            btnPumpNine.Enabled = false;
+        }
+
     }
 }

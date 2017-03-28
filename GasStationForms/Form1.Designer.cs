@@ -67,6 +67,7 @@
             // 
             this.btnPumpOne.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPumpOne.Enabled = false;
             this.btnPumpOne.Location = new System.Drawing.Point(78, 58);
             this.btnPumpOne.Name = "btnPumpOne";
             this.btnPumpOne.Size = new System.Drawing.Size(75, 23);
@@ -89,6 +90,7 @@
             // 
             this.btnPumpTwo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPumpTwo.Enabled = false;
             this.btnPumpTwo.Location = new System.Drawing.Point(159, 58);
             this.btnPumpTwo.Name = "btnPumpTwo";
             this.btnPumpTwo.Size = new System.Drawing.Size(75, 23);
@@ -101,6 +103,7 @@
             // 
             this.btnPumpThree.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPumpThree.Enabled = false;
             this.btnPumpThree.Location = new System.Drawing.Point(240, 58);
             this.btnPumpThree.Name = "btnPumpThree";
             this.btnPumpThree.Size = new System.Drawing.Size(75, 23);
@@ -114,6 +117,7 @@
             // 
             this.btnPumpFour.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPumpFour.Enabled = false;
             this.btnPumpFour.Location = new System.Drawing.Point(78, 112);
             this.btnPumpFour.Name = "btnPumpFour";
             this.btnPumpFour.Size = new System.Drawing.Size(75, 23);
@@ -126,6 +130,7 @@
             // 
             this.btnPumpFive.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPumpFive.Enabled = false;
             this.btnPumpFive.Location = new System.Drawing.Point(159, 112);
             this.btnPumpFive.Name = "btnPumpFive";
             this.btnPumpFive.Size = new System.Drawing.Size(75, 23);
@@ -138,6 +143,7 @@
             // 
             this.btnPumpSix.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPumpSix.Enabled = false;
             this.btnPumpSix.Location = new System.Drawing.Point(240, 112);
             this.btnPumpSix.Name = "btnPumpSix";
             this.btnPumpSix.Size = new System.Drawing.Size(75, 23);
@@ -150,6 +156,7 @@
             // 
             this.btnPumpSeven.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPumpSeven.Enabled = false;
             this.btnPumpSeven.Location = new System.Drawing.Point(78, 167);
             this.btnPumpSeven.Name = "btnPumpSeven";
             this.btnPumpSeven.Size = new System.Drawing.Size(75, 23);
@@ -162,6 +169,7 @@
             // 
             this.btnPumpEight.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPumpEight.Enabled = false;
             this.btnPumpEight.Location = new System.Drawing.Point(159, 167);
             this.btnPumpEight.Name = "btnPumpEight";
             this.btnPumpEight.Size = new System.Drawing.Size(75, 23);
@@ -174,6 +182,7 @@
             // 
             this.btnPumpNine.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPumpNine.Enabled = false;
             this.btnPumpNine.Location = new System.Drawing.Point(240, 167);
             this.btnPumpNine.Name = "btnPumpNine";
             this.btnPumpNine.Size = new System.Drawing.Size(75, 23);
@@ -259,9 +268,9 @@
             this.lblVehServiced.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.lblVehServiced.Location = new System.Drawing.Point(78, 216);
             this.lblVehServiced.Name = "lblVehServiced";
-            this.lblVehServiced.Size = new System.Drawing.Size(114, 23);
+            this.lblVehServiced.Size = new System.Drawing.Size(123, 23);
             this.lblVehServiced.TabIndex = 20;
-            this.lblVehServiced.Text = "Veh Serviced";
+            this.lblVehServiced.Text = "Vehicles Serviced:";
             // 
             // lblCarInfo
             // 
