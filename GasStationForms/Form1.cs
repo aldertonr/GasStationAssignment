@@ -11,20 +11,12 @@ namespace GasStationForms
 
         // Declaration of variables
         static int vehServiced = 0;
-        static string vehicleType = "";
+        public static string vehicleType = "";
+        string curlblCarInfo;
+        bool carWaiting = false;
+
         Vehicle vehicle = new Vehicle();
         
-        private static bool pumpOneAvail,
-            pumpTwoAvail,
-            pumpThreeAvail,
-            pumpFourAvail,
-            pumpFiveAvail,
-            pumpSixAvail,
-            pumpSevenAvail,
-            pumpEightAvail,
-            pumpNineAvail;
-        
-
 
         #region TickEvents
         /// <summary>
@@ -195,6 +187,12 @@ namespace GasStationForms
                 btnPumpOne.Text = "Occupied";
                 // Start the timer
                 pumpOneTimer.Start();
+                lblCarInfo.Text = "Waiting for a car to arrive...";
+                carWaiting = false;
+            } else
+            {
+                curlblCarInfo = lblCarInfo.Text;
+                lblCarInfo.Text = "That pump is occupied! Please choose another";
             }
         }
 
@@ -213,6 +211,7 @@ namespace GasStationForms
                 btnPumpTwo.Text = "Occupied";
                 // Start the timer
                 pumpTwoTimer.Start();
+                carWaiting = false;
             }
         }
 
@@ -230,6 +229,7 @@ namespace GasStationForms
                 btnPumpThree.Text = "Occupied";
                 // Start the timer
                 pumpThreeTimer.Start();
+                carWaiting = false;
             }
         }
 
@@ -247,6 +247,7 @@ namespace GasStationForms
                 btnPumpFour.Text = "Occupied";
                 // Start the timer
                 pumpFourTimer.Start();
+                carWaiting = false;
             }
         }
 
@@ -264,6 +265,7 @@ namespace GasStationForms
                 btnPumpFive.Text = "Occupied";
                 // Start the timer
                 pumpFiveTimer.Start();
+                carWaiting = false;
             }
         }
 
@@ -281,6 +283,7 @@ namespace GasStationForms
                 btnPumpSix.Text = "Occupied";
                 // Start the timer
                 pumpSixTimer.Start();
+                carWaiting = false;
             }
         }
         
@@ -308,6 +311,7 @@ namespace GasStationForms
                 btnPumpSeven.Text = "Occupied";
                 // Start the timer
                 pumpSevenTimer.Start();
+                carWaiting = false;
             }
         }
 
@@ -325,6 +329,7 @@ namespace GasStationForms
                 btnPumpEight.Text = "Occupied";
                 // Start the timer
                 pumpEightTimer.Start();
+                carWaiting = false;
             }
         }
 
@@ -342,6 +347,7 @@ namespace GasStationForms
                 btnPumpNine.Text = "Occupied";
                 // Start the timer
                 pumpNineTimer.Start();
+                carWaiting = false;
             }
         }
         #endregion
@@ -375,17 +381,33 @@ namespace GasStationForms
         private void carSpawnedTimer_Tick(object sender, EventArgs e)
         {
             lblCarInfo.Text = GenerateCar();
+            carWaiting = true;
         }
 
+        /// <summary>
+        /// Generates a car with all the information
+        /// </summary>
+        /// <returns></returns>
         private string GenerateCar()
         {
-            string brand = RandomManufacturer();
-            string vehType = VehicleType(brand);
+
+            string curlblCarInfo = lblCarInfo.Text;
+
+            if (carWaiting)
+            {
+                Console.WriteLine("Car Waiting...");
+                return curlblCarInfo;
+            }
+            else {
+                FuelType fuel = new FuelType();
+                string brand = RandomManufacturer();
+                string vehType = VehicleType(brand);
+                string fuelType = FuelType.GenerateFuelText(brand);
            
-            Console.WriteLine(brand);
+                Console.WriteLine(brand);
             
-            return "A " + brand + "  " + vehType + " with " + vehicle.fuel + "go? Please" +
-                "click the pump number.";
+                return $"Where should a {brand} {vehType} with {fuelType} fuel go? Please click the pump number.";
+            }
         }
 
         /// <summary>
@@ -491,7 +513,5 @@ namespace GasStationForms
 
             return vehicleType;
         }
-
-
     }
 }

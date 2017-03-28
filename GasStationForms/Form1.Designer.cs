@@ -269,8 +269,7 @@
             this.lblCarInfo.Name = "lblCarInfo";
             this.lblCarInfo.Size = new System.Drawing.Size(237, 59);
             this.lblCarInfo.TabIndex = 21;
-            this.lblCarInfo.Text = "A black ford fiesta with petrol just spawned. Please click the pump that you\'d li" +
-    "ke it to go to.";
+            this.lblCarInfo.Text = "Waiting for a car to appear...";
             // 
             // runtimeTimer
             // 
