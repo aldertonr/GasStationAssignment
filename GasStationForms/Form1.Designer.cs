@@ -61,6 +61,7 @@
             this.pumpEightTimer = new System.Windows.Forms.Timer(this.components);
             this.pumpNineTimer = new System.Windows.Forms.Timer(this.components);
             this.carSpawnedTimer = new System.Windows.Forms.Timer(this.components);
+            this.lblLitresDispensed = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnPumpOne
@@ -266,7 +267,7 @@
             // lblVehServiced
             // 
             this.lblVehServiced.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblVehServiced.Location = new System.Drawing.Point(78, 216);
+            this.lblVehServiced.Location = new System.Drawing.Point(30, 207);
             this.lblVehServiced.Name = "lblVehServiced";
             this.lblVehServiced.Size = new System.Drawing.Size(123, 23);
             this.lblVehServiced.TabIndex = 20;
@@ -292,42 +293,42 @@
             // 
             // pumpTwoTimer
             // 
-            this.pumpTwoTimer.Interval = 1500;
+            this.pumpTwoTimer.Interval = 18000;
             this.pumpTwoTimer.Tick += new System.EventHandler(this.pumpTwoTimer_Tick);
             // 
             // pumpThreeTimer
             // 
-            this.pumpThreeTimer.Interval = 1500;
+            this.pumpThreeTimer.Interval = 18000;
             this.pumpThreeTimer.Tick += new System.EventHandler(this.pumpThreeTimer_Tick);
             // 
             // pumpFourTimer
             // 
-            this.pumpFourTimer.Interval = 1500;
+            this.pumpFourTimer.Interval = 18000;
             this.pumpFourTimer.Tick += new System.EventHandler(this.pumpFourTimer_Tick);
             // 
             // pumpFiveTimer
             // 
-            this.pumpFiveTimer.Interval = 1500;
+            this.pumpFiveTimer.Interval = 18000;
             this.pumpFiveTimer.Tick += new System.EventHandler(this.pumpFiveTimer_Tick);
             // 
             // pumpSixTimer
             // 
-            this.pumpSixTimer.Interval = 1500;
+            this.pumpSixTimer.Interval = 18000;
             this.pumpSixTimer.Tick += new System.EventHandler(this.pumpSixTimer_Tick);
             // 
             // pumpSevenTimer
             // 
-            this.pumpSevenTimer.Interval = 1500;
+            this.pumpSevenTimer.Interval = 18000;
             this.pumpSevenTimer.Tick += new System.EventHandler(this.pumpSevenTimer_Tick);
             // 
             // pumpEightTimer
             // 
-            this.pumpEightTimer.Interval = 1500;
+            this.pumpEightTimer.Interval = 18000;
             this.pumpEightTimer.Tick += new System.EventHandler(this.pumpEightTimer_Tick);
             // 
             // pumpNineTimer
             // 
-            this.pumpNineTimer.Interval = 1500;
+            this.pumpNineTimer.Interval = 18000;
             this.pumpNineTimer.Tick += new System.EventHandler(this.pumpNineTimer_Tick);
             // 
             // carSpawnedTimer
@@ -335,12 +336,21 @@
             this.carSpawnedTimer.Interval = 1500;
             this.carSpawnedTimer.Tick += new System.EventHandler(this.carSpawnedTimer_Tick);
             // 
+            // lblLitresDispensed
+            // 
+            this.lblLitresDispensed.Location = new System.Drawing.Point(159, 207);
+            this.lblLitresDispensed.Name = "lblLitresDispensed";
+            this.lblLitresDispensed.Size = new System.Drawing.Size(110, 23);
+            this.lblLitresDispensed.TabIndex = 22;
+            this.lblLitresDispensed.Text = "Litres Dispensed: ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(400, 338);
+            this.Controls.Add(this.lblLitresDispensed);
             this.Controls.Add(this.lblCarInfo);
             this.Controls.Add(this.lblVehServiced);
             this.Controls.Add(this.lblPumpNine);
@@ -395,7 +405,6 @@
         private System.Windows.Forms.Label lblVehServiced;
         private System.Windows.Forms.Label lblCarInfo;
         private System.Windows.Forms.Timer runtimeTimer;
-        private System.Windows.Forms.Timer pumpOneTimer;
         private System.Windows.Forms.Timer pumpTwoTimer;
         private System.Windows.Forms.Timer pumpThreeTimer;
         private System.Windows.Forms.Timer pumpFourTimer;
@@ -405,6 +414,8 @@
         private System.Windows.Forms.Timer pumpEightTimer;
         private System.Windows.Forms.Timer pumpNineTimer;
         private System.Windows.Forms.Timer carSpawnedTimer;
+        public System.Windows.Forms.Timer pumpOneTimer;
+        private System.Windows.Forms.Label lblLitresDispensed;
     }
 }
 

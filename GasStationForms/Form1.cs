@@ -6,16 +6,19 @@ using System.Windows.Forms;
 
 namespace GasStationForms
 {
+    
     public partial class Form1 : Form
     {
-
         // Declaration of variables
-        static int vehServiced = 0;
         public static string vehicleType = "";
+        // The interval for the fuelling timer so it can be passed to Fuel.cs
+        public static float fuellingTime = 18000f;
+        static int vehServiced = 0;
         string curlblCarInfo;
         bool carWaiting = false;
 
         Vehicle vehicle = new Vehicle();
+        Fuel fuel = new Fuel();
         
 
         #region TickEvents
@@ -34,6 +37,9 @@ namespace GasStationForms
             vehServiced++;
             // Updates the screen
             DisplayRefresh();
+
+            
+
         }
 
         /// <summary>
@@ -428,6 +434,7 @@ namespace GasStationForms
     private void DisplayRefresh()
         {
             lblVehServiced.Text = "Vehicles Serviced: " + vehServiced;
+            
         }
 
 
@@ -463,10 +470,10 @@ namespace GasStationForms
                 return curlblCarInfo;
             }
             else {
-                FuelType fuel = new FuelType();
+                // FuelType fuel = new FuelType();
                 string brand = RandomManufacturer();
                 string vehType = VehicleType(brand);
-                string fuelType = FuelType.GenerateFuelText(brand);
+                string fuelType = Fuel.GenerateFuelText(brand);
            
                 Console.WriteLine(brand);
             
@@ -577,7 +584,7 @@ namespace GasStationForms
 
             return vehicleType;
         }
-
+        
         void EnablePumps()
         {
             btnPumpOne.Enabled = true;

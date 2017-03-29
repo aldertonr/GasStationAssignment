@@ -17,8 +17,20 @@ namespace GasStationForms
             this.fuelType = fuel;
         }
 
-        
-        
+        /// <summary>
+        /// Divides the pump timer interval by the pump flow rate
+        /// </summary>
+        /// <returns>totalLitresDispensed</returns>
+        public static float DispenseFuel()
+        {
+            float pumpFlowRate = 1500f;
+            float litresDispensedThisTransaction = 0f;
+
+            litresDispensedThisTransaction = Form1.fuellingTime / pumpFlowRate;
+            
+            return litresDispensedThisTransaction;
+
+        }
 
         public static string GenerateFuelText(string brand)
         {
