@@ -16,10 +16,7 @@ namespace GasStationForms
         {
             this.fuelType = fuel;
         }
-
         
-        
-
         public static string GenerateFuelText(string brand)
         {
             

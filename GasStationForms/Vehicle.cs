@@ -13,17 +13,19 @@ namespace GasStationForms
         public string[] vehType;
         public string vehicleType;
 
+        // TODO: Implement different classes
+
         public Vehicle()
         {
             manufacturer = new string[] { "Ford", "Vauxhall", "BMW", "Scania", "Volvo", "Iveco" }; // ?
             vehType = new string[] { "Car", "Van", "HGV" };
         }
 
-        public Vehicle(string manufacturer, int fuel, string vehType)
+        public Vehicle(string manufacturer, string vehType)
         {
             this.manufacturerText = manufacturer;
             this.vehicleType = vehType;
-           
+
         }
     }
 }

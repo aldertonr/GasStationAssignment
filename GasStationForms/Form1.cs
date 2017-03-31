@@ -16,171 +16,83 @@ namespace GasStationForms
         static int vehServiced = 0;
         string curlblCarInfo;
         bool carWaiting = false;
-
-        Vehicle vehicle = new Vehicle();
-        Fuel fuel = new Fuel();
         
+        // Instatiating a new Vehicle and Fuel class object
+        private Vehicle vehicle = new Vehicle();
+        private Fuel fuel = new Fuel();
+
+        public Vehicle Vehicle { get => vehicle; set => vehicle = value; }
+        public Fuel Fuel { get => fuel; set => fuel = value; }
+
 
         #region TickEvents
-        /// <summary>
-        /// pumpOneTimer elapsed event handler
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void pumpOneTimer_Tick(object sender, EventArgs e)
-        {
-            // Stop the timer
-            pumpOneTimer.Stop();
-            // Change the text back to Available
-            btnPumpOne.Text = "Available";
-            // Increments the vehServiced variable
-            vehServiced++;
-            // Updates the screen
-            DisplayRefresh();
-
-            
-
-        }
 
         /// <summary>
-        /// pumpTwoTimer elapsed event handler
+        /// Pump Timer Elapsed Event
         /// </summary>
         /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void pumpTwoTimer_Tick(object sender, EventArgs e)
+        /// <param name="e"></param>y
+        private void pumpTimer_Tick(object sender, EventArgs e)
         {
-            // Stop the timer
-            pumpTwoTimer.Stop();
-            // Change the text back to Available
-            btnPumpTwo.Text = "Available";
-            // Increments the vehServiced variable
-            vehServiced++;
-            // Updates the screen
-            DisplayRefresh();
-        }
+            // Create a timer variable and cast the object sender to a timer
+            Timer activeTimer = ((Timer)sender);
 
-        /// <summary>
-        /// pumpThreeTimer elapsed event handler
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void pumpThreeTimer_Tick(object sender, EventArgs e)
-        {
-            // Stop the timer
-            pumpThreeTimer.Stop();
-            // Change the text back to Available
-            btnPumpThree.Text = "Available";
-            // Increments the vehServiced variable
-            vehServiced++;
-            // Updates the screen
-            DisplayRefresh();
-        }
+            // Create a string that holds the tag of the btn that was clicked
+            string activePump = (string)activeTimer.Tag;
 
-        /// <summary>
-        /// pumpFourTimer elapsed event handler
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void pumpFourTimer_Tick(object sender, EventArgs e)
-        {
-            // Stop the timer
-            pumpFourTimer.Stop();
-            // Change the text back to Available
-            btnPumpFour.Text = "Available";
-            // Increments the vehServiced variable
-            vehServiced++;
-            // Updates the screen
-            DisplayRefresh();
-        }
+            // Stop the timer for that event
+            activeTimer.Stop();
 
-        /// <summary>
-        /// pumpFiveTimer elapsed event handler
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void pumpFiveTimer_Tick(object sender, EventArgs e)
-        {
-            // Stop the timer
-            pumpFiveTimer.Stop();
-            // Change the text back to Available
-            btnPumpFive.Text = "Available";
-            // Increments the vehServiced variable
-            vehServiced++;
-            // Updates the screen
-            DisplayRefresh();
-        }
+            Pump.DispenseFuel();
 
-        /// <summary>
-        /// pumpSixTimer elapsed event handler
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void pumpSixTimer_Tick(object sender, EventArgs e)
-        {
-            // Stop the timer
-            pumpSixTimer.Stop();
-            // Change the text back to Available
-            btnPumpSix.Text = "Available";
-            // Increments the vehServiced variable
-            vehServiced++;
-            // Updates the screen
-            DisplayRefresh();
-        }
+            // Switch of activePump
+            switch (activePump)
+            {
+                case "pumpOne":
+                    btnPumpOne.Text = "Available";
+                    break;
+                case "pumpTwo":
+                    btnPumpTwo.Text = "Available";
+                    break;
+                case "pumpThree":
+                    btnPumpThree.Text = "Available";
+                    break;
+                case "pumpFour":
+                    btnPumpFour.Text = "Available";
+                    break;
+                case "pumpFive":
+                    btnPumpFive.Text = "Available";
+                    break;
+                case "pumpSix":
+                    btnPumpSix.Text = "Available";
+                    break;
+                case "pumpSeven":
+                    btnPumpSeven.Text = "Available";
+                    break;
+                case "pumpEight":
+                    btnPumpEight.Text = "Available";
+                    break;
+                case "pumpNine":
+                    btnPumpNine.Text = "Available";
+                    break;
+            }
 
-        /// <summary>
-        /// pumpSevenTimer elapsed event handler
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void pumpSevenTimer_Tick(object sender, EventArgs e)
-        {
-            // Stop the timer
-            pumpSevenTimer.Stop();
-            // Change the text back to Available
-            btnPumpSeven.Text = "Available";
-            // Increments the vehServiced variable
+            // Increment the vehicleServiced variable
             vehServiced++;
-            // Updates the screen
+            lblLitresDispensed.Text = $"Litres Dispensed: {Pump.litresDispensed}";
+            lblTakings.Text = $"Total Takings: {Pump.totalTakings}";
+            // Refresh the display
             DisplayRefresh();
-        }
 
-        /// <summary>
-        /// pumpEightTimer elapsed event handler
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void pumpEightTimer_Tick(object sender, EventArgs e)
-        {
-            // Stop the timer
-            pumpEightTimer.Stop();
-            // Change the text back to Available
-            btnPumpEight.Text = "Available";
-            // Increments the vehServiced variable
-            vehServiced++;
-            // Updates the screen
-            DisplayRefresh();
-        }
-
-        /// <summary>
-        /// pumpNineTimer elapsed event handler
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void pumpNineTimer_Tick(object sender, EventArgs e)
-        {
-            // Stop the timer
-            pumpNineTimer.Stop();
-            // Change the text back to Available
-            btnPumpNine.Text = "Available";
-            // Increments the vehServiced variable
-            vehServiced++;
-            // Updates the screen
-            DisplayRefresh();
+            // TODO: REMOVE THIS AFTER TESTING
+            Console.WriteLine($"{activePump} elapsed");
         }
 
         private void runtimeTimer_Tick(object sender, EventArgs e)
         {
+            // Delete the runtimeTimer object
             runtimeTimer.Dispose();
+            // Let the user now that the demo has been completed
             Console.WriteLine("Runtime Tick - Demo Complete");
 
             // TODO: Create EndDemo form and implement here 
@@ -189,242 +101,107 @@ namespace GasStationForms
         }
 
         #endregion
-
-        #region ButtonClickEvents
+        
         /// <summary>
-        /// Pump One Clicked event handler
+        /// Pump Button Clicked event handler
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnPumpOne_Click(object sender, EventArgs e)
+        private void btnPump_Click(object sender, EventArgs e)
         {
+
+            // Declaring a button and casting the object sender to a button
+            Button activeButton = ((Button)sender);
+            
+
             // If the pump is free
-            if (!CheckPumpBusy(btnPumpOne.Text)) {
+            if (!CheckPumpBusy(activeButton.Text)) {
                 // Change the text of the button to be occupied
-                btnPumpOne.Text = "Occupied";
+                activeButton.Text = "Occupied";
                 // Start the timer
-                pumpOneTimer.Start();
+                startTimer(activeButton);
+                // Disable all the pump methods
                 DisablePumps();
+                // Let the user know why they are waiting
                 lblCarInfo.Text = "Waiting for a car to arrive...";
+                // Change the carWaiting bool to false, to show there is no car waiting
                 carWaiting = false;
             } else
             {
+                // Save the current car value
                 curlblCarInfo = lblCarInfo.Text;
+                // Let the user know that the pump is occupied
                 lblCarInfo.Text = "That pump is occupied! Please choose another";
             }
         }
 
         /// <summary>
-        /// Pump Two Clicked event handler
+        /// Starts the set timer, based on what button was clicked
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        /// 
-        private void btnPumpTwo_Click(object sender, EventArgs e)
+        /// <param name="activeButton">From btnClick - the button that was clicked</param>
+        private void startTimer(Button activeButton)
         {
-            // If the pump is free
-            if (!CheckPumpBusy(btnPumpTwo.Text))
-            {
-                // Change the text of the button to be occupied
-                btnPumpTwo.Text = "Occupied";
-                // Start the timer
-                pumpTwoTimer.Start();
-                DisablePumps();
-                lblCarInfo.Text = "Waiting for a car to arrive...";
-                carWaiting = false;
-            }
-            else
-            {
-                curlblCarInfo = lblCarInfo.Text;
-                lblCarInfo.Text = "That pump is occupied! Please choose another";
-            }
-        }
+            // Set the activeTimer variable to a string cast of the active button tag
+            string activeTimer = (string)activeButton.Tag;
 
-        /// <summary>
-        /// Pump Three Clicked event handler
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnPumpThree_Click(object sender, EventArgs e)
-        {
-            // If the pump is free
-            if (!CheckPumpBusy(btnPumpThree.Text))
+            // Switch to decide what timer to start
+            switch (activeTimer)
             {
-                // Change the text of the button to be occupied
-                btnPumpThree.Text = "Occupied";
-                // Start the timer
-                pumpThreeTimer.Start();
-                DisablePumps();
-                lblCarInfo.Text = "Waiting for a car to arrive...";
-                carWaiting = false;
-            }
-            else
-            {
-                curlblCarInfo = lblCarInfo.Text;
-                lblCarInfo.Text = "That pump is occupied! Please choose another";
-            }
-        }
-
-        /// <summary>
-        /// Pump Four Clicked event handler
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnPumpFour_Click(object sender, EventArgs e)
-        {
-            // If the pump is free
-            if (!CheckPumpBusy(btnPumpFour.Text))
-            {
-                // Change the text of the button to be occupied
-                btnPumpFour.Text = "Occupied";
-                // Start the timer
-                pumpFourTimer.Start();
-                DisablePumps();
-                lblCarInfo.Text = "Waiting for a car to arrive...";
-                carWaiting = false;
-            }
-            else
-            {
-                curlblCarInfo = lblCarInfo.Text;
-                lblCarInfo.Text = "That pump is occupied! Please choose another";
+                // If the tag is pumpOne etc, then do the following code;
+                case "pumpOne":
+                    // Start the timer
+                    pumpOneTimer.Start();
+                    // Print to console which timer has been started
+                    Console.WriteLine($"{activeTimer} started");
+                    break;
+                case "pumpTwo":
+                    pumpTwoTimer.Start();
+                    Console.WriteLine($"{activeTimer} started");
+                    break;
+                case "pumpThree":
+                    pumpThreeTimer.Start();
+                    Console.WriteLine($"{activeTimer} started");
+                    break;
+                case "pumpFour":
+                    pumpFourTimer.Start();
+                    Console.WriteLine($"{activeTimer} started");
+                    break;
+                case "pumpFive":
+                    pumpFiveTimer.Start();
+                    Console.WriteLine($"{activeTimer} started");
+                    break;
+                case "pumpSix":
+                    pumpSixTimer.Start();
+                    Console.WriteLine($"{activeTimer} started");
+                    break;
+                case "pumpSeven":
+                    pumpSevenTimer.Start();
+                    Console.WriteLine($"{activeTimer} started");
+                    break;
+                case "pumpEight":
+                    pumpEightTimer.Start();
+                    Console.WriteLine($"{activeTimer} started");
+                    break;
+                case "pumpNine":
+                    pumpNineTimer.Start();
+                    Console.WriteLine($"{activeTimer} started");
+                    break;
             }
         }
-
-        /// <summary>
-        /// Pump Five Clicked event handler
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnPumpFive_Click(object sender, EventArgs e)
-        {
-            // If the pump is free
-            if (!CheckPumpBusy(btnPumpFive.Text))
-            {
-                // Change the text of the button to be occupied
-                btnPumpFive.Text = "Occupied";
-                // Start the timer
-                pumpFiveTimer.Start();
-                DisablePumps();
-                lblCarInfo.Text = "Waiting for a car to arrive...";
-                carWaiting = false;
-            }
-            else
-            {
-                curlblCarInfo = lblCarInfo.Text;
-                lblCarInfo.Text = "That pump is occupied! Please choose another";
-            }
-        }
-
-        /// <summary>
-        /// Pump Six Clicked event handler
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnPumpSix_Click(object sender, EventArgs e)
-        {
-            // If the pump is free
-            if (!CheckPumpBusy(btnPumpSix.Text))
-            {
-                // Change the text of the button to be occupied
-                btnPumpSix.Text = "Occupied";
-                // Start the timer
-                pumpSixTimer.Start();
-                DisablePumps();
-                lblCarInfo.Text = "Waiting for a car to arrive...";
-                carWaiting = false;
-            }
-            else
-            {
-                curlblCarInfo = lblCarInfo.Text;
-                lblCarInfo.Text = "That pump is occupied! Please choose another";
-            }
-        }
-        
-        /// <summary>
-        /// Pump Seven Clicked event handler
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnPumpSeven_Click(object sender, EventArgs e)
-        {
-            // If the pump is free
-            if (!CheckPumpBusy(btnPumpSeven.Text))
-            {
-                // Change the text of the button to be occupied
-                btnPumpSeven.Text = "Occupied";
-                // Start the timer
-                pumpSevenTimer.Start();
-                DisablePumps();
-                lblCarInfo.Text = "Waiting for a car to arrive...";
-                carWaiting = false;
-            }
-            else
-            {
-                curlblCarInfo = lblCarInfo.Text;
-                lblCarInfo.Text = "That pump is occupied! Please choose another";
-            }
-        }
-
-        /// <summary>
-        /// Pump Eight Clicked event handler
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnPumpEight_Click(object sender, EventArgs e)
-        {
-            // If the pump is free
-            if (!CheckPumpBusy(btnPumpEight.Text))
-            {
-                // Change the text of the button to be occupied
-                btnPumpEight.Text = "Occupied";
-                // Start the timer
-                pumpEightTimer.Start();
-                DisablePumps();
-                lblCarInfo.Text = "Waiting for a car to arrive...";
-                carWaiting = false;
-            }
-            else
-            {
-                curlblCarInfo = lblCarInfo.Text;
-                lblCarInfo.Text = "That pump is occupied! Please choose another";
-            }
-        }
-
-        /// <summary>
-        /// Pump Nine Clicked event handler
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnPumpNine_Click(object sender, EventArgs e)
-        {
-            // If the pump is free
-            if (!CheckPumpBusy(btnPumpNine.Text))
-            {
-                // Change the text of the button to be occupied
-                btnPumpNine.Text = "Occupied";
-                // Start the timer
-                pumpNineTimer.Start();
-                DisablePumps();
-                lblCarInfo.Text = "Waiting for a car to arrive...";
-                carWaiting = false;
-            }
-            else
-            {
-                curlblCarInfo = lblCarInfo.Text;
-                lblCarInfo.Text = "That pump is occupied! Please choose another";
-            }
-        }
-        #endregion
 
         public Form1()
         {
             InitializeComponent();
         }
 
+        // Code to do when the form loads
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Initialise the display by refreshing all the values
             DisplayRefresh();
+            // Start the runtimeTimer
             runtimeTimer.Start();
+            // Start the car spawned timer, which spawns cars randomly
             carSpawnedTimer.Start();
         }
 
@@ -433,8 +210,10 @@ namespace GasStationForms
     /// </summary>
     private void DisplayRefresh()
         {
-            lblVehServiced.Text = "Vehicles Serviced: " + vehServiced;
-            
+            // Change the vehicleServiced variable to show how many have been serviced
+            lblVehServiced.Text = $"Vehicles Serviced: {vehServiced} ";
+            lblLitresDispensed.Text = $"Litres Dispensed: {Pump.litresDispensed}";
+            lblTakings.Text = $"Takings: £{Pump.totalTakings}";
         }
 
 
@@ -445,11 +224,15 @@ namespace GasStationForms
         /// <param name="e"></param>
         private void carSpawnedTimer_Tick(object sender, EventArgs e)
         {
+            // Call the generate car method and put it's return into the carinfo label
             lblCarInfo.Text = GenerateCar();
+            // Change the carWaiting flag to be true, showing a car is waiting
             carWaiting = true;
 
+            // If there is a car waiting
             if (carWaiting)
             {
+                // Enable all of the buttons on the form
                 EnablePumps();
             }
 
@@ -462,21 +245,26 @@ namespace GasStationForms
         private string GenerateCar()
         {
 
+            // Get the current car label and put it into a variable
             string curlblCarInfo = lblCarInfo.Text;
-
+            
             if (carWaiting)
             {
+                // Console print that there is a car waiting
                 Console.WriteLine("Car Waiting...");
+                // Return the carinfo prior to editing
                 return curlblCarInfo;
             }
             else {
-                // FuelType fuel = new FuelType();
+                // Variable declarations for ease of access
                 string brand = RandomManufacturer();
                 string vehType = VehicleType(brand);
                 string fuelType = Fuel.GenerateFuelText(brand);
            
+                // Console print the brand for debugging purposes
                 Console.WriteLine(brand);
             
+                // return the brand, vehicle type and fueltype in a string
                 return $"Where should a {brand} {vehType} with {fuelType} fuel go? Please click the pump number.";
             }
         }
@@ -502,20 +290,22 @@ namespace GasStationForms
         /// Generates a random number and matches that with the manufacturer type
         /// </summary>
         /// <returns></returns>
-        static string RandomManufacturer()
+        string RandomManufacturer()
         {
+            // Variable declarations
             string decidedManufacturer = null;
             int randomNum;
 
-            
-            Vehicle vehicle = new Vehicle();
-
+            // Instantiated a new Random
             Random random = new Random();
+            // Getting a random integer between 0 and 5 and putting it into randomNum variable
             randomNum = random.Next(5);
 
             switch (randomNum)
             {
                 case 0:
+                    // set the decided manufacturer to be the first element in the manufacturer array
+                    // in the vehicle class and so on...
                     decidedManufacturer = vehicle.manufacturer[0]; // Ford
                     break;
                 case 1:
@@ -538,6 +328,7 @@ namespace GasStationForms
                     break;
             }
 
+            // Return the decided manufacturer variable
             return decidedManufacturer;
         }
 
@@ -549,14 +340,19 @@ namespace GasStationForms
         static string VehicleType(string brand)
         {
 
+            // Instatiating a new Random
             Random rand = new Random();
 
+            // Getting a random int between 0 and 2
             int random = rand.Next(2);
+            // Writing the value of random to the console
             Console.WriteLine(random);
 
+            // Switch for selecting vehicle types based on the decided manufacturer
             switch (brand)
             {
                 case "Ford":
+                    // random generated numbers decide if car or van
                     if (random == 0) vehicleType = "Car";
                     if (random == 1) vehicleType = "Van";
                     break;
@@ -585,6 +381,28 @@ namespace GasStationForms
             return vehicleType;
         }
         
+        void CreateLog(bool fuelled, string brand, string vehType, string fuel)
+        {
+            string logLines = "";
+
+            System.IO.File.OpenWrite("log.txt");
+            Console.WriteLine("Log.txt created!");
+
+            if (fuelled)
+            {
+                logLines = $"{DateTime.Now}: {brand} {vehType} with {fuel} fuel has been filled";
+                System.IO.File.WriteAllText("log.txt", logLines);
+            } else
+            {
+                logLines = $"{DateTime.Now}: {brand} {vehType} with {fuel} fuel drove off before filling was complete.";
+                System.IO.File.WriteAllText("log.txt", logLines);
+            }
+
+        }
+
+        /// <summary>
+        /// Enable all the pump buttons on the form
+        /// </summary>
         void EnablePumps()
         {
             btnPumpOne.Enabled = true;
@@ -598,6 +416,7 @@ namespace GasStationForms
             btnPumpNine.Enabled = true;
         }
         
+        // Disable all the pump buttons on the form
         void DisablePumps()
         {
             btnPumpOne.Enabled = false;
