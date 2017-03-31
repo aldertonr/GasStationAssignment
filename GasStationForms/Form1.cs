@@ -263,7 +263,9 @@ namespace GasStationForms
            
                 // Console print the brand for debugging purposes
                 Console.WriteLine(brand);
-            
+
+                CreateLog(brand, vehType, fuelType);
+
                 // return the brand, vehicle type and fueltype in a string
                 return $"Where should a {brand} {vehType} with {fuelType} fuel go? Please click the pump number.";
             }
@@ -381,23 +383,15 @@ namespace GasStationForms
             return vehicleType;
         }
         
-        void CreateLog(bool fuelled, string brand, string vehType, string fuel)
+        void CreateLog(string brand, string vehType, string fuel)
         {
             string logLines = "";
-
-            System.IO.File.OpenWrite("log.txt");
+            
             Console.WriteLine("Log.txt created!");
 
-            if (fuelled)
-            {
-                logLines = $"{DateTime.Now}: {brand} {vehType} with {fuel} fuel has been filled";
-                System.IO.File.WriteAllText("log.txt", logLines);
-            } else
-            {
-                logLines = $"{DateTime.Now}: {brand} {vehType} with {fuel} fuel drove off before filling was complete.";
-                System.IO.File.WriteAllText("log.txt", logLines);
-            }
-
+            logLines = $"{DateTime.Now}: {brand} {vehType} with {fuel} fuel has Arrived\r\n";
+            System.IO.File.AppendAllText("log.txt", logLines);
+            
         }
 
         /// <summary>

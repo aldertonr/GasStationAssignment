@@ -1,0 +1,7 @@
+31/03/2017 14:14:36: Scania HGV with LPG fuel has Arrived
+31/03/2017 14:14:39: Volvo HGV with LPG fuel has Arrived
+31/03/2017 14:14:40: BMW Van with Diesel fuel has Arrived
+31/03/2017 14:14:42: Ford Car with Unleaded fuel has Arrived
+31/03/2017 14:19:01: Ford Car with Unleaded fuel has Arrived
+31/03/2017 14:19:02: Volvo HGV with LPG fuel has Arrived
+31/03/2017 14:19:04: BMW Car with Unleaded fuel has Arrived
