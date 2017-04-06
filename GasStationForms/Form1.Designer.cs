@@ -64,6 +64,7 @@
             this.carSpawnedTimer = new System.Windows.Forms.Timer(this.components);
             this.lblLitresDispensed = new System.Windows.Forms.Label();
             this.lblTakings = new System.Windows.Forms.Label();
+            this.lblCommision = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnPumpOne
@@ -393,7 +394,7 @@
             // 
             // lblLitresDispensed
             // 
-            this.lblLitresDispensed.Location = new System.Drawing.Point(159, 207);
+            this.lblLitresDispensed.Location = new System.Drawing.Point(30, 230);
             this.lblLitresDispensed.Name = "lblLitresDispensed";
             this.lblLitresDispensed.Size = new System.Drawing.Size(110, 23);
             this.lblLitresDispensed.TabIndex = 22;
@@ -401,11 +402,19 @@
             // 
             // lblTakings
             // 
-            this.lblTakings.Location = new System.Drawing.Point(159, 230);
+            this.lblTakings.Location = new System.Drawing.Point(156, 207);
             this.lblTakings.Name = "lblTakings";
             this.lblTakings.Size = new System.Drawing.Size(110, 23);
             this.lblTakings.TabIndex = 23;
             this.lblTakings.Text = "Takings:  ";
+            // 
+            // lblCommision
+            // 
+            this.lblCommision.Location = new System.Drawing.Point(156, 230);
+            this.lblCommision.Name = "lblCommision";
+            this.lblCommision.Size = new System.Drawing.Size(110, 23);
+            this.lblCommision.TabIndex = 24;
+            this.lblCommision.Text = "1% Commision: £0";
             // 
             // Form1
             // 
@@ -413,6 +422,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(400, 338);
+            this.Controls.Add(this.lblCommision);
             this.Controls.Add(this.lblTakings);
             this.Controls.Add(this.lblLitresDispensed);
             this.Controls.Add(this.lblCarInfo);
@@ -483,6 +493,7 @@
         private System.Windows.Forms.Label lblLitresDispensed;
         private System.Windows.Forms.Timer pumpOneTimer;
         private System.Windows.Forms.Label lblTakings;
+        private System.Windows.Forms.Label lblCommision;
     }
 }
 

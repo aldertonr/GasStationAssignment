@@ -1,7 +1,7 @@
-31/03/2017 14:14:36: Scania HGV with LPG fuel has Arrived
-31/03/2017 14:14:39: Volvo HGV with LPG fuel has Arrived
-31/03/2017 14:14:40: BMW Van with Diesel fuel has Arrived
-31/03/2017 14:14:42: Ford Car with Unleaded fuel has Arrived
-31/03/2017 14:19:01: Ford Car with Unleaded fuel has Arrived
-31/03/2017 14:19:02: Volvo HGV with LPG fuel has Arrived
-31/03/2017 14:19:04: BMW Car with Unleaded fuel has Arrived
+06/04/2017 12:45:20: FUELLED: Vauxhall Car with Unleaded fuel has been fuelled at pumpOne
+06/04/2017 12:45:22: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+06/04/2017 12:45:22: FUELLED: Vauxhall Car with Unleaded fuel has been fuelled at pumpTwo
+06/04/2017 12:45:23: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+06/04/2017 12:45:25: OCCUPIED PUMP: Volvo HGV with LPG fuel at pumpTwo
+06/04/2017 12:45:27: FUELLED: Volvo HGV with LPG fuel has been fuelled at pumpThree
+06/04/2017 12:45:28: ARRIVED: Ford Car with Unleaded, Waiting to be serviced

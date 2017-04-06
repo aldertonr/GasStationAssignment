@@ -16,7 +16,8 @@ namespace GasStationForms
         static int vehServiced = 0;
         string curlblCarInfo;
         bool carWaiting = false;
-        
+        public string[] carToBeServiced;
+
         // Instatiating a new Vehicle and Fuel class object
         private Vehicle vehicle = new Vehicle();
         private Fuel fuel = new Fuel();
@@ -24,6 +25,11 @@ namespace GasStationForms
         public Vehicle Vehicle { get => vehicle; set => vehicle = value; }
         public Fuel Fuel { get => fuel; set => fuel = value; }
 
+
+        void carOnPump(string brand, string fuelType, string pump)
+        {
+            
+        }
 
         #region TickEvents
 
@@ -44,6 +50,10 @@ namespace GasStationForms
             activeTimer.Stop();
 
             Pump.DispenseFuel();
+
+
+
+            CreateLog(carToBeServiced[0], carToBeServiced[1], carToBeServiced[2], (string)activeButton.Tag, true);
 
             // Switch of activePump
             switch (activePump)
@@ -116,6 +126,11 @@ namespace GasStationForms
 
             // If the pump is free
             if (!CheckPumpBusy(activeButton.Text)) {
+                Console.WriteLine(carToBeServiced[0], carToBeServiced[1], carToBeServiced[2], (string)activeButton.Tag);
+
+                // Replace these values with legit ones
+                carOnPump(brand, fuelType, (string)activeButton.tag);
+
                 // Change the text of the button to be occupied
                 activeButton.Text = "Occupied";
                 // Start the timer
@@ -128,6 +143,7 @@ namespace GasStationForms
                 carWaiting = false;
             } else
             {
+                CreateLog(carToBeServiced[0], carToBeServiced[1], carToBeServiced[2], (string)activeButton.Tag, false);
                 // Save the current car value
                 curlblCarInfo = lblCarInfo.Text;
                 // Let the user know that the pump is occupied
@@ -214,6 +230,7 @@ namespace GasStationForms
             lblVehServiced.Text = $"Vehicles Serviced: {vehServiced} ";
             lblLitresDispensed.Text = $"Litres Dispensed: {Pump.litresDispensed}";
             lblTakings.Text = $"Takings: £{Pump.totalTakings}";
+            lblCommision.Text = $"1% Commision: £{Pump.commision}";
         }
 
 
@@ -260,10 +277,12 @@ namespace GasStationForms
                 string brand = RandomManufacturer();
                 string vehType = VehicleType(brand);
                 string fuelType = Fuel.GenerateFuelText(brand);
-           
+
+                 carToBeServiced = new string[] { brand, vehType, fuelType };
                 // Console print the brand for debugging purposes
                 Console.WriteLine(brand);
 
+                // Car waiting
                 CreateLog(brand, vehType, fuelType);
 
                 // return the brand, vehicle type and fueltype in a string
@@ -382,18 +401,60 @@ namespace GasStationForms
 
             return vehicleType;
         }
-        
+
+        #region Log Creation
+        // TODO: FINISH THIS
         void CreateLog(string brand, string vehType, string fuel)
         {
             string logLines = "";
             
+            // REMOVE THIS
             Console.WriteLine("Log.txt created!");
-
-            logLines = $"{DateTime.Now}: {brand} {vehType} with {fuel} fuel has Arrived\r\n";
-            System.IO.File.AppendAllText("log.txt", logLines);
+            
+                    logLines = $"{DateTime.Now}: ARRIVED: {brand} {vehType} with {fuel}, Waiting to be serviced";
+        
+            try
+            {
+                System.IO.File.AppendAllText("log.txt", logLines + Environment.NewLine);
+            } catch (Exception e)
+            {
+                Console.WriteLine("EXCEPTION: " + e);
+            }
             
         }
 
+        /// <summary>
+        /// Used to create a log if the car has been fuelled or sent to an occupied pump
+        /// </summary>
+        /// <param name="brand"></param>
+        /// <param name="vehType"></param>
+        /// <param name="fuel"></param>
+        /// <param name="pump">The Pump number</param>
+        void CreateLog(string brand, string vehType, string fuel, string pump, bool fuelled)
+        {
+            string logLines = "";
+            // REMOVE THIS
+            Console.WriteLine("Log line has been created with pump");
+
+            switch (fuelled)
+            {
+                case true:
+                    logLines = $"{DateTime.Now}: FUELLED: {brand} {vehType} with {fuel} fuel has been fuelled at {pump}";
+                    break;
+                case false:
+                    logLines = $"{DateTime.Now}: OCCUPIED PUMP: {brand} {vehType} with {fuel} fuel at {pump}";
+                    break;
+                default:
+                    Console.WriteLine("CreateLog Params incorrect");
+                    break;
+            }
+
+            System.IO.File.AppendAllText("log.txt", logLines + Environment.NewLine);
+
+        }
+        #endregion
+
+        #region Enable/Disable Pumps
         /// <summary>
         /// Enable all the pump buttons on the form
         /// </summary>
@@ -423,6 +484,6 @@ namespace GasStationForms
             btnPumpEight.Enabled = false;
             btnPumpNine.Enabled = false;
         }
-
+#endregion 
     }
 }

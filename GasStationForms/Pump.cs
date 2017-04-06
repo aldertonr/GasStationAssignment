@@ -16,6 +16,7 @@ namespace GasStationForms
         private static float flowRate = 1.5f; // 1.5 litres / second
         public static float litresDispensed = 0f;
         public static double totalTakings = 0;
+        public static double commision = 0;
         // Encapsulating the above variables
         public static float FlowRate { get; set; }
 
@@ -49,6 +50,8 @@ namespace GasStationForms
             Console.WriteLine("LD: " + litresDispensed);
 
             totalTakings += Math.Round((litresDispensedThisTransaction * UNLEADED / 100), 2);
+
+            commision += Math.Round(totalTakings / 100, 2);
 
             Console.WriteLine(totalTakings);
 
