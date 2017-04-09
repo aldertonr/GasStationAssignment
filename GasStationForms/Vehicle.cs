@@ -13,7 +13,7 @@ namespace GasStationForms
         public string[] vehType;
         public string vehicleType;
 
-        // TODO: Implement different classes
+        // TODO: Implement different classes (car, van, HGV)?
 
         public Vehicle()
         {

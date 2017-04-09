@@ -13,24 +13,23 @@ namespace GasStationForms
         public static string vehicleType = "";
         // The interval for the fuelling timer so it can be passed to Fuel.cs
         public static float fuellingTime = 18000f;
+        // Integer to hold the amount of vehicles serviced
         static int vehServiced = 0;
+        // String to hold the current lblCarInfo text
         string curlblCarInfo;
+        // Boolean to show if there's a car waiting
         bool carWaiting = false;
+
+        // TODO: Implement the carToBeServiced array
+        // Array of strings to hold the car to be serviced informationa
         public string[] carToBeServiced;
+        // Array of strings to hold the vehicles waiting and their information
+        public string[] vehiclesWaiting;
 
         // Instatiating a new Vehicle and Fuel class object
         private Vehicle vehicle = new Vehicle();
         private Fuel fuel = new Fuel();
-
-        public Vehicle Vehicle { get => vehicle; set => vehicle = value; }
-        public Fuel Fuel { get => fuel; set => fuel = value; }
-
-
-        void carOnPump(string brand, string fuelType, string pump)
-        {
-            
-        }
-
+        
         #region TickEvents
 
         /// <summary>
@@ -52,8 +51,8 @@ namespace GasStationForms
             Pump.DispenseFuel();
 
 
-
-            CreateLog(carToBeServiced[0], carToBeServiced[1], carToBeServiced[2], (string)activeButton.Tag, true);
+            // Writes the type of vehicle, fuel and which pump it was fulled at
+            CreateLog(carToBeServiced[0], carToBeServiced[1], carToBeServiced[2], (string)activeTimer.Tag, true);
 
             // Switch of activePump
             switch (activePump)
@@ -119,17 +118,12 @@ namespace GasStationForms
         /// <param name="e"></param>
         private void btnPump_Click(object sender, EventArgs e)
         {
-
             // Declaring a button and casting the object sender to a button
             Button activeButton = ((Button)sender);
-            
 
             // If the pump is free
             if (!CheckPumpBusy(activeButton.Text)) {
-                Console.WriteLine(carToBeServiced[0], carToBeServiced[1], carToBeServiced[2], (string)activeButton.Tag);
-
-                // Replace these values with legit ones
-                carOnPump(brand, fuelType, (string)activeButton.tag);
+                // TODO: Implement a caronPump thing for the log
 
                 // Change the text of the button to be occupied
                 activeButton.Text = "Occupied";
@@ -150,7 +144,7 @@ namespace GasStationForms
                 lblCarInfo.Text = "That pump is occupied! Please choose another";
             }
         }
-
+        
         /// <summary>
         /// Starts the set timer, based on what button was clicked
         /// </summary>
@@ -265,6 +259,8 @@ namespace GasStationForms
             // Get the current car label and put it into a variable
             string curlblCarInfo = lblCarInfo.Text;
             
+
+
             if (carWaiting)
             {
                 // Console print that there is a car waiting
@@ -278,7 +274,9 @@ namespace GasStationForms
                 string vehType = VehicleType(brand);
                 string fuelType = Fuel.GenerateFuelText(brand);
 
-                 carToBeServiced = new string[] { brand, vehType, fuelType };
+                carToBeServiced = new string[] { brand, vehType, fuelType };
+
+                Console.WriteLine(carToBeServiced);
                 // Console print the brand for debugging purposes
                 Console.WriteLine(brand);
 
@@ -403,7 +401,6 @@ namespace GasStationForms
         }
 
         #region Log Creation
-        // TODO: FINISH THIS
         void CreateLog(string brand, string vehType, string fuel)
         {
             string logLines = "";
@@ -422,6 +419,8 @@ namespace GasStationForms
             }
             
         }
+
+        // TODO: Vehicle Drive off log
 
         /// <summary>
         /// Used to create a log if the car has been fuelled or sent to an occupied pump

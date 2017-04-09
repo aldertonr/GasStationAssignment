@@ -4,8 +4,9 @@ namespace GasStationForms
 {
     public class Fuel
     {
-        public int[] fuel;
-        private int fuelType { get; set; }
+        private int[] fuel;
+
+        public int fuelType;
 
         public Fuel()
         {
@@ -26,7 +27,7 @@ namespace GasStationForms
 
             if(Form1.vehicleType == "HGV")
             {
-                // TODO: ENUM this?
+                // TODO: Potentially ENUM fuel types?
                 fuelText = "LPG"; 
             } else if (Form1.vehicleType == "Car" || Form1.vehicleType == "Van")
             {
@@ -41,8 +42,7 @@ namespace GasStationForms
             {
 
             }
-
-
+            
             return fuelText;
         }
     }
