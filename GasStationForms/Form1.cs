@@ -11,8 +11,6 @@ namespace GasStationForms
     {
         // Declaration of variables
         public static string vehicleType = "";
-        // The interval for the fuelling timer so it can be passed to Fuel.cs
-        public static float fuellingTime = 18000f;
         // Integer to hold the amount of vehicles serviced
         static int vehServiced = 0;
         // String to hold the current lblCarInfo text
@@ -26,9 +24,10 @@ namespace GasStationForms
         // Array of strings to hold the vehicles waiting and their information
         public string[] vehiclesWaiting;
 
-        // Instatiating a new Vehicle and Fuel class object
+        // Instatiating a new Vehicle, Fuel and pump class object
         private Vehicle vehicle = new Vehicle();
         private Fuel fuel = new Fuel();
+        private Pump pump = new Pump();
         
         #region TickEvents
 
@@ -49,11 +48,11 @@ namespace GasStationForms
             activeTimer.Stop();
 
             Pump.DispenseFuel();
-
-
+            
             // Writes the type of vehicle, fuel and which pump it was fulled at
-            CreateLog(carToBeServiced[0], carToBeServiced[1], carToBeServiced[2], (string)activeTimer.Tag, true);
-
+            CreateLog(carToBeServiced[0], carToBeServiced[1], carToBeServiced[2], (string)activeTimer.Tag,  true);
+            CreateFuellingLog(carToBeServiced[1], Pump.litresDispensedThisTransaction, (string)activeTimer.Tag);
+            
             // Switch of activePump
             switch (activePump)
             {
@@ -160,39 +159,48 @@ namespace GasStationForms
                 // If the tag is pumpOne etc, then do the following code;
                 case "pumpOne":
                     // Start the timer
+                    pumpOneTimer.Interval = (int)Pump.GenerateInterval();
                     pumpOneTimer.Start();
                     // Print to console which timer has been started
                     Console.WriteLine($"{activeTimer} started");
                     break;
                 case "pumpTwo":
+                    pumpTwoTimer.Interval = (int)Pump.GenerateInterval();
                     pumpTwoTimer.Start();
                     Console.WriteLine($"{activeTimer} started");
                     break;
                 case "pumpThree":
+                    pumpThreeTimer.Interval = (int)Pump.GenerateInterval();
                     pumpThreeTimer.Start();
                     Console.WriteLine($"{activeTimer} started");
                     break;
                 case "pumpFour":
+                    pumpFourTimer.Interval = (int)Pump.GenerateInterval();
                     pumpFourTimer.Start();
                     Console.WriteLine($"{activeTimer} started");
                     break;
                 case "pumpFive":
+                    pumpFiveTimer.Interval = (int)Pump.GenerateInterval();
                     pumpFiveTimer.Start();
                     Console.WriteLine($"{activeTimer} started");
                     break;
                 case "pumpSix":
+                    pumpSixTimer.Interval = (int)Pump.GenerateInterval();
                     pumpSixTimer.Start();
                     Console.WriteLine($"{activeTimer} started");
                     break;
                 case "pumpSeven":
+                    pumpSevenTimer.Interval = (int)Pump.GenerateInterval();
                     pumpSevenTimer.Start();
                     Console.WriteLine($"{activeTimer} started");
                     break;
                 case "pumpEight":
+                    pumpEightTimer.Interval = (int)Pump.GenerateInterval();
                     pumpEightTimer.Start();
                     Console.WriteLine($"{activeTimer} started");
                     break;
                 case "pumpNine":
+                    pumpNineTimer.Interval = (int)Pump.GenerateInterval();
                     pumpNineTimer.Start();
                     Console.WriteLine($"{activeTimer} started");
                     break;
@@ -211,8 +219,7 @@ namespace GasStationForms
             DisplayRefresh();
             // Start the runtimeTimer
             runtimeTimer.Start();
-            // Start the car spawned timer, which spawns cars randomly
-            carSpawnedTimer.Start();
+            CarSpawner();
         }
 
     /// <summary>
@@ -250,21 +257,38 @@ namespace GasStationForms
         }
 
         /// <summary>
+        /// Generates the random integer for the timer interval
+        /// </summary>
+        void CarSpawner()
+        {
+
+            // Instantiating a new random class
+            Random random = new Random();
+
+            // Integer to hold the new random integer between 1500 and 2200
+            int rndInterval = random.Next(1500, 2200);
+
+            // Setting the carSpawnedTimer interval to the rndInterval value
+            carSpawnedTimer.Interval = rndInterval;
+
+            // Start the carSpawnedTimer
+            carSpawnedTimer.Start();
+            
+        }
+        
+        /// <summary>
         /// Generates a car with all the information
         /// </summary>
         /// <returns></returns>
         private string GenerateCar()
         {
-
             // Get the current car label and put it into a variable
             string curlblCarInfo = lblCarInfo.Text;
             
-
-
             if (carWaiting)
             {
                 // Console print that there is a car waiting
-                Console.WriteLine("Car Waiting...");
+                Console.WriteLine("Car Already waiting - Removing Vehicle");
                 // Return the carinfo prior to editing
                 return curlblCarInfo;
             }
@@ -304,7 +328,7 @@ namespace GasStationForms
                 return false;
             }
         }
-
+        
         /// <summary>
         /// Generates a random number and matches that with the manufacturer type
         /// </summary>
@@ -401,6 +425,21 @@ namespace GasStationForms
         }
 
         #region Log Creation
+
+        void CreateFuellingLog(string vehType, float litresDispensed, string pump)
+        {
+            string logLines = "";
+            logLines = $"{DateTime.Now}: FUELLED: {vehType} with {litresDispensed} litres at {pump}";
+
+            try
+            {
+                System.IO.File.AppendAllText("log.txt", logLines + Environment.NewLine);
+            } catch (Exception e)
+            {
+                Console.WriteLine("EXCEPTION " + e);
+            }
+        }
+
         void CreateLog(string brand, string vehType, string fuel)
         {
             string logLines = "";

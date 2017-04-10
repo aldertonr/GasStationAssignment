@@ -61,10 +61,10 @@
             this.pumpSevenTimer = new System.Windows.Forms.Timer(this.components);
             this.pumpEightTimer = new System.Windows.Forms.Timer(this.components);
             this.pumpNineTimer = new System.Windows.Forms.Timer(this.components);
-            this.carSpawnedTimer = new System.Windows.Forms.Timer(this.components);
             this.lblLitresDispensed = new System.Windows.Forms.Label();
             this.lblTakings = new System.Windows.Forms.Label();
             this.lblCommision = new System.Windows.Forms.Label();
+            this.carSpawnedTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // btnPumpOne
@@ -387,11 +387,6 @@
             this.pumpNineTimer.Tag = "pumpNine";
             this.pumpNineTimer.Tick += new System.EventHandler(this.pumpTimer_Tick);
             // 
-            // carSpawnedTimer
-            // 
-            this.carSpawnedTimer.Interval = 1500;
-            this.carSpawnedTimer.Tick += new System.EventHandler(this.carSpawnedTimer_Tick);
-            // 
             // lblLitresDispensed
             // 
             this.lblLitresDispensed.Location = new System.Drawing.Point(30, 230);
@@ -412,9 +407,13 @@
             // 
             this.lblCommision.Location = new System.Drawing.Point(156, 230);
             this.lblCommision.Name = "lblCommision";
-            this.lblCommision.Size = new System.Drawing.Size(110, 23);
+            this.lblCommision.Size = new System.Drawing.Size(120, 23);
             this.lblCommision.TabIndex = 24;
-            this.lblCommision.Text = "1% Commision: £0";
+            this.lblCommision.Text = "1% Commision: £0.3089";
+            // 
+            // carSpawnedTimer
+            // 
+            this.carSpawnedTimer.Tick += new System.EventHandler(this.carSpawnedTimer_Tick);
             // 
             // Form1
             // 
@@ -489,11 +488,11 @@
         private System.Windows.Forms.Timer pumpSevenTimer;
         private System.Windows.Forms.Timer pumpEightTimer;
         private System.Windows.Forms.Timer pumpNineTimer;
-        private System.Windows.Forms.Timer carSpawnedTimer;
         private System.Windows.Forms.Label lblLitresDispensed;
         private System.Windows.Forms.Timer pumpOneTimer;
         private System.Windows.Forms.Label lblTakings;
         private System.Windows.Forms.Label lblCommision;
+        private System.Windows.Forms.Timer carSpawnedTimer;
     }
 }
 
