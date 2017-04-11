@@ -4,6 +4,12 @@ namespace GasStationForms
 {
     public class Fuel
     {
+
+        // Petrol prices as constants
+        public const float UNLEADED = 117.5f;
+        public const float DIESEL = 119.5f;
+        public const float LPG = 60.1f;
+
         private int[] fuel;
 
         public int fuelType;
@@ -18,7 +24,7 @@ namespace GasStationForms
             this.fuelType = fuel;
         }
         
-        public static string GenerateFuelText(string brand)
+        public static string GenerateFuelText()
         {
             
             Random random = new Random();
@@ -27,7 +33,7 @@ namespace GasStationForms
 
             if(Form1.vehicleType == "HGV")
             {
-                // TODO: Potentially ENUM fuel types?
+                fuel = 2;
                 fuelText = "LPG"; 
             } else if (Form1.vehicleType == "Car" || Form1.vehicleType == "Van")
             {
@@ -40,7 +46,7 @@ namespace GasStationForms
                 }
             } else
             {
-
+                Console.WriteLine("Fuel Error");
             }
             
             return fuelText;

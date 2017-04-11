@@ -87,3 +87,272 @@
 10/04/2017 14:45:06: ARRIVED: BMW Van with Diesel, Waiting to be serviced
 10/04/2017 14:45:24: FUELLED: BMW Van with Diesel fuel has been fuelled at pumpOne
 10/04/2017 14:45:24: FUELLED: Van with 26.391 litres at pumpOne
+10/04/2017 22:59:17: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+10/04/2017 22:59:21: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+10/04/2017 22:59:22: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+10/04/2017 22:59:24: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+10/04/2017 22:59:25: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+10/04/2017 23:00:33: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+10/04/2017 23:00:35: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+10/04/2017 23:00:37: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+10/04/2017 23:00:39: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+10/04/2017 23:00:41: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+10/04/2017 23:00:43: ARRIVED: BMW Van with Diesel, Waiting to be serviced
+10/04/2017 23:00:44: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+10/04/2017 23:01:02: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+10/04/2017 23:01:04: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+10/04/2017 23:01:06: OCCUPIED PUMP: Scania HGV with LPG fuel at pumpOne
+10/04/2017 23:01:06: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+10/04/2017 23:01:08: OCCUPIED PUMP: Vauxhall Car with Unleaded fuel at pumpOne
+10/04/2017 23:01:08: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+10/04/2017 23:01:10: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+10/04/2017 23:01:29: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+10/04/2017 23:01:31: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+10/04/2017 23:01:32: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+10/04/2017 23:01:34: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+10/04/2017 23:01:36: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+10/04/2017 23:01:37: OCCUPIED PUMP: Scania HGV with LPG fuel at pumpOne
+10/04/2017 23:01:37: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+10/04/2017 23:19:28: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+10/04/2017 23:19:29: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+10/04/2017 23:19:31: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+10/04/2017 23:19:33: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+10/04/2017 23:19:35: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+10/04/2017 23:19:36: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+10/04/2017 23:19:38: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+10/04/2017 23:19:40: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+10/04/2017 23:19:42: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+10/04/2017 23:19:43: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+10/04/2017 23:19:45: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+10/04/2017 23:19:47: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+10/04/2017 23:19:47: FUELLED: Scania HGV with LPG fuel has been fuelled at pumpOne
+10/04/2017 23:19:47: FUELLED: HGV with 26.0895 litres at pumpOne
+10/04/2017 23:19:48: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+10/04/2017 23:19:50: ARRIVED: BMW Van with Diesel, Waiting to be serviced
+10/04/2017 23:19:52: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+10/04/2017 23:19:54: ARRIVED: BMW Van with Diesel, Waiting to be serviced
+10/04/2017 23:19:55: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 21:58:46: ARRIVED: Vauxhall Car with Diesel, Waiting to be serviced
+11/04/2017 21:58:49: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 21:58:50: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 21:58:52: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+11/04/2017 21:58:53: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 21:58:55: ARRIVED: BMW Van with Diesel, Waiting to be serviced
+11/04/2017 21:58:56: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 21:58:58: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 21:58:59: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 21:59:01: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 21:59:02: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 21:59:04: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 21:59:05: ARRIVED: BMW Van with Diesel, Waiting to be serviced
+11/04/2017 21:59:07: FUELLED: BMW Van with Diesel fuel has been fuelled at pumpOne
+11/04/2017 21:59:07: FUELLED: Van with 27.714 litres at pumpOne
+11/04/2017 21:59:07: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 21:59:08: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 21:59:10: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 21:59:11: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 21:59:12: FUELLED: Ford Car with Unleaded fuel has been fuelled at pumpTwo
+11/04/2017 21:59:12: FUELLED: Car with 25.737 litres at pumpTwo
+11/04/2017 21:59:13: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 21:59:15: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 21:59:16: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+11/04/2017 21:59:18: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 21:59:19: ARRIVED: BMW Van with Diesel, Waiting to be serviced
+11/04/2017 21:59:21: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 21:59:22: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:08:32: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:08:34: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:08:35: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:08:37: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:08:39: ARRIVED: BMW Van with Diesel, Waiting to be serviced
+11/04/2017 23:08:40: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:08:42: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+11/04/2017 23:08:43: ARRIVED: BMW Van with Diesel, Waiting to be serviced
+11/04/2017 23:08:45: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:08:47: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:08:48: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:08:50: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:08:51: FUELLED: Volvo HGV with LPG fuel has been fuelled at pumpOne
+11/04/2017 23:08:51: FUELLED: HGV with 27.0165 litres at pumpOne
+11/04/2017 23:08:51: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:08:52: FUELLED: Ford Car with Unleaded fuel has been fuelled at pumpTwo
+11/04/2017 23:08:52: FUELLED: Car with 25.6485 litres at pumpTwo
+11/04/2017 23:08:53: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:08:54: FUELLED: Ford Car with Unleaded fuel has been fuelled at pumpThree
+11/04/2017 23:08:54: FUELLED: Car with 27.8265 litres at pumpThree
+11/04/2017 23:08:55: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:08:56: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:08:58: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:08:59: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+11/04/2017 23:09:01: ARRIVED: BMW Van with Diesel, Waiting to be serviced
+11/04/2017 23:09:02: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:10:54: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:10:56: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:10:58: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:11:00: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:11:02: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:11:04: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:11:06: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:11:08: ARRIVED: BMW Van with Diesel, Waiting to be serviced
+11/04/2017 23:11:10: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:11:12: ARRIVED: BMW Van with Diesel, Waiting to be serviced
+11/04/2017 23:11:13: FUELLED: BMW Van with Diesel fuel has been fuelled at pumpOne
+11/04/2017 23:11:13: FUELLED: Van with 25.758 litres at pumpOne
+11/04/2017 23:11:14: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:11:14: FUELLED: Ford Car with Unleaded fuel has been fuelled at pumpTwo
+11/04/2017 23:11:14: FUELLED: Car with 26.7225 litres at pumpTwo
+11/04/2017 23:11:16: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+11/04/2017 23:11:18: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:11:20: FUELLED: Volvo HGV with LPG fuel has been fuelled at pumpThree
+11/04/2017 23:11:20: FUELLED: HGV with 26.2725 litres at pumpThree
+11/04/2017 23:11:23: ARRIVED: BMW Car with Diesel, Waiting to be serviced
+11/04/2017 23:16:20: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:16:22: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:16:24: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:16:45: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:16:46: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:16:48: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:16:50: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:16:51: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:21:26: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:21:29: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:21:31: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:21:33: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:21:35: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+11/04/2017 23:21:37: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:21:38: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:21:40: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:21:42: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:21:44: ARRIVED: BMW Van with Diesel, Waiting to be serviced
+11/04/2017 23:21:45: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:21:47: FUELLED: Volvo HGV with LPG fuel has been fuelled at pumpOne
+11/04/2017 23:21:47: FUELLED: HGV with 26.292 litres at pumpOne
+11/04/2017 23:21:47: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:21:49: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:21:51: ARRIVED: BMW Van with Diesel, Waiting to be serviced
+11/04/2017 23:21:52: FUELLED: BMW Van with Diesel fuel has been fuelled at pumpTwo
+11/04/2017 23:21:52: FUELLED: Van with 26.3955 litres at pumpTwo
+11/04/2017 23:21:53: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:21:54: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:21:56: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:21:58: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+11/04/2017 23:22:00: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:22:02: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+11/04/2017 23:22:03: FUELLED: BMW Car with Unleaded fuel has been fuelled at pumpThree
+11/04/2017 23:22:03: FUELLED: Car with 26.3835 litres at pumpThree
+11/04/2017 23:22:03: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:22:05: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:22:07: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:22:09: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:22:39: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:22:40: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:22:42: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:22:44: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:22:45: ARRIVED: BMW Van with Diesel, Waiting to be serviced
+11/04/2017 23:22:47: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:22:48: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+11/04/2017 23:22:50: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:22:51: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:22:53: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:22:55: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:22:56: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:22:58: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:22:59: FUELLED: Ford Car with Unleaded fuel has been fuelled at pumpTwo
+11/04/2017 23:22:59: FUELLED: Car with 26.2725 litres at pumpTwo
+11/04/2017 23:22:59: FUELLED: Ford Car with Unleaded fuel has been fuelled at pumpOne
+11/04/2017 23:22:59: FUELLED: Car with 27.933 litres at pumpOne
+11/04/2017 23:22:59: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:23:01: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:23:03: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:23:04: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:23:10: ARRIVED: BMW Van with Diesel, Waiting to be serviced
+11/04/2017 23:23:12: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:23:13: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:23:15: ARRIVED: BMW Van with Diesel, Waiting to be serviced
+11/04/2017 23:23:17: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:23:19: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+11/04/2017 23:23:20: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:23:22: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:23:24: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+11/04/2017 23:23:26: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:23:27: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:23:29: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:23:30: FUELLED: Ford Car with Unleaded fuel has been fuelled at pumpOne
+11/04/2017 23:23:30: FUELLED: Car with 26.2005 litres at pumpOne
+11/04/2017 23:23:31: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:23:31: FUELLED: Scania HGV with LPG fuel has been fuelled at pumpTwo
+11/04/2017 23:23:31: FUELLED: HGV with 25.743 litres at pumpTwo
+11/04/2017 23:23:31: FUELLED: Scania HGV with LPG fuel has been fuelled at pumpThree
+11/04/2017 23:23:31: FUELLED: HGV with 25.9935 litres at pumpThree
+11/04/2017 23:23:33: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:23:34: ARRIVED: BMW Van with Diesel, Waiting to be serviced
+11/04/2017 23:23:36: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:25:43: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+11/04/2017 23:25:45: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:25:47: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:25:48: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:25:50: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:25:51: ARRIVED: BMW Van with Diesel, Waiting to be serviced
+11/04/2017 23:25:53: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:25:54: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:25:56: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:25:58: ARRIVED: BMW Van with Diesel, Waiting to be serviced
+11/04/2017 23:25:59: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:26:01: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:26:02: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:26:02: FUELLED: Vauxhall Car with Unleaded fuel has been fuelled at pumpOne
+11/04/2017 23:26:02: FUELLED: Car with 25.7565 litres at pumpOne
+11/04/2017 23:26:04: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+11/04/2017 23:26:06: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:26:07: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:26:09: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:26:10: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+11/04/2017 23:26:12: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:26:13: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:26:15: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:26:17: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:26:18: ARRIVED: BMW Van with Diesel, Waiting to be serviced
+11/04/2017 23:26:20: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:26:21: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:26:23: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:26:24: FUELLED: Vauxhall Car with Unleaded fuel has been fuelled at pumpTwo
+11/04/2017 23:26:24: FUELLED: Car with 26.9025 litres at pumpTwo
+11/04/2017 23:26:25: ARRIVED: BMW Van with Diesel, Waiting to be serviced
+11/04/2017 23:26:26: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:26:28: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:26:29: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:26:31: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+11/04/2017 23:29:51: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+11/04/2017 23:29:54: ARRIVED: BMW Van with Diesel, Waiting to be serviced
+11/04/2017 23:29:56: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:29:58: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:31:27: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:31:29: ARRIVED: BMW Van with Diesel, Waiting to be serviced
+11/04/2017 23:32:29: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:32:31: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+11/04/2017 23:32:33: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:32:35: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:32:37: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:32:39: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:33:30: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:33:32: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:34:32: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:34:33: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:34:35: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:34:37: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:34:38: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:34:40: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+11/04/2017 23:34:42: ARRIVED: Scania HGV with LPG, Waiting to be serviced
+11/04/2017 23:34:59: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+11/04/2017 23:35:01: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+11/04/2017 23:35:03: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+11/04/2017 23:35:05: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+11/04/2017 23:35:07: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+11/04/2017 23:35:09: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:35:11: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:35:12: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:36:39: ARRIVED: BMW Van with Diesel, Waiting to be serviced
+11/04/2017 23:36:41: ARRIVED: BMW Van with Diesel, Waiting to be serviced
+11/04/2017 23:36:43: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+11/04/2017 23:36:45: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+11/04/2017 23:36:47: ARRIVED: Volvo HGV with LPG, Waiting to be serviced

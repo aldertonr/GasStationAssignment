@@ -47,7 +47,7 @@ namespace GasStationForms
             // Stop the timer for that event
             activeTimer.Stop();
 
-            Pump.DispenseFuel();
+            Pump.DispenseFuel(carToBeServiced[2]);
             
             // Writes the type of vehicle, fuel and which pump it was fulled at
             CreateLog(carToBeServiced[0], carToBeServiced[1], carToBeServiced[2], (string)activeTimer.Tag,  true);
@@ -87,7 +87,9 @@ namespace GasStationForms
 
             // Increment the vehicleServiced variable
             vehServiced++;
-            lblLitresDispensed.Text = $"Litres Dispensed: {Pump.litresDispensed}";
+            lblPetrolDispensed.Text = $"Litres Dispensed: {Pump.petrolLitresDispensed}";
+            lblDieselDispensed.Text = $"Litres Dispensed: {Pump.dieselLitresDispensed}";
+            lblLpgDispensed.Text = $"Litres Dispensed: {Pump.lpgLitresDispensed}";
             lblTakings.Text = $"Total Takings: {Pump.totalTakings}";
             // Refresh the display
             DisplayRefresh();
@@ -108,8 +110,25 @@ namespace GasStationForms
             //EndDemo.Visible = true;
         }
 
+        /// <summary>
+        /// Handle the driveOffTimer elapsed event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void driveOffTimer_Tick(object sender, EventArgs e)
+        {
+            // Stop the timer so it doesn't keep happening
+            driveOffTimer.Stop();
+            // Print to the console that the car got bored
+            Console.WriteLine("Vehicle got bored of waiting and drove off");
+            // Set the lblCarInfo to be empty
+            lblCarInfo.Text = "Waiting for a vehicle to arrive";
+            // Set the carWaiting boolean to be false to indicate there is no car
+            carWaiting = false;
+        }
+
         #endregion
-        
+
         /// <summary>
         /// Pump Button Clicked event handler
         /// </summary>
@@ -131,7 +150,7 @@ namespace GasStationForms
                 // Disable all the pump methods
                 DisablePumps();
                 // Let the user know why they are waiting
-                lblCarInfo.Text = "Waiting for a car to arrive...";
+                lblCarInfo.Text = "Waiting for a vehicle to arrive";
                 // Change the carWaiting bool to false, to show there is no car waiting
                 carWaiting = false;
             } else
@@ -229,9 +248,11 @@ namespace GasStationForms
         {
             // Change the vehicleServiced variable to show how many have been serviced
             lblVehServiced.Text = $"Vehicles Serviced: {vehServiced} ";
-            lblLitresDispensed.Text = $"Litres Dispensed: {Pump.litresDispensed}";
             lblTakings.Text = $"Takings: £{Pump.totalTakings}";
             lblCommision.Text = $"1% Commision: £{Pump.commision}";
+            lblPetrolDispensed.Text = $"Petrol Litres Dispensed: {Pump.petrolLitresDispensed}";
+            lblDieselDispensed.Text = $"Diesel Litres Dispensed: {Pump.dieselLitresDispensed}";
+            lblLpgDispensed.Text = $"LPG Litres Dispensed: {Pump.lpgLitresDispensed}";
         }
 
 
@@ -288,7 +309,7 @@ namespace GasStationForms
             if (carWaiting)
             {
                 // Console print that there is a car waiting
-                Console.WriteLine("Car Already waiting - Removing Vehicle");
+                Console.WriteLine("Vehicle Already waiting - Removing Vehicle");
                 // Return the carinfo prior to editing
                 return curlblCarInfo;
             }
@@ -296,18 +317,17 @@ namespace GasStationForms
                 // Variable declarations for ease of access
                 string brand = RandomManufacturer();
                 string vehType = VehicleType(brand);
-                string fuelType = Fuel.GenerateFuelText(brand);
+                string fuelType = Fuel.GenerateFuelText();
+
+                Console.WriteLine(vehicleType);
 
                 carToBeServiced = new string[] { brand, vehType, fuelType };
-
-                Console.WriteLine(carToBeServiced);
-                // Console print the brand for debugging purposes
-                Console.WriteLine(brand);
-
+                
                 // Car waiting
                 CreateLog(brand, vehType, fuelType);
 
                 // return the brand, vehicle type and fueltype in a string
+                driveOffTimer.Start();
                 return $"Where should a {brand} {vehType} with {fuelType} fuel go? Please click the pump number.";
             }
         }
@@ -378,7 +398,7 @@ namespace GasStationForms
         /// <summary>
         /// Generates a random number and then matches it with Car, Van or HGV
         /// </summary>
-        /// <param name="brand">The manufacturer of the Vehicle</param>
+        /// <param name="brand">The type of the Vehicle</param>
         /// <returns></returns>
         static string VehicleType(string brand)
         {
@@ -522,6 +542,7 @@ namespace GasStationForms
             btnPumpEight.Enabled = false;
             btnPumpNine.Enabled = false;
         }
-#endregion 
+        #endregion
+        
     }
 }

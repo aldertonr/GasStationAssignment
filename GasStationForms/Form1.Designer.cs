@@ -61,17 +61,17 @@
             this.pumpSevenTimer = new System.Windows.Forms.Timer(this.components);
             this.pumpEightTimer = new System.Windows.Forms.Timer(this.components);
             this.pumpNineTimer = new System.Windows.Forms.Timer(this.components);
-            this.lblLitresDispensed = new System.Windows.Forms.Label();
             this.lblTakings = new System.Windows.Forms.Label();
             this.lblCommision = new System.Windows.Forms.Label();
             this.carSpawnedTimer = new System.Windows.Forms.Timer(this.components);
+            this.driveOffTimer = new System.Windows.Forms.Timer(this.components);
+            this.lblPetrolDispensed = new System.Windows.Forms.Label();
+            this.lblDieselDispensed = new System.Windows.Forms.Label();
+            this.lblLpgDispensed = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnPumpOne
             // 
-            this.btnPumpOne.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPumpOne.Enabled = false;
             this.btnPumpOne.Location = new System.Drawing.Point(78, 58);
             this.btnPumpOne.Name = "btnPumpOne";
@@ -87,16 +87,13 @@
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(400, 30);
+            this.lblTitle.Size = new System.Drawing.Size(539, 30);
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "Petrol Somewhat Unlimited M25";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnPumpTwo
             // 
-            this.btnPumpTwo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPumpTwo.Enabled = false;
             this.btnPumpTwo.Location = new System.Drawing.Point(159, 58);
             this.btnPumpTwo.Name = "btnPumpTwo";
@@ -109,9 +106,6 @@
             // 
             // btnPumpThree
             // 
-            this.btnPumpThree.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPumpThree.Enabled = false;
             this.btnPumpThree.Location = new System.Drawing.Point(240, 58);
             this.btnPumpThree.Name = "btnPumpThree";
@@ -124,9 +118,6 @@
             // 
             // btnPumpFour
             // 
-            this.btnPumpFour.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPumpFour.Enabled = false;
             this.btnPumpFour.Location = new System.Drawing.Point(78, 112);
             this.btnPumpFour.Name = "btnPumpFour";
@@ -139,9 +130,6 @@
             // 
             // btnPumpFive
             // 
-            this.btnPumpFive.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPumpFive.Enabled = false;
             this.btnPumpFive.Location = new System.Drawing.Point(159, 112);
             this.btnPumpFive.Name = "btnPumpFive";
@@ -154,9 +142,6 @@
             // 
             // btnPumpSix
             // 
-            this.btnPumpSix.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPumpSix.Enabled = false;
             this.btnPumpSix.Location = new System.Drawing.Point(240, 112);
             this.btnPumpSix.Name = "btnPumpSix";
@@ -169,9 +154,6 @@
             // 
             // btnPumpSeven
             // 
-            this.btnPumpSeven.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPumpSeven.Enabled = false;
             this.btnPumpSeven.Location = new System.Drawing.Point(78, 167);
             this.btnPumpSeven.Name = "btnPumpSeven";
@@ -184,9 +166,6 @@
             // 
             // btnPumpEight
             // 
-            this.btnPumpEight.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPumpEight.Enabled = false;
             this.btnPumpEight.Location = new System.Drawing.Point(159, 167);
             this.btnPumpEight.Name = "btnPumpEight";
@@ -199,9 +178,6 @@
             // 
             // btnPumpNine
             // 
-            this.btnPumpNine.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPumpNine.Enabled = false;
             this.btnPumpNine.Location = new System.Drawing.Point(240, 167);
             this.btnPumpNine.Name = "btnPumpNine";
@@ -214,9 +190,6 @@
             // 
             // lblPumpTwo
             // 
-            this.lblPumpTwo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPumpTwo.Location = new System.Drawing.Point(159, 42);
             this.lblPumpTwo.Name = "lblPumpTwo";
             this.lblPumpTwo.Size = new System.Drawing.Size(75, 13);
@@ -225,9 +198,6 @@
             // 
             // lblPumpOne
             // 
-            this.lblPumpOne.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPumpOne.Location = new System.Drawing.Point(78, 42);
             this.lblPumpOne.Name = "lblPumpOne";
             this.lblPumpOne.Size = new System.Drawing.Size(75, 13);
@@ -236,9 +206,6 @@
             // 
             // lblPumpThree
             // 
-            this.lblPumpThree.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPumpThree.Location = new System.Drawing.Point(240, 42);
             this.lblPumpThree.Name = "lblPumpThree";
             this.lblPumpThree.Size = new System.Drawing.Size(75, 13);
@@ -247,9 +214,6 @@
             // 
             // lblPumpFour
             // 
-            this.lblPumpFour.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPumpFour.Location = new System.Drawing.Point(78, 96);
             this.lblPumpFour.Name = "lblPumpFour";
             this.lblPumpFour.Size = new System.Drawing.Size(75, 13);
@@ -258,9 +222,6 @@
             // 
             // lblPumpFive
             // 
-            this.lblPumpFive.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPumpFive.Location = new System.Drawing.Point(159, 96);
             this.lblPumpFive.Name = "lblPumpFive";
             this.lblPumpFive.Size = new System.Drawing.Size(75, 13);
@@ -269,9 +230,6 @@
             // 
             // lblPumpSix
             // 
-            this.lblPumpSix.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPumpSix.Location = new System.Drawing.Point(240, 96);
             this.lblPumpSix.Name = "lblPumpSix";
             this.lblPumpSix.Size = new System.Drawing.Size(75, 13);
@@ -280,9 +238,6 @@
             // 
             // lblPumpSeven
             // 
-            this.lblPumpSeven.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPumpSeven.Location = new System.Drawing.Point(78, 151);
             this.lblPumpSeven.Name = "lblPumpSeven";
             this.lblPumpSeven.Size = new System.Drawing.Size(75, 13);
@@ -291,9 +246,6 @@
             // 
             // lblPumpEight
             // 
-            this.lblPumpEight.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPumpEight.Location = new System.Drawing.Point(159, 151);
             this.lblPumpEight.Name = "lblPumpEight";
             this.lblPumpEight.Size = new System.Drawing.Size(75, 13);
@@ -302,9 +254,6 @@
             // 
             // lblPumpNine
             // 
-            this.lblPumpNine.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPumpNine.Location = new System.Drawing.Point(237, 151);
             this.lblPumpNine.Name = "lblPumpNine";
             this.lblPumpNine.Size = new System.Drawing.Size(75, 13);
@@ -387,14 +336,6 @@
             this.pumpNineTimer.Tag = "pumpNine";
             this.pumpNineTimer.Tick += new System.EventHandler(this.pumpTimer_Tick);
             // 
-            // lblLitresDispensed
-            // 
-            this.lblLitresDispensed.Location = new System.Drawing.Point(30, 230);
-            this.lblLitresDispensed.Name = "lblLitresDispensed";
-            this.lblLitresDispensed.Size = new System.Drawing.Size(110, 23);
-            this.lblLitresDispensed.TabIndex = 22;
-            this.lblLitresDispensed.Text = "Litres Dispensed: ";
-            // 
             // lblTakings
             // 
             this.lblTakings.Location = new System.Drawing.Point(156, 207);
@@ -405,7 +346,7 @@
             // 
             // lblCommision
             // 
-            this.lblCommision.Location = new System.Drawing.Point(156, 230);
+            this.lblCommision.Location = new System.Drawing.Point(30, 230);
             this.lblCommision.Name = "lblCommision";
             this.lblCommision.Size = new System.Drawing.Size(120, 23);
             this.lblCommision.TabIndex = 24;
@@ -415,15 +356,46 @@
             // 
             this.carSpawnedTimer.Tick += new System.EventHandler(this.carSpawnedTimer_Tick);
             // 
+            // driveOffTimer
+            // 
+            this.driveOffTimer.Interval = 1500;
+            this.driveOffTimer.Tick += new System.EventHandler(this.driveOffTimer_Tick);
+            // 
+            // lblPetrolDispensed
+            // 
+            this.lblPetrolDispensed.Location = new System.Drawing.Point(381, 34);
+            this.lblPetrolDispensed.Name = "lblPetrolDispensed";
+            this.lblPetrolDispensed.Size = new System.Drawing.Size(158, 23);
+            this.lblPetrolDispensed.TabIndex = 25;
+            this.lblPetrolDispensed.Text = "Petrol Litres Dispensed: 12.34";
+            // 
+            // lblDieselDispensed
+            // 
+            this.lblDieselDispensed.Location = new System.Drawing.Point(381, 57);
+            this.lblDieselDispensed.Name = "lblDieselDispensed";
+            this.lblDieselDispensed.Size = new System.Drawing.Size(158, 23);
+            this.lblDieselDispensed.TabIndex = 26;
+            this.lblDieselDispensed.Text = "Diesel Litres Dispensed: 1234";
+            // 
+            // lblLpgDispensed
+            // 
+            this.lblLpgDispensed.Location = new System.Drawing.Point(381, 80);
+            this.lblLpgDispensed.Name = "lblLpgDispensed";
+            this.lblLpgDispensed.Size = new System.Drawing.Size(158, 23);
+            this.lblLpgDispensed.TabIndex = 27;
+            this.lblLpgDispensed.Text = "LPG Litres Dispensed: 1234";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(400, 338);
+            this.ClientSize = new System.Drawing.Size(539, 338);
+            this.Controls.Add(this.lblLpgDispensed);
+            this.Controls.Add(this.lblDieselDispensed);
+            this.Controls.Add(this.lblPetrolDispensed);
             this.Controls.Add(this.lblCommision);
             this.Controls.Add(this.lblTakings);
-            this.Controls.Add(this.lblLitresDispensed);
             this.Controls.Add(this.lblCarInfo);
             this.Controls.Add(this.lblVehServiced);
             this.Controls.Add(this.lblPumpNine);
@@ -488,11 +460,14 @@
         private System.Windows.Forms.Timer pumpSevenTimer;
         private System.Windows.Forms.Timer pumpEightTimer;
         private System.Windows.Forms.Timer pumpNineTimer;
-        private System.Windows.Forms.Label lblLitresDispensed;
         private System.Windows.Forms.Timer pumpOneTimer;
         private System.Windows.Forms.Label lblTakings;
         private System.Windows.Forms.Label lblCommision;
         private System.Windows.Forms.Timer carSpawnedTimer;
+        private System.Windows.Forms.Timer driveOffTimer;
+        private System.Windows.Forms.Label lblPetrolDispensed;
+        private System.Windows.Forms.Label lblDieselDispensed;
+        private System.Windows.Forms.Label lblLpgDispensed;
     }
 }
 
