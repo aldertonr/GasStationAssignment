@@ -10,9 +10,9 @@ namespace GasStationForms
         Fuel fuel = new Fuel();
 
         // Constants for the tank size in liters
-        const int CAR_TANK = 52;
-        const int VAN_TANK = 96;
-        const int HGV_TANK = 300;
+        const int CAR_TANK = 40;
+        const int VAN_TANK = 80;
+        const int HGV_TANK = 150;
 
         // float var to hold the fuelling time, which is randomly generated
         public static float fuellingTime;
@@ -32,6 +32,11 @@ namespace GasStationForms
         // Encapsulating the above variables
         public static float FlowRate { get; set; }
 
+        // Instantiating a new random class
+        static Random random = new Random();
+        static Vehicle vehicle = new Vehicle();
+        static Log log = new Log();
+
         public Pump()
         {
             
@@ -43,10 +48,6 @@ namespace GasStationForms
         /// <returns></returns>
         public static float GenerateInterval(string vehType)
         {
-            // Instantiating a new random class
-            Random random = new Random();
-            Vehicle vehicle = new Vehicle();
-
             float fuelNeeded = 0f;
             int fuelLevel = 0;
 
@@ -125,6 +126,9 @@ namespace GasStationForms
             }
             // The commision is the total takings divided by 100 to be 1%
             commision = (decimal)totalTakings / 100;
+
+            log.CreateLog($"LITRES THIS TRANSACTION: {litresDispensedThisTransaction} | TAKINGS: {totalTakings} | COMMISSION: {commision}");
+
         }
 
     }

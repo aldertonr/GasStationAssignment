@@ -24,7 +24,8 @@ namespace GasStationForms
         // Array of strings to hold the vehicles waiting and their information
         public string[] vehiclesWaiting;
 
-        // Instatiating a new Vehicle, Fuel and pump class object
+        // Instatiating a new Log, Vehicle, Fuel and pump class object
+        static Log log = new Log();
         private Vehicle vehicle = new Vehicle();
         private Fuel fuel = new Fuel();
         private Pump pump = new Pump();
@@ -91,8 +92,8 @@ namespace GasStationForms
             }
             
             // Writes the type of vehicle, fuel and which pump it was fulled at
-            CreateLog(carToBeServiced[0], carToBeServiced[1], carToBeServiced[2], (string)activeTimer.Tag,  true);
-            CreateFuellingLog(carToBeServiced[1], Pump.litresDispensedThisTransaction, (string)activeTimer.Tag);
+            log.CreateStatusLog(carToBeServiced[0], carToBeServiced[1], carToBeServiced[2], (string)activeTimer.Tag,  true);
+            log.CreateFuellingLog(carToBeServiced[1], Pump.litresDispensedThisTransaction, (string)activeTimer.Tag);
             
             // Switch of activePump
             switch (activePump)
@@ -159,7 +160,9 @@ namespace GasStationForms
             // Stop the timer so it doesn't keep happening
             driveOffTimer.Stop();
             // Print to the console that the car got bored
+
             Console.WriteLine("Vehicle got bored of waiting and drove off");
+            log.CreateDriveOffLog();
             // Set the lblCarInfo to be empty
             lblCarInfo.Text = "Waiting for a vehicle to arrive";
             // Set the carWaiting boolean to be false to indicate there is no car
@@ -243,7 +246,7 @@ namespace GasStationForms
                 carWaiting = false;
             } else
             {
-                CreateLog(carToBeServiced[0], carToBeServiced[1], carToBeServiced[2], (string)activeButton.Tag, false);
+                log.CreateStatusLog(carToBeServiced[0], carToBeServiced[1], carToBeServiced[2], (string)activeButton.Tag, false);
                 // Save the current car value
                 curlblCarInfo = lblCarInfo.Text;
                 // Let the user know that the pump is occupied
@@ -418,6 +421,9 @@ namespace GasStationForms
             {
                 // Console print that there is a car waiting
                 Console.WriteLine("Vehicle Already waiting - Removing Vehicle");
+
+                Console.WriteLine(curlblCarInfo);
+
                 // Return the carinfo prior to editing
                 return curlblCarInfo;
             }
@@ -431,7 +437,7 @@ namespace GasStationForms
                 carToBeServiced = new string[] { brand, vehType, fuelType, Convert.ToString(currentFuelLevel)};
                 
                 // Car waiting
-                CreateLog(brand, vehType, fuelType);
+                log.CreateArrivedLog(brand, vehType, fuelType);
                 
                 // Calls the wait time generator method
                 WaitTimerGenerator();
@@ -497,6 +503,7 @@ namespace GasStationForms
                     break;
                 default:
                     Console.WriteLine("Random Number generated {0}, not valid response", randomNum);
+                    log.CreateErrorLog($"Random number generated {randomNum}, not a valid response");
                     break;
             }
 
@@ -545,75 +552,12 @@ namespace GasStationForms
                     break;
                 default:
                     Console.WriteLine("Brand {0} is not recognised - Error", brand);
+                    log.CreateErrorLog($"Brand {brand} is not recognised");
                     break;
             }
 
             return vehicleType;
         }
-
-        #region Log Creation
-
-        void CreateFuellingLog(string vehType, float litresDispensed, string pump)
-        {
-            string logLines = "";
-            logLines = $"{DateTime.Now}: FUELLED: {vehType} with {litresDispensed} litres at {pump}";
-
-            try
-            {
-                System.IO.File.AppendAllText("log.txt", logLines + Environment.NewLine);
-            } catch (Exception e)
-            {
-                Console.WriteLine("EXCEPTION " + e);
-            }
-        }
-
-        void CreateLog(string brand, string vehType, string fuel)
-        {
-            string logLines = "";
-            
-            
-            logLines = $"{DateTime.Now}: ARRIVED: {brand} {vehType} with {fuel}, Waiting to be serviced";
-        
-            try
-            {
-                System.IO.File.AppendAllText("log.txt", logLines + Environment.NewLine);
-            } catch (Exception e)
-            {
-                Console.WriteLine("EXCEPTION: " + e);
-            }
-            
-        }
-
-        // TODO: Vehicle Drive off log
-
-        /// <summary>
-        /// Used to create a log if the car has been fuelled or sent to an occupied pump
-        /// </summary>
-        /// <param name="brand"></param>
-        /// <param name="vehType"></param>
-        /// <param name="fuel"></param>
-        /// <param name="pump">The Pump number</param>
-        void CreateLog(string brand, string vehType, string fuel, string pump, bool fuelled)
-        {
-            string logLines = "";
-
-            switch (fuelled)
-            {
-                case true:
-                    logLines = $"{DateTime.Now}: FUELLED: {brand} {vehType} with {fuel} fuel has been fuelled at {pump}";
-                    break;
-                case false:
-                    logLines = $"{DateTime.Now}: OCCUPIED PUMP: {brand} {vehType} with {fuel} fuel at {pump}";
-                    break;
-                default:
-                    Console.WriteLine("CreateLog Params incorrect");
-                    break;
-            }
-
-            System.IO.File.AppendAllText("log.txt", logLines + Environment.NewLine);
-
-        }
-        #endregion
 
         #region Enable/Disable Pumps
         /// <summary>

@@ -28,25 +28,27 @@ namespace GasStationForms
         {
             
             Random random = new Random();
-            int fuel = random.Next(2); // Switch between 0 and 1
+            int fuel = random.Next(1,3); // Switch between 0 and 1
             string fuelText = "";
 
-            if(Form1.vehicleType == "HGV")
+            switch (Form1.vehicleType)
             {
-                fuel = 2;
-                fuelText = "LPG"; 
-            } else if (Form1.vehicleType == "Car" || Form1.vehicleType == "Van")
-            {
-                if(fuel == 0)
-                {
-                    fuelText = "Unleaded";
-                } else if(fuel == 1)
-                {
+                case "HGV":
                     fuelText = "Diesel";
-                }
-            } else 
-            {
-                Console.WriteLine("Fuel Error");
+                    break;
+                case "Van":
+                    if (fuel == 1) fuelText = "Diesel";
+                    else if (fuel == 2) fuelText = "LPG";
+                    break;
+                case "Car":
+                    fuel = random.Next(3);
+                    if (fuel == 0) fuelText = "Unleaded";
+                    else if (fuel == 1) fuelText = "Diesel";
+                    else if (fuel == 2) fuelText = "LPG";
+                    break;
+                default:
+                    Console.WriteLine("Error");
+                    break;
             }
             
             return fuelText;
