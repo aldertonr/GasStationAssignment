@@ -30,7 +30,7 @@ namespace GasStationForms
         private Pump pump = new Pump();
 
         // Private strings to hold the caronPump info
-        private string carOnPumpOne,
+        private string[] carOnPumpOne,
                 carOnPumpTwo,
                 carOnPumpThree,
                 carOnPumpFour,
@@ -39,7 +39,7 @@ namespace GasStationForms
                 carOnPumpSeven,
                 carOnPumpEight,
                 carOnPumpNine;
-
+        
         #region TickEvents
 
         /// <summary>
@@ -57,36 +57,36 @@ namespace GasStationForms
 
             // Stop the timer for that event
             activeTimer.Stop();
-
+            
             // Switch statement to decide what fuel to dispense
             switch ((string)activeTimer.Tag)
             {
                 case "pumpOne":
-                    Pump.DispenseFuel(carOnPumpOne);
+                    Pump.DispenseFuel(carOnPumpOne[1], carOnPumpOne[2]);
                     break;
                 case "pumpTwo":
-                    Pump.DispenseFuel(carOnPumpTwo);
+                    Pump.DispenseFuel(carOnPumpTwo[1], carOnPumpTwo[2]);
                     break;
                 case "pumpThree":
-                    Pump.DispenseFuel(carOnPumpThree);
+                    Pump.DispenseFuel(carOnPumpThree[1], carOnPumpThree[2]);
                     break;
                 case "pumpFour":
-                    Pump.DispenseFuel(carOnPumpFour);
+                    Pump.DispenseFuel(carOnPumpFour[1], carOnPumpFour[2]);
                     break;
                 case "pumpFive":
-                    Pump.DispenseFuel(carOnPumpFive);
+                    Pump.DispenseFuel(carOnPumpFive[1], carOnPumpFive[2]);
                     break;
                 case "pumpSix":
-                    Pump.DispenseFuel(carOnPumpSix);
+                    Pump.DispenseFuel(carOnPumpSix[1], carOnPumpSix[2]);
                     break;
                 case "pumpSeven":
-                    Pump.DispenseFuel(carOnPumpSeven);
+                    Pump.DispenseFuel(carOnPumpSeven[1], carOnPumpSeven[2]);
                     break;
                 case "pumpEight":
-                    Pump.DispenseFuel(carOnPumpEight);
+                    Pump.DispenseFuel(carOnPumpEight[1], carOnPumpEight[2]);
                     break;
                 case "pumpNine":
-                    Pump.DispenseFuel(carOnPumpNine);
+                    Pump.DispenseFuel(carOnPumpNine[1], carOnPumpNine[2]);
                     break;
             }
             
@@ -134,9 +134,7 @@ namespace GasStationForms
             lblTakings.Text = $"Total Takings: {Pump.totalTakings}";
             // Refresh the display
             DisplayRefresh();
-
-            // TODO: REMOVE THIS AFTER TESTING
-            Console.WriteLine($"{activePump} elapsed");
+            
         }
 
         private void runtimeTimer_Tick(object sender, EventArgs e)
@@ -176,36 +174,36 @@ namespace GasStationForms
         /// <param name="pump">The relevant Pump number</param>
         void carOnPump(string pump)
         {
-            Console.WriteLine($"{pump} Clicked");
 
             switch (pump)
             {
                 case "pumpOne":
-                    carOnPumpOne = carToBeServiced[2];
+                    
+                    carOnPumpOne = new string[] { carToBeServiced[0], carToBeServiced[1], carToBeServiced[2] };
                     break;
                 case "pumpTwo":
-                    carOnPumpTwo = carToBeServiced[2];
+                    carOnPumpTwo = new string[] { carToBeServiced[0], carToBeServiced[1], carToBeServiced[2] };
                     break;
                 case "pumpThree":
-                    carOnPumpThree = carToBeServiced[2];
+                    carOnPumpThree = new string[] { carToBeServiced[0], carToBeServiced[1], carToBeServiced[2] };
                     break;
                 case "pumpFour":
-                    carOnPumpFour = carToBeServiced[2];
+                    carOnPumpFour = new string[] { carToBeServiced[0], carToBeServiced[1], carToBeServiced[2] };
                     break;
                 case "pumpFive":
-                    carOnPumpFive = carToBeServiced[2];
+                    carOnPumpFive = new string[] { carToBeServiced[0], carToBeServiced[1], carToBeServiced[2] };
                     break;
                 case "pumpSix":
-                    carOnPumpSix = carToBeServiced[2];
+                    carOnPumpSix = new string[] { carToBeServiced[0], carToBeServiced[1], carToBeServiced[2] };
                     break;
                 case "pumpSeven":
-                    carOnPumpSeven = carToBeServiced[2];
+                    carOnPumpSeven = new string[] { carToBeServiced[0], carToBeServiced[1], carToBeServiced[2] };
                     break;
                 case "pumpEight":
-                    carOnPumpEight = carToBeServiced[2];
+                    carOnPumpEight = new string[] { carToBeServiced[0], carToBeServiced[1], carToBeServiced[2] };
                     break;
                 case "pumpNine":
-                    carOnPumpNine = carToBeServiced[2];
+                    carOnPumpNine = new string[] { carToBeServiced[0], carToBeServiced[1], carToBeServiced[2] };
                     break;
                 default:
                     Console.WriteLine("ERROR: Incorrect pump Supplied");
@@ -268,48 +266,49 @@ namespace GasStationForms
                 // If the tag is pumpOne etc, then do the following code;
                 case "pumpOne":
                     // Start the timer
-                    pumpOneTimer.Interval = (int)Pump.GenerateInterval();
+                    pumpOneTimer.Interval = (int)Pump.GenerateInterval(carOnPumpOne[1]);
                     pumpOneTimer.Start();
                     // Print to console which timer has been started
                     Console.WriteLine($"{activeTimer} started");
                     break;
                 case "pumpTwo":
-                    pumpTwoTimer.Interval = (int)Pump.GenerateInterval();
+                    pumpTwoTimer.Interval = (int)Pump.GenerateInterval(carOnPumpTwo[1]);
                     pumpTwoTimer.Start();
                     Console.WriteLine($"{activeTimer} started");
                     break;
                 case "pumpThree":
-                    pumpThreeTimer.Interval = (int)Pump.GenerateInterval();
+                    pumpThreeTimer.Interval = (int)Pump.GenerateInterval(carOnPumpThree[1]);
                     pumpThreeTimer.Start();
                     Console.WriteLine($"{activeTimer} started");
                     break;
                 case "pumpFour":
-                    pumpFourTimer.Interval = (int)Pump.GenerateInterval();
+                    pumpFourTimer.Interval = (int)Pump.GenerateInterval(carOnPumpFour[1]);
                     pumpFourTimer.Start();
                     Console.WriteLine($"{activeTimer} started");
                     break;
                 case "pumpFive":
-                    pumpFiveTimer.Interval = (int)Pump.GenerateInterval();
+                    pumpFiveTimer.Interval = (int)Pump.GenerateInterval(carOnPumpFive[1]);
                     pumpFiveTimer.Start();
                     Console.WriteLine($"{activeTimer} started");
                     break;
                 case "pumpSix":
-                    pumpSixTimer.Interval = (int)Pump.GenerateInterval();
+                    pumpSixTimer.Interval = (int)Pump.GenerateInterval(carOnPumpSix[1]);
                     pumpSixTimer.Start();
                     Console.WriteLine($"{activeTimer} started");
                     break;
                 case "pumpSeven":
-                    pumpSevenTimer.Interval = (int)Pump.GenerateInterval();
+                    pumpSevenTimer.Interval = (int)Pump.GenerateInterval(carOnPumpSeven[1]);
                     pumpSevenTimer.Start();
                     Console.WriteLine($"{activeTimer} started");
                     break;
+                    
                 case "pumpEight":
-                    pumpEightTimer.Interval = (int)Pump.GenerateInterval();
+                    pumpEightTimer.Interval = (int)Pump.GenerateInterval(carOnPumpEight[1]);
                     pumpEightTimer.Start();
                     Console.WriteLine($"{activeTimer} started");
                     break;
                 case "pumpNine":
-                    pumpNineTimer.Interval = (int)Pump.GenerateInterval();
+                    pumpNineTimer.Interval = (int)Pump.GenerateInterval(carOnPumpNine[1]);
                     pumpNineTimer.Start();
                     Console.WriteLine($"{activeTimer} started");
                     break;
@@ -397,8 +396,7 @@ namespace GasStationForms
 
             // Creates an integer to hold the next random integer between 1 and 2 seconds
             int rndInterval = random.Next(1000, 2000);
-
-            Console.WriteLine($"Driveoff Interval: {rndInterval}");
+            
             // set the driveofftimer to be the random generated numbers
             driveOffTimer.Interval = rndInterval;
 
@@ -428,11 +426,9 @@ namespace GasStationForms
                 string brand = RandomManufacturer();
                 string vehType = VehicleType(brand);
                 string fuelType = Fuel.GenerateFuelText();
-                float currentFuelLevel = 
-
-                Console.WriteLine(vehicleType);
-
-                carToBeServiced = new string[] { brand, vehType, fuelType };
+                float currentFuelLevel = vehicle.GenerateFuelLevel(vehType);
+                
+                carToBeServiced = new string[] { brand, vehType, fuelType, Convert.ToString(currentFuelLevel)};
                 
                 // Car waiting
                 CreateLog(brand, vehType, fuelType);
@@ -521,61 +517,31 @@ namespace GasStationForms
 
             // Getting a random int between 0 and 2
             int random = rand.Next(2);
-            // Writing the value of random to the console
-            Console.WriteLine(random);
 
             // Switch for selecting vehicle types based on the decided manufacturer
             switch (brand)
             {
                 case "Ford":
                     // random generated numbers decide if car or van
-                    if (random == 0)
-                    {
-                        vehicleType = "Car";
-                        vehicle.TankSize = 50f;
-                    }
-                    if (random == 1)
-                    {
-                        vehicleType = "Van";
-                        vehicle.TankSize = 95f;
-                    }
-                      
+                    if (random == 0) vehicleType = "Car";
+                    if (random == 1) vehicleType = "Van"; 
                     break;
                 case "Vauxhall":
-                    if (random == 0)
-                    {
-                        vehicleType = "Car";
-                        vehicle.TankSize = 50f;
-                    }
-                    if (random == 1)
-                    {
-                        vehicleType = "Van";
-                        vehicle.TankSize = 95f;
-                    }
+                    if (random == 0) vehicleType = "Car";
+                    if (random == 1) vehicleType = "Van";
                     break;
                 case "BMW":
-                    if (random == 0)
-                    {
-                        vehicleType = "Car";
-                        vehicle.TankSize = 50f;
-                    }
-                    if (random == 1)
-                    {
-                        vehicleType = "Van";
-                        vehicle.TankSize = 95f;
-                    }
+                    if (random == 0) vehicleType = "Car";
+                    if (random == 1) vehicleType = "Van";
                     break;
                 case "Scania":
                     vehicleType = "HGV";
-                    vehicle.TankSize = 300f;
                     break;
                 case "Volvo":
                     vehicleType = "HGV";
-                    vehicle.TankSize = 300f;
                     break;
                 case "Iveco":
                     vehicleType = "HGV";
-                    vehicle.TankSize = 300f;
                     break;
                 default:
                     Console.WriteLine("Brand {0} is not recognised - Error", brand);
@@ -605,10 +571,8 @@ namespace GasStationForms
         {
             string logLines = "";
             
-            // REMOVE THIS
-            Console.WriteLine("Log.txt created!");
             
-                    logLines = $"{DateTime.Now}: ARRIVED: {brand} {vehType} with {fuel}, Waiting to be serviced";
+            logLines = $"{DateTime.Now}: ARRIVED: {brand} {vehType} with {fuel}, Waiting to be serviced";
         
             try
             {
@@ -632,8 +596,6 @@ namespace GasStationForms
         void CreateLog(string brand, string vehType, string fuel, string pump, bool fuelled)
         {
             string logLines = "";
-            // REMOVE THIS
-            Console.WriteLine("Log line has been created with pump");
 
             switch (fuelled)
             {

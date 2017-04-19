@@ -8,10 +8,10 @@ namespace GasStationForms
 {
     public class Vehicle
     {
-        // Constants for the tank size in liters
-        public const int CAR_TANK = 52;
-        const int VAN_TANK = 96;
-        const int HGV_TANK = 300;
+        // Constants for the tank size
+        const float CAR_TANK = 50f;
+        const float VAN_TANK = 95f;
+        const float HGV_TANK = 300f;
 
         // Public arrays: must be public due to accessibility
         public string[] manufacturer;
@@ -22,7 +22,6 @@ namespace GasStationForms
         private string vehicleType;
         private float tankSize; // in Litres
         private float currentFuel; // in Litres
-        private int currentFuelLvl;
 
         // The encapsulation property for the above variables
         public string ManufacturerText
@@ -73,18 +72,8 @@ namespace GasStationForms
                 currentFuel = value;
             }
         }
-        public int CurrentFuelLvl
-        {
-            get
-            {
-                return currentFuelLvl;
-            }
 
-            set
-            {
-                currentFuelLvl = value;
-            }
-        }
+        // TODO: Implement different classes (car, van, HGV)?
 
         public Vehicle()
         {
@@ -96,34 +85,37 @@ namespace GasStationForms
         {
             this.ManufacturerText = manufacturer;
             this.VehicleType = vehType;
+
         }
 
-        public int GenerateFuelLevel(string vehType)
+        public float GenerateFuelLevel(string vehType)
         {
             Random random = new Random();
-            
+
+            float currentFuelLvl;
+            float tankSize;
+
             switch (vehType)
             {
                 case "Car":
-                    CurrentFuelLvl = random.Next(1, CAR_TANK / 4);
-                    Console.WriteLine($"Current fuel level of the car is: {CurrentFuelLvl}");
-                   break;
+                    int currentFuelLvl = random.Next();
+                    break;
                 case "Van":
-                    CurrentFuelLvl = random.Next(1, VAN_TANK / 4);
-                    Console.WriteLine($"Current fuel level of the car is: {CurrentFuelLvl}");
                     break;
                 case "HGV":
-                    CurrentFuelLvl = random.Next(1, HGV_TANK / 4);
-                    Console.WriteLine($"Current fuel level of the car is: {CurrentFuelLvl}");
                     break;
                 default:
-                    Console.WriteLine("ERROR: Vehicle type not recognised");
-                    CurrentFuelLvl = 0;
                     break;
             }
 
+
+
+            // Random int with the ceiling of 25% of the tank size
+            
+            
+
             return currentFuelLvl;
         }
-        
+
     }
 }
