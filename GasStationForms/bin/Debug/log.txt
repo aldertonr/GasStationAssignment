@@ -456,3 +456,6 @@
 19/04/2017 15:05:25: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
 19/04/2017 15:05:27: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
 19/04/2017 15:05:29: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+19/04/2017 15:18:55: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+19/04/2017 15:18:57: ARRIVED: Volvo HGV with LPG, Waiting to be serviced
+19/04/2017 15:19:01: ARRIVED: Volvo HGV with LPG, Waiting to be serviced

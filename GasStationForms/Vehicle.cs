@@ -8,10 +8,65 @@ namespace GasStationForms
 {
     public class Vehicle
     {
+        // Public arrays: must be public due to accessibility
         public string[] manufacturer;
-        public string manufacturerText;
         public string[] vehType;
-        public string vehicleType;
+
+        // Private (but encapsulated) string variables
+        private string manufacturerText;
+        private string vehicleType;
+        private float tankSize; // in Litres
+        private float currentFuel; // in Litres
+
+        // The encapsulation property for the above variables
+        public string ManufacturerText
+        {
+            get
+            {
+                return manufacturerText;
+            }
+
+            set
+            {
+                manufacturerText = value;
+            }
+        }
+        public string VehicleType
+        {
+            get
+            {
+                return vehicleType;
+            }
+
+            set
+            {
+                vehicleType = value;
+            }
+        }
+        public float TankSize
+        {
+            get
+            {
+                return tankSize;
+            }
+
+            set
+            {
+                tankSize = value;
+            }
+        }
+        public float CurrentFuel
+        {
+            get
+            {
+                return currentFuel;
+            }
+
+            set
+            {
+                currentFuel = value;
+            }
+        }
 
         // TODO: Implement different classes (car, van, HGV)?
 
@@ -23,9 +78,21 @@ namespace GasStationForms
 
         public Vehicle(string manufacturer, string vehType)
         {
-            this.manufacturerText = manufacturer;
-            this.vehicleType = vehType;
+            this.ManufacturerText = manufacturer;
+            this.VehicleType = vehType;
 
         }
+
+        public float GenerateFuelLevel(string vehType)
+        {
+            float currentFuelLvl = 0f;
+            float tankSize;
+            Random random = new Random();
+
+            
+
+            return currentFuelLvl;
+        }
+
     }
 }

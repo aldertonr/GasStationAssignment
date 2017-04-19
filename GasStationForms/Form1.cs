@@ -367,6 +367,7 @@ namespace GasStationForms
 
         }
 
+        #region Timer interval generators
         /// <summary>
         /// Generates the random integer for the timer interval
         /// </summary>
@@ -391,14 +392,20 @@ namespace GasStationForms
         /// </summary>
         void WaitTimerGenerator()
         {
+            // Instantiates a new random class
             Random random = new Random();
 
+            // Creates an integer to hold the next random integer between 1 and 2 seconds
             int rndInterval = random.Next(1000, 2000);
 
+            Console.WriteLine($"Driveoff Interval: {rndInterval}");
+            // set the driveofftimer to be the random generated numbers
             driveOffTimer.Interval = rndInterval;
 
-            carSpawnedTimer.Start()
+            // Starts the drive off timer
+            driveOffTimer.Start();
         }
+        #endregion
         
         /// <summary>
         /// Generates a car with all the information
@@ -421,6 +428,7 @@ namespace GasStationForms
                 string brand = RandomManufacturer();
                 string vehType = VehicleType(brand);
                 string fuelType = Fuel.GenerateFuelText();
+                float currentFuelLevel = 
 
                 Console.WriteLine(vehicleType);
 
@@ -428,9 +436,11 @@ namespace GasStationForms
                 
                 // Car waiting
                 CreateLog(brand, vehType, fuelType);
+                
+                // Calls the wait time generator method
+                WaitTimerGenerator();
 
                 // return the brand, vehicle type and fueltype in a string
-                driveOffTimer.Start();
                 return $"Where should a {brand} {vehType} with {fuelType} fuel go? Please click the pump number.";
             }
         }
@@ -505,7 +515,7 @@ namespace GasStationForms
         /// <returns></returns>
         static string VehicleType(string brand)
         {
-
+            Vehicle vehicle = new Vehicle();
             // Instatiating a new Random
             Random rand = new Random();
 
@@ -519,25 +529,53 @@ namespace GasStationForms
             {
                 case "Ford":
                     // random generated numbers decide if car or van
-                    if (random == 0) vehicleType = "Car";
-                    if (random == 1) vehicleType = "Van";
+                    if (random == 0)
+                    {
+                        vehicleType = "Car";
+                        vehicle.TankSize = 50f;
+                    }
+                    if (random == 1)
+                    {
+                        vehicleType = "Van";
+                        vehicle.TankSize = 95f;
+                    }
+                      
                     break;
                 case "Vauxhall":
-                    if (random == 0) vehicleType = "Car";
-                    if (random == 1) vehicleType = "Van";
+                    if (random == 0)
+                    {
+                        vehicleType = "Car";
+                        vehicle.TankSize = 50f;
+                    }
+                    if (random == 1)
+                    {
+                        vehicleType = "Van";
+                        vehicle.TankSize = 95f;
+                    }
                     break;
                 case "BMW":
-                    if (random == 0) vehicleType = "Car";
-                    if (random == 1) vehicleType = "Van";
+                    if (random == 0)
+                    {
+                        vehicleType = "Car";
+                        vehicle.TankSize = 50f;
+                    }
+                    if (random == 1)
+                    {
+                        vehicleType = "Van";
+                        vehicle.TankSize = 95f;
+                    }
                     break;
                 case "Scania":
                     vehicleType = "HGV";
+                    vehicle.TankSize = 300f;
                     break;
                 case "Volvo":
                     vehicleType = "HGV";
+                    vehicle.TankSize = 300f;
                     break;
                 case "Iveco":
                     vehicleType = "HGV";
+                    vehicle.TankSize = 300f;
                     break;
                 default:
                     Console.WriteLine("Brand {0} is not recognised - Error", brand);
