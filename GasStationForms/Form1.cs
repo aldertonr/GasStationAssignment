@@ -28,7 +28,18 @@ namespace GasStationForms
         private Vehicle vehicle = new Vehicle();
         private Fuel fuel = new Fuel();
         private Pump pump = new Pump();
-        
+
+        // Private strings to hold the caronPump info
+        private string carOnPumpOne,
+                carOnPumpTwo,
+                carOnPumpThree,
+                carOnPumpFour,
+                carOnPumpFive,
+                carOnPumpSix,
+                carOnPumpSeven,
+                carOnPumpEight,
+                carOnPumpNine;
+
         #region TickEvents
 
         /// <summary>
@@ -47,7 +58,37 @@ namespace GasStationForms
             // Stop the timer for that event
             activeTimer.Stop();
 
-            Pump.DispenseFuel(carToBeServiced[2]);
+            // Switch statement to decide what fuel to dispense
+            switch ((string)activeTimer.Tag)
+            {
+                case "pumpOne":
+                    Pump.DispenseFuel(carOnPumpOne);
+                    break;
+                case "pumpTwo":
+                    Pump.DispenseFuel(carOnPumpTwo);
+                    break;
+                case "pumpThree":
+                    Pump.DispenseFuel(carOnPumpThree);
+                    break;
+                case "pumpFour":
+                    Pump.DispenseFuel(carOnPumpFour);
+                    break;
+                case "pumpFive":
+                    Pump.DispenseFuel(carOnPumpFive);
+                    break;
+                case "pumpSix":
+                    Pump.DispenseFuel(carOnPumpSix);
+                    break;
+                case "pumpSeven":
+                    Pump.DispenseFuel(carOnPumpSeven);
+                    break;
+                case "pumpEight":
+                    Pump.DispenseFuel(carOnPumpEight);
+                    break;
+                case "pumpNine":
+                    Pump.DispenseFuel(carOnPumpNine);
+                    break;
+            }
             
             // Writes the type of vehicle, fuel and which pump it was fulled at
             CreateLog(carToBeServiced[0], carToBeServiced[1], carToBeServiced[2], (string)activeTimer.Tag,  true);
@@ -130,6 +171,50 @@ namespace GasStationForms
         #endregion
 
         /// <summary>
+        /// Stores the fuel type for each pump
+        /// </summary>
+        /// <param name="pump">The relevant Pump number</param>
+        void carOnPump(string pump)
+        {
+            Console.WriteLine($"{pump} Clicked");
+
+            switch (pump)
+            {
+                case "pumpOne":
+                    carOnPumpOne = carToBeServiced[2];
+                    break;
+                case "pumpTwo":
+                    carOnPumpTwo = carToBeServiced[2];
+                    break;
+                case "pumpThree":
+                    carOnPumpThree = carToBeServiced[2];
+                    break;
+                case "pumpFour":
+                    carOnPumpFour = carToBeServiced[2];
+                    break;
+                case "pumpFive":
+                    carOnPumpFive = carToBeServiced[2];
+                    break;
+                case "pumpSix":
+                    carOnPumpSix = carToBeServiced[2];
+                    break;
+                case "pumpSeven":
+                    carOnPumpSeven = carToBeServiced[2];
+                    break;
+                case "pumpEight":
+                    carOnPumpEight = carToBeServiced[2];
+                    break;
+                case "pumpNine":
+                    carOnPumpNine = carToBeServiced[2];
+                    break;
+                default:
+                    Console.WriteLine("ERROR: Incorrect pump Supplied");
+                    break;
+            }
+
+        }
+
+        /// <summary>
         /// Pump Button Clicked event handler
         /// </summary>
         /// <param name="sender"></param>
@@ -139,9 +224,14 @@ namespace GasStationForms
             // Declaring a button and casting the object sender to a button
             Button activeButton = ((Button)sender);
 
+            // Call the carOnPump method and cast the activeButton.tag to int
+            carOnPump((string)activeButton.Tag);
+
             // If the pump is free
             if (!CheckPumpBusy(activeButton.Text)) {
                 // TODO: Implement a caronPump thing for the log
+
+                carOnPump((string)activeButton.Tag);
 
                 // Change the text of the button to be occupied
                 activeButton.Text = "Occupied";
@@ -293,8 +383,21 @@ namespace GasStationForms
             carSpawnedTimer.Interval = rndInterval;
 
             // Start the carSpawnedTimer
-            carSpawnedTimer.Start();
-            
+            carSpawnedTimer.Start();   
+        }
+
+        /// <summary>
+        /// Generates the random integer for the timer interval
+        /// </summary>
+        void WaitTimerGenerator()
+        {
+            Random random = new Random();
+
+            int rndInterval = random.Next(1000, 2000);
+
+            driveOffTimer.Interval = rndInterval;
+
+            carSpawnedTimer.Start()
         }
         
         /// <summary>

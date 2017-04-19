@@ -44,7 +44,7 @@ namespace GasStationForms
                 {
                     fuelText = "Diesel";
                 }
-            } else
+            } else 
             {
                 Console.WriteLine("Fuel Error");
             }
