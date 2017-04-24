@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// Author: Ryan Alderton
+// SID: 1609275
+
+using System;
 
 namespace GasStationForms
 {

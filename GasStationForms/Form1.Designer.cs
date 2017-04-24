@@ -68,6 +68,11 @@
             this.lblPetrolDispensed = new System.Windows.Forms.Label();
             this.lblDieselDispensed = new System.Windows.Forms.Label();
             this.lblLpgDispensed = new System.Windows.Forms.Label();
+            this.lblQueueOne = new System.Windows.Forms.Label();
+            this.lblQueueTwo = new System.Windows.Forms.Label();
+            this.lblQueueThree = new System.Windows.Forms.Label();
+            this.lblQueueFour = new System.Windows.Forms.Label();
+            this.lblQueueFive = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnPumpOne
@@ -87,7 +92,7 @@
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(539, 30);
+            this.lblTitle.Size = new System.Drawing.Size(539, 23);
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "Petrol Somewhat Unlimited M25";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -263,7 +268,7 @@
             // lblVehServiced
             // 
             this.lblVehServiced.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblVehServiced.Location = new System.Drawing.Point(30, 207);
+            this.lblVehServiced.Location = new System.Drawing.Point(30, 210);
             this.lblVehServiced.Name = "lblVehServiced";
             this.lblVehServiced.Size = new System.Drawing.Size(123, 23);
             this.lblVehServiced.TabIndex = 20;
@@ -338,7 +343,7 @@
             // 
             // lblTakings
             // 
-            this.lblTakings.Location = new System.Drawing.Point(156, 207);
+            this.lblTakings.Location = new System.Drawing.Point(156, 210);
             this.lblTakings.Name = "lblTakings";
             this.lblTakings.Size = new System.Drawing.Size(110, 23);
             this.lblTakings.TabIndex = 23;
@@ -346,7 +351,7 @@
             // 
             // lblCommision
             // 
-            this.lblCommision.Location = new System.Drawing.Point(30, 230);
+            this.lblCommision.Location = new System.Drawing.Point(30, 233);
             this.lblCommision.Name = "lblCommision";
             this.lblCommision.Size = new System.Drawing.Size(120, 23);
             this.lblCommision.TabIndex = 24;
@@ -385,12 +390,53 @@
             this.lblLpgDispensed.TabIndex = 27;
             this.lblLpgDispensed.Text = "LPG Litres Dispensed: 1234";
             // 
+            // lblQueueOne
+            // 
+            this.lblQueueOne.Location = new System.Drawing.Point(384, 141);
+            this.lblQueueOne.Name = "lblQueueOne";
+            this.lblQueueOne.Size = new System.Drawing.Size(143, 23);
+            this.lblQueueOne.TabIndex = 28;
+            // 
+            // lblQueueTwo
+            // 
+            this.lblQueueTwo.Location = new System.Drawing.Point(384, 164);
+            this.lblQueueTwo.Name = "lblQueueTwo";
+            this.lblQueueTwo.Size = new System.Drawing.Size(143, 23);
+            this.lblQueueTwo.TabIndex = 29;
+            // 
+            // lblQueueThree
+            // 
+            this.lblQueueThree.Location = new System.Drawing.Point(384, 187);
+            this.lblQueueThree.Name = "lblQueueThree";
+            this.lblQueueThree.Size = new System.Drawing.Size(143, 23);
+            this.lblQueueThree.TabIndex = 30;
+            // 
+            // lblQueueFour
+            // 
+            this.lblQueueFour.Location = new System.Drawing.Point(384, 210);
+            this.lblQueueFour.Name = "lblQueueFour";
+            this.lblQueueFour.Size = new System.Drawing.Size(143, 23);
+            this.lblQueueFour.TabIndex = 31;
+            // 
+            // lblQueueFive
+            // 
+            this.lblQueueFive.Location = new System.Drawing.Point(384, 233);
+            this.lblQueueFive.Name = "lblQueueFive";
+            this.lblQueueFive.Size = new System.Drawing.Size(143, 23);
+            this.lblQueueFive.TabIndex = 32;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackgroundImage = global::GasStationForms.Properties.Resources.bg;
             this.ClientSize = new System.Drawing.Size(539, 338);
+            this.Controls.Add(this.lblQueueFive);
+            this.Controls.Add(this.lblQueueFour);
+            this.Controls.Add(this.lblQueueThree);
+            this.Controls.Add(this.lblQueueTwo);
+            this.Controls.Add(this.lblQueueOne);
             this.Controls.Add(this.lblLpgDispensed);
             this.Controls.Add(this.lblDieselDispensed);
             this.Controls.Add(this.lblPetrolDispensed);
@@ -468,6 +514,11 @@
         private System.Windows.Forms.Label lblPetrolDispensed;
         private System.Windows.Forms.Label lblDieselDispensed;
         private System.Windows.Forms.Label lblLpgDispensed;
+        private System.Windows.Forms.Label lblQueueOne;
+        private System.Windows.Forms.Label lblQueueTwo;
+        private System.Windows.Forms.Label lblQueueThree;
+        private System.Windows.Forms.Label lblQueueFour;
+        private System.Windows.Forms.Label lblQueueFive;
     }
 }
 

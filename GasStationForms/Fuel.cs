@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Author: Ryan Alderton
+// SID: 1609275
+
+using System;
 
 namespace GasStationForms
 {

@@ -2,6 +2,7 @@
 // SID: 1609275
 
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace GasStationForms
@@ -40,6 +41,12 @@ namespace GasStationForms
                 carOnPumpSeven,
                 carOnPumpEight,
                 carOnPumpNine;
+
+        private string waitOne = "",
+                waitTwo = "",
+                waitThree = "",
+                waitFour = "",
+                waitFive = "";
         
         #region TickEvents
 
@@ -160,13 +167,13 @@ namespace GasStationForms
             // Stop the timer so it doesn't keep happening
             driveOffTimer.Stop();
             // Print to the console that the car got bored
-
-            Console.WriteLine("Vehicle got bored of waiting and drove off");
+            
             log.CreateDriveOffLog();
             // Set the lblCarInfo to be empty
             lblCarInfo.Text = "Waiting for a vehicle to arrive";
             // Set the carWaiting boolean to be false to indicate there is no car
             carWaiting = false;
+
         }
 
         #endregion
@@ -345,6 +352,13 @@ namespace GasStationForms
             lblPetrolDispensed.Text = $"Petrol Litres Dispensed: {Pump.petrolLitresDispensed}";
             lblDieselDispensed.Text = $"Diesel Litres Dispensed: {Pump.dieselLitresDispensed}";
             lblLpgDispensed.Text = $"LPG Litres Dispensed: {Pump.lpgLitresDispensed}";
+
+            lblQueueOne.Text = waitOne;
+            lblQueueTwo.Text = waitTwo;
+            lblQueueThree.Text = waitThree;
+            lblQueueFour.Text = waitFour;
+            lblQueueFive.Text = waitFive;
+
         }
 
 
@@ -407,7 +421,7 @@ namespace GasStationForms
             driveOffTimer.Start();
         }
         #endregion
-        
+
         /// <summary>
         /// Generates a car with all the information
         /// </summary>
@@ -416,14 +430,9 @@ namespace GasStationForms
         {
             // Get the current car label and put it into a variable
             string curlblCarInfo = lblCarInfo.Text;
-            
+
             if (carWaiting)
             {
-                // Console print that there is a car waiting
-                Console.WriteLine("Vehicle Already waiting - Removing Vehicle");
-
-                Console.WriteLine(curlblCarInfo);
-
                 // Return the carinfo prior to editing
                 return curlblCarInfo;
             }
@@ -433,18 +442,44 @@ namespace GasStationForms
                 string vehType = VehicleType(brand);
                 string fuelType = Fuel.GenerateFuelText();
                 float currentFuelLevel = vehicle.GenerateFuelLevel(vehType);
-                
-                carToBeServiced = new string[] { brand, vehType, fuelType, Convert.ToString(currentFuelLevel)};
-                
+
+                carToBeServiced = new string[] { brand, vehType, fuelType, Convert.ToString(currentFuelLevel) };
                 // Car waiting
                 log.CreateArrivedLog(brand, vehType, fuelType);
-                
+
+                for (int i = 0; i > 4; i++)
+                {
+                    switch (i)
+                    {
+                        case 1:
+                            waitOne = string.Join("", carToBeServiced);
+                            lblQueueOne.Text = waitOne;
+                            break;
+                        case 2:
+                            waitTwo = string.Join("", carToBeServiced);
+                            break;
+                        case 3:
+                            waitThree = string.Join("", carToBeServiced);
+                            break;
+                        case 4:
+                            waitFour = string.Join("", carToBeServiced);
+                            break;
+                        case 5:
+                            waitFive = string.Join("", carToBeServiced);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+
                 // Calls the wait time generator method
                 WaitTimerGenerator();
 
                 // return the brand, vehicle type and fueltype in a string
                 return $"Where should a {brand} {vehType} with {fuelType} fuel go? Please click the pump number.";
             }
+
+         
         }
 
         /// <summary>

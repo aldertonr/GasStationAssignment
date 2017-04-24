@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Author: Ryan Alderton
+// SID: 1609275
+
+// Log.cs is used for logging messages to log.txt, stored in the root directory for the program.
+using System;
 
 namespace GasStationForms
 {
