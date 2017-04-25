@@ -18,6 +18,7 @@ namespace GasStationForms
         string curlblCarInfo;
         // Boolean to show if there's a car waiting
         bool carWaiting = false;
+        bool vehQueueFull = false;
 
         // TODO: Implement the carToBeServiced array
         // Array of strings to hold the car to be serviced informationa
@@ -41,12 +42,9 @@ namespace GasStationForms
                 carOnPumpSeven,
                 carOnPumpEight,
                 carOnPumpNine;
-
-        private string waitOne = "",
-                waitTwo = "",
-                waitThree = "",
-                waitFour = "",
-                waitFive = "";
+        
+        // Private list of strings to hold the vehicle waiting list
+        private List<string> vehWaitList = new List<string>();
         
         #region TickEvents
 
@@ -71,27 +69,60 @@ namespace GasStationForms
             {
                 case "pumpOne":
                     Pump.DispenseFuel(carOnPumpOne[1], carOnPumpOne[2]);
+
+                    // Re-enable pumpTwo and pumpThree
+                    btnPumpTwo.Enabled = true;
+                    btnPumpThree.Enabled = true;
+
+                    // Reset text
+                    btnPumpTwo.Text = "Available";
+                    btnPumpThree.Text = "Available";
                     break;
                 case "pumpTwo":
                     Pump.DispenseFuel(carOnPumpTwo[1], carOnPumpTwo[2]);
+                    // Enable pumpThree
+                    btnPumpThree.Enabled = true;
+
+
+                    btnPumpThree.Text = "Available";
                     break;
                 case "pumpThree":
                     Pump.DispenseFuel(carOnPumpThree[1], carOnPumpThree[2]);
                     break;
                 case "pumpFour":
                     Pump.DispenseFuel(carOnPumpFour[1], carOnPumpFour[2]);
+                    // Enable pumpFive and pumpSix
+                    btnPumpFive.Enabled = true;
+                    btnPumpSix.Enabled = true;
+
+                    btnPumpFive.Text = "Available";
+                    btnPumpSix.Text = "Available";
                     break;
                 case "pumpFive":
                     Pump.DispenseFuel(carOnPumpFive[1], carOnPumpFive[2]);
+                    // Enable pumpSix
+                    btnPumpSix.Enabled = true;
+
+                    btnPumpSix.Text = "Available";
                     break;
                 case "pumpSix":
                     Pump.DispenseFuel(carOnPumpSix[1], carOnPumpSix[2]);
                     break;
                 case "pumpSeven":
                     Pump.DispenseFuel(carOnPumpSeven[1], carOnPumpSeven[2]);
+                    // Enable pumpEight and pumpNine
+                    btnPumpEight.Enabled = true;
+                    btnPumpNine.Enabled = true;
+
+                    btnPumpEight.Text = "Available";
+                    btnPumpNine.Text = "Available";
                     break;
                 case "pumpEight":
                     Pump.DispenseFuel(carOnPumpEight[1], carOnPumpEight[2]);
+                    // Enable pumpNine
+                    btnPumpNine.Enabled = true;
+
+                    btnPumpNine.Text = "Available";
                     break;
                 case "pumpNine":
                     Pump.DispenseFuel(carOnPumpNine[1], carOnPumpNine[2]);
@@ -232,7 +263,7 @@ namespace GasStationForms
             // Declaring a button and casting the object sender to a button
             Button activeButton = ((Button)sender);
 
-            // Call the carOnPump method and cast the activeButton.tag to int
+            // Call the carOnPump method and cast the activeButton.tag to string
             carOnPump((string)activeButton.Tag);
 
             // If the pump is free
@@ -240,13 +271,31 @@ namespace GasStationForms
                 // TODO: Implement a caronPump thing for the log
 
                 carOnPump((string)activeButton.Tag);
+                
+
+                try
+                {
+                    vehWaitList.RemoveAt(vehWaitList.Count - (vehWaitList.Count - 1));
+                } catch (Exception)
+                {
+                    vehWaitList.RemoveAt(0);
+
+                    if (vehWaitList.Count == 0)
+                    {
+                        vehQueueFull = false;
+                    }
+
+                }
+                DisplayRefresh();
+
+                BlockedLanes((string)activeButton.Tag);
 
                 // Change the text of the button to be occupied
                 activeButton.Text = "Occupied";
                 // Start the timer
                 startTimer(activeButton);
                 // Disable all the pump methods
-                DisablePumps();
+                //DisablePumps();
                 // Let the user know why they are waiting
                 lblCarInfo.Text = "Waiting for a vehicle to arrive";
                 // Change the carWaiting bool to false, to show there is no car waiting
@@ -338,12 +387,15 @@ namespace GasStationForms
             // Start the runtimeTimer
             runtimeTimer.Start();
             CarSpawner();
+            // Set the lblQueue text value to be empty, to prevent erroneous returns
+            lblQueue.Text = "";
+            EnablePumps();
         }
 
-    /// <summary>
-    /// Update method to refresh certain text variables on the form itself
-    /// </summary>
-    private void DisplayRefresh()
+        /// <summary>
+        /// Update method to refresh certain text variables on the form itself
+        /// </summary>
+        private void DisplayRefresh()
         {
             // Change the vehicleServiced variable to show how many have been serviced
             lblVehServiced.Text = $"Vehicles Serviced: {vehServiced} ";
@@ -352,13 +404,7 @@ namespace GasStationForms
             lblPetrolDispensed.Text = $"Petrol Litres Dispensed: {Pump.petrolLitresDispensed}";
             lblDieselDispensed.Text = $"Diesel Litres Dispensed: {Pump.dieselLitresDispensed}";
             lblLpgDispensed.Text = $"LPG Litres Dispensed: {Pump.lpgLitresDispensed}";
-
-            lblQueueOne.Text = waitOne;
-            lblQueueTwo.Text = waitTwo;
-            lblQueueThree.Text = waitThree;
-            lblQueueFour.Text = waitFour;
-            lblQueueFive.Text = waitFive;
-
+            lblQueue.Text = string.Join("", vehWaitList);
         }
 
 
@@ -378,7 +424,6 @@ namespace GasStationForms
             if (carWaiting)
             {
                 // Enable all of the buttons on the form
-                EnablePumps();
             }
 
         }
@@ -437,46 +482,29 @@ namespace GasStationForms
                 return curlblCarInfo;
             }
             else {
-                // Variable declarations for ease of access
-                string brand = RandomManufacturer();
-                string vehType = VehicleType(brand);
-                string fuelType = Fuel.GenerateFuelText();
-                float currentFuelLevel = vehicle.GenerateFuelLevel(vehType);
 
-                carToBeServiced = new string[] { brand, vehType, fuelType, Convert.ToString(currentFuelLevel) };
-                // Car waiting
-                log.CreateArrivedLog(brand, vehType, fuelType);
-
-                for (int i = 0; i > 4; i++)
+                if (!vehQueueFull)
                 {
-                    switch (i)
-                    {
-                        case 1:
-                            waitOne = string.Join("", carToBeServiced);
-                            lblQueueOne.Text = waitOne;
-                            break;
-                        case 2:
-                            waitTwo = string.Join("", carToBeServiced);
-                            break;
-                        case 3:
-                            waitThree = string.Join("", carToBeServiced);
-                            break;
-                        case 4:
-                            waitFour = string.Join("", carToBeServiced);
-                            break;
-                        case 5:
-                            waitFive = string.Join("", carToBeServiced);
-                            break;
-                        default:
-                            break;
-                    }
+                    // Variable declarations for ease of access
+                    string brand = RandomManufacturer();
+                    string vehType = VehicleType(brand);
+                    string fuelType = Fuel.GenerateFuelText();
+                    float currentFuelLevel = vehicle.GenerateFuelLevel(vehType);
+
+                    carToBeServiced = new string[] { brand, vehType, fuelType, Convert.ToString(currentFuelLevel) };
+                    // Car waiting
+                    log.CreateArrivedLog(brand, vehType, fuelType);
+
+                    AddVehicleToQueue(vehType, fuelType);
+
+                    // Calls the wait time generator method
+                    WaitTimerGenerator();
+
+                    // return the brand, vehicle type and fueltype in a string
+                    return $"Where should a {brand} {vehType} with {fuelType} fuel go? Please click the pump number.";
                 }
 
-                // Calls the wait time generator method
-                WaitTimerGenerator();
-
-                // return the brand, vehicle type and fueltype in a string
-                return $"Where should a {brand} {vehType} with {fuelType} fuel go? Please click the pump number.";
+                return "Vehicle Queue Full; please service queue first";
             }
 
          
@@ -594,7 +622,109 @@ namespace GasStationForms
             return vehicleType;
         }
 
-        #region Enable/Disable Pumps
+        /// <summary>
+        /// Tries to add vehType and fuel to vehWaitList if the count less than five
+        /// </summary>
+        /// <param name="vehType">The vehicle type</param>
+        /// <param name="fuel">The fuel type of the vehicle</param>
+        void AddVehicleToQueue(string vehType, string fuel)
+        {
+            
+            if (vehWaitList.Count < 5)
+            {
+                vehWaitList.Add($"{vehType} with {fuel}\n");
+
+                Console.WriteLine($"{vehType} with {fuel}\n");
+
+                string queueText = string.Join("", vehWaitList);
+
+                lblQueue.Text = queueText;
+
+
+            } else
+            {
+                lblCarInfo.Text = "Vehicle Waiting List is currently full.";
+                Console.WriteLine("Vehicle Waiting List is currently full.");
+                vehQueueFull = true;
+            }
+
+        }
+
+        /// <summary>
+        /// Checks what pumps need to be disabled to implement the blocked lane scenario
+        /// </summary>
+        /// <param name="pumpPressed"></param>
+        void BlockedLanes(string pumpPressed)
+        {
+            Console.WriteLine(pumpPressed);
+
+            switch (pumpPressed)
+            {
+                case "pumpOne":
+                    // Disable pumpTwo and pumpThree
+                    btnPumpTwo.Enabled = false;
+                    btnPumpThree.Enabled = false;
+
+                    // Change button text to be "Blocked"
+                    btnPumpTwo.Text = "Blocked";
+                    btnPumpThree.Text = "Blocked";
+                    break;
+                case "pumpTwo":
+                    // Disable pumpThree
+                    btnPumpThree.Enabled = false;
+
+                    // Change button text to "Blocked"
+                    btnPumpThree.Enabled = false;
+                    break;
+                case "pumpThree":
+                    // Nothing is needed to be done, just break out
+                    break;
+                case "pumpFour":
+                    // Disable pumpFive and pumpSix
+                    btnPumpFive.Enabled = false;
+                    btnPumpSix.Enabled = false;
+
+                    // Change button text to "Blocked"
+                    btnPumpFive.Text = "Blocked";
+                    btnPumpSix.Text = "Blocked";
+                    break;
+                case "pumpFive":
+                    // Disable pumpSix
+                    btnPumpSix.Enabled = false;
+
+                    // Change button text to "Blocked"
+                    btnPumpSix.Text = "Blocked";
+                    break;
+                case "pumpSix":
+                    // Nothing is needed, just break out
+                    break;
+                case "pumpSeven":
+                    // Disable pumpEight and pumpNine
+                    btnPumpEight.Enabled = false;
+                    btnPumpNine.Enabled = false;
+
+                    // Change button text to "Blocked"
+                    btnPumpEight.Text = "Blocked";
+                    btnPumpNine.Text = "Blocked";
+                    break;
+                case "pumpEight":
+                    // Disable pumpNine
+                    btnPumpNine.Enabled = false;
+
+                    // Change button text to "Blocked"
+                    btnPumpNine.Text = "Blocked";
+                    break;
+                case "pumpNine":
+                    // Nothing is needed, just break out
+                    break;
+                default:
+                    Console.WriteLine("Default Case");
+                    break;
+            }
+
+        }
+
+        
         /// <summary>
         /// Enable all the pump buttons on the form
         /// </summary>
@@ -611,20 +741,20 @@ namespace GasStationForms
             btnPumpNine.Enabled = true;
         }
         
-        // Disable all the pump buttons on the form
-        void DisablePumps()
-        {
-            btnPumpOne.Enabled = false;
-            btnPumpTwo.Enabled = false;
-            btnPumpThree.Enabled = false;
-            btnPumpFour.Enabled = false;
-            btnPumpFive.Enabled = false;
-            btnPumpSix.Enabled = false;
-            btnPumpSeven.Enabled = false;
-            btnPumpEight.Enabled = false;
-            btnPumpNine.Enabled = false;
-        }
-        #endregion
+        //// Disable all the pump buttons on the form
+        //void DisablePumps()
+        //{
+        //    btnPumpOne.Enabled = false;
+        //    btnPumpTwo.Enabled = false;
+        //    btnPumpThree.Enabled = false;
+        //    btnPumpFour.Enabled = false;
+        //    btnPumpFive.Enabled = false;
+        //    btnPumpSix.Enabled = false;
+        //    btnPumpSeven.Enabled = false;
+        //    btnPumpEight.Enabled = false;
+        //    btnPumpNine.Enabled = false;
+        //}
+        //#endregion
         
     }
 }

@@ -68,11 +68,7 @@
             this.lblPetrolDispensed = new System.Windows.Forms.Label();
             this.lblDieselDispensed = new System.Windows.Forms.Label();
             this.lblLpgDispensed = new System.Windows.Forms.Label();
-            this.lblQueueOne = new System.Windows.Forms.Label();
-            this.lblQueueTwo = new System.Windows.Forms.Label();
-            this.lblQueueThree = new System.Windows.Forms.Label();
-            this.lblQueueFour = new System.Windows.Forms.Label();
-            this.lblQueueFive = new System.Windows.Forms.Label();
+            this.lblQueue = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnPumpOne
@@ -355,7 +351,7 @@
             this.lblCommision.Name = "lblCommision";
             this.lblCommision.Size = new System.Drawing.Size(120, 23);
             this.lblCommision.TabIndex = 24;
-            this.lblCommision.Text = "1% Commision: £0.3089";
+            this.lblCommision.Text = "1% Commision: £";
             // 
             // carSpawnedTimer
             // 
@@ -390,40 +386,13 @@
             this.lblLpgDispensed.TabIndex = 27;
             this.lblLpgDispensed.Text = "LPG Litres Dispensed: 1234";
             // 
-            // lblQueueOne
+            // lblQueue
             // 
-            this.lblQueueOne.Location = new System.Drawing.Point(384, 141);
-            this.lblQueueOne.Name = "lblQueueOne";
-            this.lblQueueOne.Size = new System.Drawing.Size(143, 23);
-            this.lblQueueOne.TabIndex = 28;
-            // 
-            // lblQueueTwo
-            // 
-            this.lblQueueTwo.Location = new System.Drawing.Point(384, 164);
-            this.lblQueueTwo.Name = "lblQueueTwo";
-            this.lblQueueTwo.Size = new System.Drawing.Size(143, 23);
-            this.lblQueueTwo.TabIndex = 29;
-            // 
-            // lblQueueThree
-            // 
-            this.lblQueueThree.Location = new System.Drawing.Point(384, 187);
-            this.lblQueueThree.Name = "lblQueueThree";
-            this.lblQueueThree.Size = new System.Drawing.Size(143, 23);
-            this.lblQueueThree.TabIndex = 30;
-            // 
-            // lblQueueFour
-            // 
-            this.lblQueueFour.Location = new System.Drawing.Point(384, 210);
-            this.lblQueueFour.Name = "lblQueueFour";
-            this.lblQueueFour.Size = new System.Drawing.Size(143, 23);
-            this.lblQueueFour.TabIndex = 31;
-            // 
-            // lblQueueFive
-            // 
-            this.lblQueueFive.Location = new System.Drawing.Point(384, 233);
-            this.lblQueueFive.Name = "lblQueueFive";
-            this.lblQueueFive.Size = new System.Drawing.Size(143, 23);
-            this.lblQueueFive.TabIndex = 32;
+            this.lblQueue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQueue.Location = new System.Drawing.Point(384, 121);
+            this.lblQueue.Name = "lblQueue";
+            this.lblQueue.Size = new System.Drawing.Size(143, 208);
+            this.lblQueue.TabIndex = 28;
             // 
             // Form1
             // 
@@ -432,11 +401,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = global::GasStationForms.Properties.Resources.bg;
             this.ClientSize = new System.Drawing.Size(539, 338);
-            this.Controls.Add(this.lblQueueFive);
-            this.Controls.Add(this.lblQueueFour);
-            this.Controls.Add(this.lblQueueThree);
-            this.Controls.Add(this.lblQueueTwo);
-            this.Controls.Add(this.lblQueueOne);
+            this.Controls.Add(this.lblQueue);
             this.Controls.Add(this.lblLpgDispensed);
             this.Controls.Add(this.lblDieselDispensed);
             this.Controls.Add(this.lblPetrolDispensed);
@@ -514,11 +479,7 @@
         private System.Windows.Forms.Label lblPetrolDispensed;
         private System.Windows.Forms.Label lblDieselDispensed;
         private System.Windows.Forms.Label lblLpgDispensed;
-        private System.Windows.Forms.Label lblQueueOne;
-        private System.Windows.Forms.Label lblQueueTwo;
-        private System.Windows.Forms.Label lblQueueThree;
-        private System.Windows.Forms.Label lblQueueFour;
-        private System.Windows.Forms.Label lblQueueFive;
+        private System.Windows.Forms.Label lblQueue;
     }
 }
 

@@ -488,3 +488,349 @@
 20/04/2017 18:24:53: ARRIVED: Volvo HGV with Diesel, Waiting to be serviced
 20/04/2017 18:24:55: DRIVE-OFF: Vehicle got bored of waiting and drove off
 20/04/2017 18:24:55: ARRIVED: Vauxhall Car with Diesel, Waiting to be serviced
+25/04/2017 00:57:42: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 00:57:44: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 00:57:44: ARRIVED: Vauxhall Car with Diesel, Waiting to be serviced
+25/04/2017 00:57:45: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 00:57:46: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 00:59:12: ARRIVED: Ford Car with Diesel, Waiting to be serviced
+25/04/2017 00:59:13: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 00:59:14: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 00:59:15: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 00:59:16: ARRIVED: Vauxhall Car with LPG, Waiting to be serviced
+25/04/2017 00:59:17: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:01:26: ARRIVED: Volvo HGV with Diesel, Waiting to be serviced
+25/04/2017 01:01:27: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:01:28: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+25/04/2017 01:01:29: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:01:30: ARRIVED: BMW Van with LPG, Waiting to be serviced
+25/04/2017 01:01:31: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:01:32: ARRIVED: Vauxhall Car with LPG, Waiting to be serviced
+25/04/2017 01:01:33: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:01:34: ARRIVED: BMW Van with LPG, Waiting to be serviced
+25/04/2017 01:01:35: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:01:36: ARRIVED: Volvo HGV with Diesel, Waiting to be serviced
+25/04/2017 01:01:38: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:01:38: ARRIVED: Ford Car with LPG, Waiting to be serviced
+25/04/2017 01:01:39: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:07:06: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+25/04/2017 01:07:08: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:07:08: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+25/04/2017 01:07:09: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:07:10: ARRIVED: BMW Van with LPG, Waiting to be serviced
+25/04/2017 01:07:12: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:07:23: ARRIVED: BMW Van with LPG, Waiting to be serviced
+25/04/2017 01:07:25: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:07:25: ARRIVED: Ford Car with LPG, Waiting to be serviced
+25/04/2017 01:07:26: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:07:27: ARRIVED: Ford Car with LPG, Waiting to be serviced
+25/04/2017 01:08:00: ARRIVED: Volvo HGV with Diesel, Waiting to be serviced
+25/04/2017 01:08:01: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:08:02: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 01:08:29: ARRIVED: Ford Car with LPG, Waiting to be serviced
+25/04/2017 01:08:31: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:08:32: ARRIVED: BMW Van with LPG, Waiting to be serviced
+25/04/2017 01:08:34: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:08:34: ARRIVED: BMW Car with Diesel, Waiting to be serviced
+25/04/2017 01:08:35: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:08:35: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+25/04/2017 01:08:37: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:09:00: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+25/04/2017 01:09:02: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:09:02: ARRIVED: Volvo HGV with Diesel, Waiting to be serviced
+25/04/2017 01:09:04: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:09:04: ARRIVED: Ford Car with Diesel, Waiting to be serviced
+25/04/2017 01:09:06: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:09:07: ARRIVED: Vauxhall Car with Diesel, Waiting to be serviced
+25/04/2017 01:09:08: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:09:09: ARRIVED: BMW Van with LPG, Waiting to be serviced
+25/04/2017 01:09:10: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:09:11: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 01:09:13: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:09:13: ARRIVED: Volvo HGV with Diesel, Waiting to be serviced
+25/04/2017 01:09:37: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 01:09:39: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:09:39: ARRIVED: BMW Car with Diesel, Waiting to be serviced
+25/04/2017 01:09:41: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:09:42: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 01:09:43: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:09:44: ARRIVED: BMW Van with LPG, Waiting to be serviced
+25/04/2017 01:09:45: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:09:46: ARRIVED: Vauxhall Car with Diesel, Waiting to be serviced
+25/04/2017 01:09:47: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:14:50: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 01:14:51: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:14:51: ARRIVED: Volvo HGV with Diesel, Waiting to be serviced
+25/04/2017 01:14:53: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:14:55: ARRIVED: BMW Van with LPG, Waiting to be serviced
+25/04/2017 01:14:56: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:14:56: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 01:14:58: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:14:58: ARRIVED: Ford Car with LPG, Waiting to be serviced
+25/04/2017 01:14:59: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:15:00: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+25/04/2017 01:15:01: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:15:01: ARRIVED: Vauxhall Car with Diesel, Waiting to be serviced
+25/04/2017 01:15:03: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:15:03: ARRIVED: Volvo HGV with Diesel, Waiting to be serviced
+25/04/2017 01:15:05: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:15:06: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 01:15:08: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:15:10: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 01:15:11: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:15:13: ARRIVED: BMW Car with LPG, Waiting to be serviced
+25/04/2017 01:15:14: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:15:15: ARRIVED: Ford Car with LPG, Waiting to be serviced
+25/04/2017 01:15:16: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:15:16: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+25/04/2017 01:15:17: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:15:18: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+25/04/2017 01:15:19: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:15:19: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 01:15:21: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:15:23: ARRIVED: Volvo HGV with Diesel, Waiting to be serviced
+25/04/2017 01:15:25: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:15:26: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 01:15:28: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:15:28: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+25/04/2017 01:16:49: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+25/04/2017 01:16:51: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:16:51: ARRIVED: BMW Van with LPG, Waiting to be serviced
+25/04/2017 01:16:53: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:16:53: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+25/04/2017 01:16:54: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:16:55: ARRIVED: Ford Car with Diesel, Waiting to be serviced
+25/04/2017 01:16:57: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:16:58: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 01:16:59: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:17:00: ARRIVED: Vauxhall Car with LPG, Waiting to be serviced
+25/04/2017 01:17:01: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:17:02: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+25/04/2017 01:17:03: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:21:12: ARRIVED: BMW Van with LPG, Waiting to be serviced
+25/04/2017 01:21:14: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:21:16: ARRIVED: BMW Car with Diesel, Waiting to be serviced
+25/04/2017 01:21:17: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:21:18: ARRIVED: BMW Car with LPG, Waiting to be serviced
+25/04/2017 01:21:19: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:21:20: ARRIVED: BMW Car with LPG, Waiting to be serviced
+25/04/2017 01:21:21: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:21:22: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+25/04/2017 01:21:23: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:21:23: ARRIVED: Vauxhall Car with Diesel, Waiting to be serviced
+25/04/2017 01:21:25: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:21:37: MESSAGE: LITRES THIS TRANSACTION: 6.3 | TAKINGS: 7.53 | COMMISSION: 0.0753
+25/04/2017 01:21:37: FUELLED: Vauxhall Car with Diesel fuel has been fuelled at pumpOne
+25/04/2017 01:21:37: FUELLED: Car with 6.3 litres at pumpOne
+25/04/2017 01:42:34: ARRIVED: BMW Van with LPG, Waiting to be serviced
+25/04/2017 01:42:36: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:42:36: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 01:42:38: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:42:39: ARRIVED: Vauxhall Car with LPG, Waiting to be serviced
+25/04/2017 01:42:40: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:42:41: ARRIVED: BMW Car with Diesel, Waiting to be serviced
+25/04/2017 01:42:42: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:42:43: ARRIVED: Ford Car with Diesel, Waiting to be serviced
+25/04/2017 01:42:44: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:42:45: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 01:42:47: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:42:52: OCCUPIED PUMP: Scania HGV with Diesel fuel at pumpOne
+25/04/2017 01:43:35: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 01:43:37: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:43:37: ARRIVED: Volvo HGV with Diesel, Waiting to be serviced
+25/04/2017 01:43:39: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:43:40: ARRIVED: BMW Van with LPG, Waiting to be serviced
+25/04/2017 01:43:42: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:43:42: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 01:43:43: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:43:43: ARRIVED: Ford Car with Diesel, Waiting to be serviced
+25/04/2017 01:43:45: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:43:45: ARRIVED: Vauxhall Car with LPG, Waiting to be serviced
+25/04/2017 01:43:46: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:43:51: OCCUPIED PUMP: Vauxhall Car with LPG fuel at pumpOne
+25/04/2017 01:44:11: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 01:44:13: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:44:13: ARRIVED: BMW Van with LPG, Waiting to be serviced
+25/04/2017 01:44:15: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:44:15: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+25/04/2017 01:44:17: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:44:17: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+25/04/2017 01:44:19: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:44:19: ARRIVED: Volvo HGV with Diesel, Waiting to be serviced
+25/04/2017 01:44:21: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:44:21: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 01:44:23: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:44:23: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 01:44:25: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:44:27: MESSAGE: LITRES THIS TRANSACTION: 17.1 | TAKINGS: 10.28 | COMMISSION: 0.1028
+25/04/2017 01:44:27: FUELLED: Scania HGV with Diesel fuel has been fuelled at pumpOne
+25/04/2017 01:44:27: FUELLED: HGV with 17.1 litres at pumpOne
+25/04/2017 01:45:59: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 01:46:01: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:46:01: ARRIVED: Vauxhall Car with Diesel, Waiting to be serviced
+25/04/2017 01:46:03: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:46:03: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+25/04/2017 01:46:05: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:46:05: ARRIVED: Volvo HGV with Diesel, Waiting to be serviced
+25/04/2017 01:46:07: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:46:07: ARRIVED: Ford Car with LPG, Waiting to be serviced
+25/04/2017 01:46:08: MESSAGE: LITRES THIS TRANSACTION: 6.525 | TAKINGS: 7.8 | COMMISSION: 0.078
+25/04/2017 01:46:08: FUELLED: Ford Car with LPG fuel has been fuelled at pumpEight
+25/04/2017 01:46:08: FUELLED: Car with 6.525 litres at pumpEight
+25/04/2017 01:46:08: MESSAGE: LITRES THIS TRANSACTION: 6.525 | TAKINGS: 15.47 | COMMISSION: 0.1547
+25/04/2017 01:46:08: FUELLED: Ford Car with LPG fuel has been fuelled at pumpSeven
+25/04/2017 01:46:08: FUELLED: Car with 6.525 litres at pumpSeven
+25/04/2017 01:46:08: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:46:09: ARRIVED: Ford Car with Diesel, Waiting to be serviced
+25/04/2017 01:46:10: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:46:11: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 01:46:13: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:46:13: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 01:46:15: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:46:21: MESSAGE: LITRES THIS TRANSACTION: 26.1 | TAKINGS: 46.66 | COMMISSION: 0.4666
+25/04/2017 01:46:21: FUELLED: Scania HGV with Diesel fuel has been fuelled at pumpTwo
+25/04/2017 01:46:21: FUELLED: HGV with 26.1 litres at pumpTwo
+25/04/2017 01:47:22: ARRIVED: Vauxhall Car with Diesel, Waiting to be serviced
+25/04/2017 01:47:23: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:47:23: ARRIVED: Ford Car with Diesel, Waiting to be serviced
+25/04/2017 01:47:25: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:47:25: ARRIVED: Volvo HGV with Diesel, Waiting to be serviced
+25/04/2017 01:47:27: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:47:27: ARRIVED: BMW Van with LPG, Waiting to be serviced
+25/04/2017 01:47:29: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:47:29: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+25/04/2017 01:47:31: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:47:31: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+25/04/2017 01:47:32: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:47:39: MESSAGE: LITRES THIS TRANSACTION: 6.3 | TAKINGS: 7.4 | COMMISSION: 0.074
+25/04/2017 01:47:39: FUELLED: Ford Car with Unleaded fuel has been fuelled at pumpThree
+25/04/2017 01:47:39: FUELLED: Car with 6.3 litres at pumpThree
+25/04/2017 01:47:41: MESSAGE: LITRES THIS TRANSACTION: 6.3 | TAKINGS: 14.8 | COMMISSION: 0.148
+25/04/2017 01:47:41: FUELLED: Ford Car with Unleaded fuel has been fuelled at pumpTwo
+25/04/2017 01:47:41: FUELLED: Car with 6.3 litres at pumpTwo
+25/04/2017 01:47:43: MESSAGE: LITRES THIS TRANSACTION: 8.549999 | TAKINGS: 24.85 | COMMISSION: 0.2485
+25/04/2017 01:47:43: FUELLED: Ford Car with Unleaded fuel has been fuelled at pumpOne
+25/04/2017 01:47:43: FUELLED: Car with 8.549999 litres at pumpOne
+25/04/2017 01:47:44: MESSAGE: LITRES THIS TRANSACTION: 8.549999 | TAKINGS: 34.9 | COMMISSION: 0.349
+25/04/2017 01:47:44: FUELLED: Ford Car with Unleaded fuel has been fuelled at pumpFour
+25/04/2017 01:47:44: FUELLED: Car with 8.549999 litres at pumpFour
+25/04/2017 01:48:54: ARRIVED: Volvo HGV with Diesel, Waiting to be serviced
+25/04/2017 01:48:55: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:48:55: ARRIVED: Ford Car with LPG, Waiting to be serviced
+25/04/2017 01:48:56: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:48:57: ARRIVED: Ford Car with Diesel, Waiting to be serviced
+25/04/2017 01:48:58: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:48:59: ARRIVED: Volvo HGV with Diesel, Waiting to be serviced
+25/04/2017 01:49:00: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:49:02: ARRIVED: BMW Van with LPG, Waiting to be serviced
+25/04/2017 01:49:04: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:49:04: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 01:49:05: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:49:16: ARRIVED: Ford Car with LPG, Waiting to be serviced
+25/04/2017 01:49:17: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:49:17: ARRIVED: Vauxhall Car with LPG, Waiting to be serviced
+25/04/2017 01:49:19: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:49:19: ARRIVED: Volvo HGV with Diesel, Waiting to be serviced
+25/04/2017 01:49:21: ARRIVED: Ford Car with Diesel, Waiting to be serviced
+25/04/2017 01:49:21: MESSAGE: LITRES THIS TRANSACTION: 18 | TAKINGS: 21.51 | COMMISSION: 0.2151
+25/04/2017 01:49:21: FUELLED: Ford Car with Diesel fuel has been fuelled at pumpOne
+25/04/2017 01:49:21: FUELLED: Car with 18 litres at pumpOne
+25/04/2017 01:49:22: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:49:22: MESSAGE: LITRES THIS TRANSACTION: 18 | TAKINGS: 43.02 | COMMISSION: 0.4302
+25/04/2017 01:49:22: FUELLED: Ford Car with Diesel fuel has been fuelled at pumpTwo
+25/04/2017 01:49:22: FUELLED: Car with 18 litres at pumpTwo
+25/04/2017 01:49:22: MESSAGE: LITRES THIS TRANSACTION: 18 | TAKINGS: 53.84 | COMMISSION: 0.5384
+25/04/2017 01:49:22: FUELLED: Ford Car with Diesel fuel has been fuelled at pumpNine
+25/04/2017 01:49:22: FUELLED: Car with 18 litres at pumpNine
+25/04/2017 01:49:22: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 01:49:24: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:49:24: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 01:49:25: MESSAGE: LITRES THIS TRANSACTION: 18 | TAKINGS: 75.35 | COMMISSION: 0.7535
+25/04/2017 01:49:25: FUELLED: Scania HGV with Diesel fuel has been fuelled at pumpThree
+25/04/2017 01:49:25: FUELLED: HGV with 18 litres at pumpThree
+25/04/2017 01:49:26: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:49:27: MESSAGE: LITRES THIS TRANSACTION: 18 | TAKINGS: 96.86 | COMMISSION: 0.9686
+25/04/2017 01:49:27: FUELLED: Scania HGV with Diesel fuel has been fuelled at pumpFour
+25/04/2017 01:49:27: FUELLED: HGV with 18 litres at pumpFour
+25/04/2017 01:49:28: ARRIVED: BMW Van with LPG, Waiting to be serviced
+25/04/2017 01:49:29: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:49:29: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 01:49:31: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:49:32: MESSAGE: LITRES THIS TRANSACTION: 18 | TAKINGS: 118.37 | COMMISSION: 1.1837
+25/04/2017 01:49:32: FUELLED: Scania HGV with Diesel fuel has been fuelled at pumpEight
+25/04/2017 01:49:32: FUELLED: HGV with 18 litres at pumpEight
+25/04/2017 01:56:29: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+25/04/2017 01:56:31: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:56:31: ARRIVED: Vauxhall Car with Diesel, Waiting to be serviced
+25/04/2017 01:56:32: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:56:32: ARRIVED: Volvo HGV with Diesel, Waiting to be serviced
+25/04/2017 01:56:34: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 01:56:36: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 02:04:53: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 02:04:54: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 02:04:55: ARRIVED: BMW Car with Diesel, Waiting to be serviced
+25/04/2017 02:04:56: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 02:04:57: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 02:05:37: ARRIVED: Ford Car with Diesel, Waiting to be serviced
+25/04/2017 02:05:39: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 02:05:39: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+25/04/2017 02:06:22: ARRIVED: BMW Van with LPG, Waiting to be serviced
+25/04/2017 02:06:24: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 02:06:38: ARRIVED: BMW Car with Diesel, Waiting to be serviced
+25/04/2017 02:06:40: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 02:06:40: ARRIVED: Volvo HGV with Diesel, Waiting to be serviced
+25/04/2017 02:06:42: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 02:06:42: ARRIVED: Vauxhall Car with Diesel, Waiting to be serviced
+25/04/2017 02:06:44: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 02:06:44: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+25/04/2017 02:07:20: ARRIVED: Ford Car with LPG, Waiting to be serviced
+25/04/2017 02:07:22: ARRIVED: Ford Car with Diesel, Waiting to be serviced
+25/04/2017 02:07:23: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 02:07:23: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+25/04/2017 02:07:24: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 02:07:25: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+25/04/2017 02:07:26: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 02:07:27: ARRIVED: Volvo HGV with Diesel, Waiting to be serviced
+25/04/2017 02:07:27: MESSAGE: LITRES THIS TRANSACTION: 8.549999 | TAKINGS: 5.14 | COMMISSION: 0.0514
+25/04/2017 02:07:27: FUELLED: Volvo HGV with Diesel fuel has been fuelled at pumpOne
+25/04/2017 02:07:27: FUELLED: HGV with 8.549999 litres at pumpOne
+25/04/2017 02:07:29: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 02:07:30: ARRIVED: Volvo HGV with Diesel, Waiting to be serviced
+25/04/2017 02:10:41: ARRIVED: Ford Car with LPG, Waiting to be serviced
+25/04/2017 02:10:42: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 02:10:42: ARRIVED: Ford Car with Diesel, Waiting to be serviced
+25/04/2017 02:10:43: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 02:10:44: ARRIVED: Ford Car with Diesel, Waiting to be serviced
+25/04/2017 02:10:45: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 02:10:45: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+25/04/2017 02:10:46: MESSAGE: LITRES THIS TRANSACTION: 6.3 | TAKINGS: 3.79 | COMMISSION: 0.0379
+25/04/2017 02:10:46: FUELLED: Ford Car with Unleaded fuel has been fuelled at pumpOne
+25/04/2017 02:10:46: FUELLED: Car with 6.3 litres at pumpOne
+25/04/2017 02:10:46: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 02:10:47: ARRIVED: Ford Car with LPG, Waiting to be serviced
+25/04/2017 02:10:48: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 02:10:48: ARRIVED: Volvo HGV with Diesel, Waiting to be serviced
+25/04/2017 02:10:49: MESSAGE: LITRES THIS TRANSACTION: 6.3 | TAKINGS: 11.32 | COMMISSION: 0.1132
+25/04/2017 02:10:49: FUELLED: Volvo HGV with Diesel fuel has been fuelled at pumpSeven
+25/04/2017 02:10:49: FUELLED: HGV with 6.3 litres at pumpSeven
+25/04/2017 02:10:49: MESSAGE: LITRES THIS TRANSACTION: 6.3 | TAKINGS: 18.85 | COMMISSION: 0.1885
+25/04/2017 02:10:49: FUELLED: Volvo HGV with Diesel fuel has been fuelled at pumpFive
+25/04/2017 02:10:49: FUELLED: HGV with 6.3 litres at pumpFive
+25/04/2017 02:15:31: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 02:15:33: ARRIVED: Vauxhall Car with Unleaded, Waiting to be serviced
+25/04/2017 02:15:34: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 02:15:35: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 02:15:37: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 02:15:38: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 02:15:40: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 02:15:40: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+25/04/2017 02:15:41: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 02:15:42: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 02:15:43: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 02:15:43: ARRIVED: Ford Car with Diesel, Waiting to be serviced
+25/04/2017 02:15:45: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 02:15:45: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 02:15:47: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 02:15:49: MESSAGE: LITRES THIS TRANSACTION: 20.475 | TAKINGS: 24.47 | COMMISSION: 0.2447
+25/04/2017 02:15:49: FUELLED: Scania HGV with Diesel fuel has been fuelled at pumpOne
+25/04/2017 02:15:49: FUELLED: HGV with 20.475 litres at pumpOne
