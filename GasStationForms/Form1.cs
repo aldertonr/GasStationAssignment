@@ -275,7 +275,7 @@ namespace GasStationForms
 
                 try
                 {
-                    vehWaitList.RemoveAt(vehWaitList.Count - (vehWaitList.Count - 1));
+                    vehWaitList.RemoveAt(0);
                 } catch (Exception)
                 {
                     vehWaitList.RemoveAt(0);

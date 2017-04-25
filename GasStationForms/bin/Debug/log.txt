@@ -834,3 +834,77 @@
 25/04/2017 02:15:49: MESSAGE: LITRES THIS TRANSACTION: 20.475 | TAKINGS: 24.47 | COMMISSION: 0.2447
 25/04/2017 02:15:49: FUELLED: Scania HGV with Diesel fuel has been fuelled at pumpOne
 25/04/2017 02:15:49: FUELLED: HGV with 20.475 litres at pumpOne
+25/04/2017 11:21:00: ARRIVED: Volvo HGV with Diesel, Waiting to be serviced
+25/04/2017 11:21:01: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 11:21:02: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 11:21:03: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 11:21:04: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 11:21:05: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 11:21:06: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 11:21:08: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 11:21:08: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 11:21:09: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 11:21:09: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 11:21:11: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 11:21:22: ARRIVED: Vauxhall Car with Diesel, Waiting to be serviced
+25/04/2017 11:21:24: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 11:21:26: ARRIVED: BMW Van with LPG, Waiting to be serviced
+25/04/2017 11:21:27: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 11:21:28: ARRIVED: BMW Van with LPG, Waiting to be serviced
+25/04/2017 11:21:29: MESSAGE: LITRES THIS TRANSACTION: 18.45 | TAKINGS: 22.05 | COMMISSION: 0.2205
+25/04/2017 11:21:29: FUELLED: BMW Van with LPG fuel has been fuelled at pumpTwo
+25/04/2017 11:21:29: FUELLED: Van with 18.45 litres at pumpTwo
+25/04/2017 11:21:29: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 11:21:30: ARRIVED: BMW Van with LPG, Waiting to be serviced
+25/04/2017 11:21:31: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 11:21:31: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+25/04/2017 11:21:32: MESSAGE: LITRES THIS TRANSACTION: 18.45 | TAKINGS: 44.1 | COMMISSION: 0.441
+25/04/2017 11:21:32: FUELLED: Ford Car with Unleaded fuel has been fuelled at pumpEight
+25/04/2017 11:21:32: FUELLED: Car with 18.45 litres at pumpEight
+25/04/2017 11:21:33: MESSAGE: LITRES THIS TRANSACTION: 18.45 | TAKINGS: 66.15 | COMMISSION: 0.6615
+25/04/2017 11:21:33: FUELLED: Ford Car with Unleaded fuel has been fuelled at pumpOne
+25/04/2017 11:21:33: FUELLED: Car with 18.45 litres at pumpOne
+25/04/2017 11:21:33: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 11:21:35: ARRIVED: Ford Car with Unleaded, Waiting to be serviced
+25/04/2017 11:21:36: MESSAGE: LITRES THIS TRANSACTION: 18.45 | TAKINGS: 88.2 | COMMISSION: 0.882
+25/04/2017 11:21:36: FUELLED: Ford Car with Unleaded fuel has been fuelled at pumpFour
+25/04/2017 11:21:36: FUELLED: Car with 18.45 litres at pumpFour
+25/04/2017 11:21:37: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 11:21:39: MESSAGE: LITRES THIS TRANSACTION: 18.45 | TAKINGS: 110.25 | COMMISSION: 1.1025
+25/04/2017 11:21:39: FUELLED: Ford Car with Unleaded fuel has been fuelled at pumpSeven
+25/04/2017 11:21:39: FUELLED: Car with 18.45 litres at pumpSeven
+25/04/2017 11:21:44: OCCUPIED PUMP: Ford Car with Unleaded fuel at pumpEight
+25/04/2017 11:21:44: MESSAGE: LITRES THIS TRANSACTION: 7.65 | TAKINGS: 119.24 | COMMISSION: 1.1924
+25/04/2017 11:21:44: FUELLED: Ford Car with Unleaded fuel has been fuelled at pumpEight
+25/04/2017 11:21:44: FUELLED: Car with 7.65 litres at pumpEight
+25/04/2017 11:21:46: OCCUPIED PUMP: Ford Car with Unleaded fuel at pumpEight
+25/04/2017 11:21:47: OCCUPIED PUMP: Ford Car with Unleaded fuel at pumpEight
+25/04/2017 11:21:47: OCCUPIED PUMP: Ford Car with Unleaded fuel at pumpEight
+25/04/2017 11:21:47: OCCUPIED PUMP: Ford Car with Unleaded fuel at pumpEight
+25/04/2017 11:21:47: OCCUPIED PUMP: Ford Car with Unleaded fuel at pumpEight
+25/04/2017 11:21:48: OCCUPIED PUMP: Ford Car with Unleaded fuel at pumpEight
+25/04/2017 11:21:48: OCCUPIED PUMP: Ford Car with Unleaded fuel at pumpEight
+25/04/2017 11:21:48: OCCUPIED PUMP: Ford Car with Unleaded fuel at pumpEight
+25/04/2017 11:21:48: OCCUPIED PUMP: Ford Car with Unleaded fuel at pumpEight
+25/04/2017 11:21:48: OCCUPIED PUMP: Ford Car with Unleaded fuel at pumpEight
+25/04/2017 11:21:49: OCCUPIED PUMP: Ford Car with Unleaded fuel at pumpEight
+25/04/2017 11:21:49: OCCUPIED PUMP: Ford Car with Unleaded fuel at pumpEight
+25/04/2017 11:21:49: OCCUPIED PUMP: Ford Car with Unleaded fuel at pumpEight
+25/04/2017 11:21:51: MESSAGE: LITRES THIS TRANSACTION: 7.65 | TAKINGS: 128.23 | COMMISSION: 1.2823
+25/04/2017 11:21:51: FUELLED: Ford Car with Unleaded fuel has been fuelled at pumpEight
+25/04/2017 11:21:51: FUELLED: Car with 7.65 litres at pumpEight
+25/04/2017 11:26:00: ARRIVED: Vauxhall Car with LPG, Waiting to be serviced
+25/04/2017 11:26:02: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 11:26:02: ARRIVED: Volvo HGV with Diesel, Waiting to be serviced
+25/04/2017 11:26:04: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 11:26:04: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 11:26:06: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 11:26:06: ARRIVED: Ford Car with Diesel, Waiting to be serviced
+25/04/2017 11:26:07: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 11:26:08: ARRIVED: Scania HGV with Diesel, Waiting to be serviced
+25/04/2017 11:26:10: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 11:26:10: ARRIVED: BMW Car with Unleaded, Waiting to be serviced
+25/04/2017 11:26:11: DRIVE-OFF: Vehicle got bored of waiting and drove off
+25/04/2017 11:27:52: MESSAGE: LITRES THIS TRANSACTION: 7.2 | TAKINGS: 8.46 | COMMISSION: 0.0846
+25/04/2017 11:27:52: FUELLED: BMW Car with Unleaded fuel has been fuelled at pumpOne
+25/04/2017 11:27:52: FUELLED: Car with 7.2 litres at pumpOne
