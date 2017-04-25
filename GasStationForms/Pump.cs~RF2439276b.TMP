@@ -64,41 +64,25 @@ namespace GasStationForms
                     fuelLevel = vehicle.GenerateFuelLevel(vehType);
                     // Set fuelNeeded to be the cars tank size minus the fuelLevel it already has
                     fuelNeeded = CAR_TANK - fuelLevel;
-                    // Write to the console that the car needs however many litres of fuel
                     Console.WriteLine($"Car needs {fuelNeeded} litres");
                     break;
-                // If the vehType is Van, do this
                 case "Van":
-                    // set fuelLevel to be the value of the returen of vehicle.GenerateFuelLevel
                     fuelLevel = vehicle.GenerateFuelLevel(vehType);
-                    // Set the fuelNeeded to be the vans tank size minus the fuelLevel is already has
                     fuelNeeded = VAN_TANK - fuelLevel;
-                    // Write to the console that the van needs however many litres of fuel
                     Console.WriteLine($"Van needs {fuelNeeded} litres");
                     break;
-                // if the vehType is HGV, do this
                 case "HGV":
-                    // set fuelLevel to be the value of the returen of vehicle.GenerateFuelLevel
                     fuelLevel = vehicle.GenerateFuelLevel(vehType);
-                    // Set the fuelNeeded to be the HGV tank size minus the fuelLevel is already has
                     fuelNeeded = HGV_TANK - fuelLevel;
-                    // Write to the console that the HGV needs however many litres of fuel
                     Console.WriteLine($"HGV needs {fuelNeeded} litres");
-                    break;
-                // if the vehType is neither Car, Van or HGV, then do this
-                default:
-                    // Create an error log with the reason for the error
-                    log.CreateErrorLog("GenerateInterval vehType parameter incorrect");
                     break;
             }
 
             // Set the fuelling time to be the amount of fuelNeeded multiplied by the flowrate(1.5)
             fuellingTime = (fuelNeeded * flowRate) * 100;
             
-            // Write to the console the sum that we just did
             Console.WriteLine($"{fuelNeeded} * {flowRate} = {fuellingTime}");
 
-            // Return the fuelling time, in milliseconds
             return fuellingTime;
         }
 
@@ -120,8 +104,8 @@ namespace GasStationForms
             // Switch statement based on what fuel the vehicle has
             switch (fuel)
             {
-                // if the fuel is Unleaded, do this
                 case "Unleaded":
+                    Console.WriteLine($"{litresDispensedThisTransaction} * {Fuel.UNLEADED} = ");
                     // The total takings is the litres dispensed * cost of fuel / 100 rounded to 2 decimal places
                     totalTakings += Math.Round(((litresDispensedThisTransaction * Fuel.UNLEADED) / 100), 2);
                     // Add the litres dispensed this transaction to what we have already dispensed
@@ -129,34 +113,23 @@ namespace GasStationForms
                     // Write the costs and fuel to the CLI
                     Console.WriteLine($"Costs: {totalTakings} at {fuel} cost {Fuel.UNLEADED}");
                     break;
-                // if the fuel is Diesel, then do this
                 case "Diesel":
-                    // The total takings is the litres dispensed * cost of fuel / 100 rounded to 2 decimal places
                     totalTakings += Math.Round(((litresDispensedThisTransaction * Fuel.DIESEL) / 100), 2);
-                    // Add the litres dispensed this transaction to what we have already dispensed
                     dieselLitresDispensed += (float)Math.Round(litresDispensedThisTransaction, 2);
-                    // Write the costs and fuel to the CLI
                     Console.WriteLine($"Costs: {totalTakings} at {fuel} cost {Fuel.DIESEL}");
                     break;
-                // if the fuel is LPG, do this
                 case "LPG":
-                    // The total takings is the litres dispensed * cost of fuel / 100 rounded to 2 decimal places
                     totalTakings += Math.Round(((litresDispensedThisTransaction * Fuel.LPG) / 100), 2);
-                    // Add the litres dispensed this transaction to what we have already dispensed
                     lpgLitresDispensed += (float)Math.Round(litresDispensedThisTransaction, 2);
-                    // Write the costs and fuel to the CLI
                     Console.WriteLine($"Costs: {totalTakings} at {fuel} cost {Fuel.LPG}");
                     break;
-                // if the fuel is neither Unleaded, Diesel or LPG, then do this
                 default:
-                    // Create an error log with the error in question
-                    log.CreateErrorLog("DispenseFuel error, incorrect fuel type provided");
+                    Console.WriteLine("Incorrect fuel Provided");
                     break;
             }
             // The commision is the total takings divided by 100 to be 1%
             commision = (decimal)totalTakings / 100;
 
-            // Create a transaction log
             log.CreateLog($"LITRES THIS TRANSACTION: {litresDispensedThisTransaction} | TAKINGS: {totalTakings} | COMMISSION: {commision}");
 
         }

@@ -1,0 +1,10 @@
+C:\Users\Ryan\Documents\University\GasStationAssignment\GasStationForms\bin\Debug\GasStationAssignment.exe.config
+C:\Users\Ryan\Documents\University\GasStationAssignment\GasStationForms\bin\Debug\GasStationAssignment.exe
+C:\Users\Ryan\Documents\University\GasStationAssignment\GasStationForms\bin\Debug\GasStationAssignment.pdb
+C:\Users\Ryan\Documents\University\GasStationAssignment\GasStationForms\obj\Debug\GasStationAssignment.csprojResolveAssemblyReference.cache
+C:\Users\Ryan\Documents\University\GasStationAssignment\GasStationForms\obj\Debug\GasStationForms.Form1.resources
+C:\Users\Ryan\Documents\University\GasStationAssignment\GasStationForms\obj\Debug\GasStationAssignment.Properties.Resources.resources
+C:\Users\Ryan\Documents\University\GasStationAssignment\GasStationForms\obj\Debug\GasStationForms.Welcome.resources
+C:\Users\Ryan\Documents\University\GasStationAssignment\GasStationForms\obj\Debug\GasStationAssignment.csproj.GenerateResource.Cache
+C:\Users\Ryan\Documents\University\GasStationAssignment\GasStationForms\obj\Debug\GasStationAssignment.exe
+C:\Users\Ryan\Documents\University\GasStationAssignment\GasStationForms\obj\Debug\GasStationAssignment.pdb

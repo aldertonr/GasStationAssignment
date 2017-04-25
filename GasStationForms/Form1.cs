@@ -7,22 +7,21 @@ using System.Windows.Forms;
 
 namespace GasStationForms
 {
-    
+
     public partial class Form1 : Form
     {
         // Declaration of variables
         public static string vehicleType = "";
         // Integer to hold the amount of vehicles serviced
         static int vehServiced = 0;
-        // String to hold the current lblCarInfo text
-        string curlblCarInfo;
-        // Boolean to show if there's a car waiting
-        bool carWaiting = false;
+        // String to hold the current lblvehInfo text
+        string curlblVehInfo;
+        // Booleans to show if there's a veh waiting
+        bool vehWaiting = false;
         bool vehQueueFull = false;
 
-        // TODO: Implement the carToBeServiced array
-        // Array of strings to hold the car to be serviced informationa
-        public string[] carToBeServiced;
+        // Array of strings to hold the veh to be serviced informationa
+        public string[] vehToBeServiced;
         // Array of strings to hold the vehicles waiting and their information
         public string[] vehiclesWaiting;
 
@@ -32,20 +31,20 @@ namespace GasStationForms
         private Fuel fuel = new Fuel();
         private Pump pump = new Pump();
 
-        // Private strings to hold the caronPump info
-        private string[] carOnPumpOne,
-                carOnPumpTwo,
-                carOnPumpThree,
-                carOnPumpFour,
-                carOnPumpFive,
-                carOnPumpSix,
-                carOnPumpSeven,
-                carOnPumpEight,
-                carOnPumpNine;
-        
+        // Private strings to hold the vehonPump info
+        private string[] vehOnPumpOne,
+                vehOnPumpTwo,
+                vehOnPumpThree,
+                vehOnPumpFour,
+                vehOnPumpFive,
+                vehOnPumpSix,
+                vehOnPumpSeven,
+                vehOnPumpEight,
+                vehOnPumpNine;
+
         // Private list of strings to hold the vehicle waiting list
         private List<string> vehWaitList = new List<string>();
-        
+
         #region TickEvents
 
         /// <summary>
@@ -63,12 +62,12 @@ namespace GasStationForms
 
             // Stop the timer for that event
             activeTimer.Stop();
-            
+
             // Switch statement to decide what fuel to dispense
             switch ((string)activeTimer.Tag)
             {
                 case "pumpOne":
-                    Pump.DispenseFuel(carOnPumpOne[1], carOnPumpOne[2]);
+                    Pump.DispenseFuel(vehOnPumpOne[1], vehOnPumpOne[2]);
 
                     // Re-enable pumpTwo and pumpThree
                     btnPumpTwo.Enabled = true;
@@ -79,18 +78,16 @@ namespace GasStationForms
                     btnPumpThree.Text = "Available";
                     break;
                 case "pumpTwo":
-                    Pump.DispenseFuel(carOnPumpTwo[1], carOnPumpTwo[2]);
+                    Pump.DispenseFuel(vehOnPumpTwo[1], vehOnPumpTwo[2]);
                     // Enable pumpThree
                     btnPumpThree.Enabled = true;
-
-
                     btnPumpThree.Text = "Available";
                     break;
                 case "pumpThree":
-                    Pump.DispenseFuel(carOnPumpThree[1], carOnPumpThree[2]);
+                    Pump.DispenseFuel(vehOnPumpThree[1], vehOnPumpThree[2]);
                     break;
                 case "pumpFour":
-                    Pump.DispenseFuel(carOnPumpFour[1], carOnPumpFour[2]);
+                    Pump.DispenseFuel(vehOnPumpFour[1], vehOnPumpFour[2]);
                     // Enable pumpFive and pumpSix
                     btnPumpFive.Enabled = true;
                     btnPumpSix.Enabled = true;
@@ -99,17 +96,17 @@ namespace GasStationForms
                     btnPumpSix.Text = "Available";
                     break;
                 case "pumpFive":
-                    Pump.DispenseFuel(carOnPumpFive[1], carOnPumpFive[2]);
+                    Pump.DispenseFuel(vehOnPumpFive[1], vehOnPumpFive[2]);
                     // Enable pumpSix
                     btnPumpSix.Enabled = true;
 
                     btnPumpSix.Text = "Available";
                     break;
                 case "pumpSix":
-                    Pump.DispenseFuel(carOnPumpSix[1], carOnPumpSix[2]);
+                    Pump.DispenseFuel(vehOnPumpSix[1], vehOnPumpSix[2]);
                     break;
                 case "pumpSeven":
-                    Pump.DispenseFuel(carOnPumpSeven[1], carOnPumpSeven[2]);
+                    Pump.DispenseFuel(vehOnPumpSeven[1], vehOnPumpSeven[2]);
                     // Enable pumpEight and pumpNine
                     btnPumpEight.Enabled = true;
                     btnPumpNine.Enabled = true;
@@ -118,21 +115,20 @@ namespace GasStationForms
                     btnPumpNine.Text = "Available";
                     break;
                 case "pumpEight":
-                    Pump.DispenseFuel(carOnPumpEight[1], carOnPumpEight[2]);
+                    Pump.DispenseFuel(vehOnPumpEight[1], vehOnPumpEight[2]);
                     // Enable pumpNine
                     btnPumpNine.Enabled = true;
-
                     btnPumpNine.Text = "Available";
                     break;
                 case "pumpNine":
-                    Pump.DispenseFuel(carOnPumpNine[1], carOnPumpNine[2]);
+                    Pump.DispenseFuel(vehOnPumpNine[1], vehOnPumpNine[2]);
                     break;
             }
-            
+
             // Writes the type of vehicle, fuel and which pump it was fulled at
-            log.CreateStatusLog(carToBeServiced[0], carToBeServiced[1], carToBeServiced[2], (string)activeTimer.Tag,  true);
-            log.CreateFuellingLog(carToBeServiced[1], Pump.litresDispensedThisTransaction, (string)activeTimer.Tag);
-            
+            log.CreateStatusLog(vehToBeServiced[0], vehToBeServiced[1], vehToBeServiced[2], (string)activeTimer.Tag, true);
+            log.CreateFuellingLog(vehToBeServiced[1], Pump.litresDispensedThisTransaction, (string)activeTimer.Tag);
+
             // Switch of activePump
             switch (activePump)
             {
@@ -173,19 +169,19 @@ namespace GasStationForms
             lblTakings.Text = $"Total Takings: {Pump.totalTakings}";
             // Refresh the display
             DisplayRefresh();
-            
+
         }
 
         private void runtimeTimer_Tick(object sender, EventArgs e)
         {
             // Delete the runtimeTimer object
             runtimeTimer.Dispose();
-            // Let the user now that the demo has been completed
+            // Let the user now that the demo has been completed via console 
             Console.WriteLine("Runtime Tick - Demo Complete");
-
-            // TODO: Create EndDemo form and implement here 
-            //this.Visible = false;
-            //EndDemo.Visible = true;
+            // Let the user know that the demo has been completed via a message box
+            MessageBox.Show("Thank you for using my Program, Closing now.", "Closing", MessageBoxButtons.OK);
+            // Close the application
+            Application.Exit();
         }
 
         /// <summary>
@@ -197,13 +193,12 @@ namespace GasStationForms
         {
             // Stop the timer so it doesn't keep happening
             driveOffTimer.Stop();
-            // Print to the console that the car got bored
-            
+            // Print to the console that the veh got bored
             log.CreateDriveOffLog();
-            // Set the lblCarInfo to be empty
-            lblCarInfo.Text = "Waiting for a vehicle to arrive";
-            // Set the carWaiting boolean to be false to indicate there is no car
-            carWaiting = false;
+            // Set the lblvehInfo to be empty
+            lblVehInfo.Text = "Waiting for a vehicle to arrive";
+            // Set the vehWaiting boolean to be false to indicate there is no veh
+            vehWaiting = false;
 
         }
 
@@ -213,38 +208,38 @@ namespace GasStationForms
         /// Stores the fuel type for each pump
         /// </summary>
         /// <param name="pump">The relevant Pump number</param>
-        void carOnPump(string pump)
+        void vehOnPump(string pump)
         {
 
             switch (pump)
             {
                 case "pumpOne":
-                    
-                    carOnPumpOne = new string[] { carToBeServiced[0], carToBeServiced[1], carToBeServiced[2] };
+
+                    vehOnPumpOne = new string[] { vehToBeServiced[0], vehToBeServiced[1], vehToBeServiced[2] };
                     break;
                 case "pumpTwo":
-                    carOnPumpTwo = new string[] { carToBeServiced[0], carToBeServiced[1], carToBeServiced[2] };
+                    vehOnPumpTwo = new string[] { vehToBeServiced[0], vehToBeServiced[1], vehToBeServiced[2] };
                     break;
                 case "pumpThree":
-                    carOnPumpThree = new string[] { carToBeServiced[0], carToBeServiced[1], carToBeServiced[2] };
+                    vehOnPumpThree = new string[] { vehToBeServiced[0], vehToBeServiced[1], vehToBeServiced[2] };
                     break;
                 case "pumpFour":
-                    carOnPumpFour = new string[] { carToBeServiced[0], carToBeServiced[1], carToBeServiced[2] };
+                    vehOnPumpFour = new string[] { vehToBeServiced[0], vehToBeServiced[1], vehToBeServiced[2] };
                     break;
                 case "pumpFive":
-                    carOnPumpFive = new string[] { carToBeServiced[0], carToBeServiced[1], carToBeServiced[2] };
+                    vehOnPumpFive = new string[] { vehToBeServiced[0], vehToBeServiced[1], vehToBeServiced[2] };
                     break;
                 case "pumpSix":
-                    carOnPumpSix = new string[] { carToBeServiced[0], carToBeServiced[1], carToBeServiced[2] };
+                    vehOnPumpSix = new string[] { vehToBeServiced[0], vehToBeServiced[1], vehToBeServiced[2] };
                     break;
                 case "pumpSeven":
-                    carOnPumpSeven = new string[] { carToBeServiced[0], carToBeServiced[1], carToBeServiced[2] };
+                    vehOnPumpSeven = new string[] { vehToBeServiced[0], vehToBeServiced[1], vehToBeServiced[2] };
                     break;
                 case "pumpEight":
-                    carOnPumpEight = new string[] { carToBeServiced[0], carToBeServiced[1], carToBeServiced[2] };
+                    vehOnPumpEight = new string[] { vehToBeServiced[0], vehToBeServiced[1], vehToBeServiced[2] };
                     break;
                 case "pumpNine":
-                    carOnPumpNine = new string[] { carToBeServiced[0], carToBeServiced[1], carToBeServiced[2] };
+                    vehOnPumpNine = new string[] { vehToBeServiced[0], vehToBeServiced[1], vehToBeServiced[2] };
                     break;
                 default:
                     Console.WriteLine("ERROR: Incorrect pump Supplied");
@@ -263,15 +258,14 @@ namespace GasStationForms
             // Declaring a button and casting the object sender to a button
             Button activeButton = ((Button)sender);
 
-            // Call the carOnPump method and cast the activeButton.tag to string
-            carOnPump((string)activeButton.Tag);
+            // Call the vehOnPump method and cast the activeButton.tag to string
+            vehOnPump((string)activeButton.Tag);
 
             // If the pump is free
             if (!CheckPumpBusy(activeButton.Text)) {
-                // TODO: Implement a caronPump thing for the log
 
-                carOnPump((string)activeButton.Tag);
-                
+                vehOnPump((string)activeButton.Tag);
+
 
                 try
                 {
@@ -297,19 +291,19 @@ namespace GasStationForms
                 // Disable all the pump methods
                 //DisablePumps();
                 // Let the user know why they are waiting
-                lblCarInfo.Text = "Waiting for a vehicle to arrive";
-                // Change the carWaiting bool to false, to show there is no car waiting
-                carWaiting = false;
+                lblVehInfo.Text = "Waiting for a vehicle to arrive";
+                // Change the vehWaiting bool to false, to show there is no veh waiting
+                vehWaiting = false;
             } else
             {
-                log.CreateStatusLog(carToBeServiced[0], carToBeServiced[1], carToBeServiced[2], (string)activeButton.Tag, false);
-                // Save the current car value
-                curlblCarInfo = lblCarInfo.Text;
+                log.CreateStatusLog(vehToBeServiced[0], vehToBeServiced[1], vehToBeServiced[2], (string)activeButton.Tag, false);
+                // Save the current veh value
+                curlblVehInfo = lblVehInfo.Text;
                 // Let the user know that the pump is occupied
-                lblCarInfo.Text = "That pump is occupied! Please choose another";
+                lblVehInfo.Text = "That pump is occupied! Please choose another";
             }
         }
-        
+
         /// <summary>
         /// Starts the set timer, based on what button was clicked
         /// </summary>
@@ -325,49 +319,49 @@ namespace GasStationForms
                 // If the tag is pumpOne etc, then do the following code;
                 case "pumpOne":
                     // Start the timer
-                    pumpOneTimer.Interval = (int)Pump.GenerateInterval(carOnPumpOne[1]);
+                    pumpOneTimer.Interval = (int)Pump.GenerateInterval(vehOnPumpOne[1]);
                     pumpOneTimer.Start();
                     // Print to console which timer has been started
                     Console.WriteLine($"{activeTimer} started");
                     break;
                 case "pumpTwo":
-                    pumpTwoTimer.Interval = (int)Pump.GenerateInterval(carOnPumpTwo[1]);
+                    pumpTwoTimer.Interval = (int)Pump.GenerateInterval(vehOnPumpTwo[1]);
                     pumpTwoTimer.Start();
                     Console.WriteLine($"{activeTimer} started");
                     break;
                 case "pumpThree":
-                    pumpThreeTimer.Interval = (int)Pump.GenerateInterval(carOnPumpThree[1]);
+                    pumpThreeTimer.Interval = (int)Pump.GenerateInterval(vehOnPumpThree[1]);
                     pumpThreeTimer.Start();
                     Console.WriteLine($"{activeTimer} started");
                     break;
                 case "pumpFour":
-                    pumpFourTimer.Interval = (int)Pump.GenerateInterval(carOnPumpFour[1]);
+                    pumpFourTimer.Interval = (int)Pump.GenerateInterval(vehOnPumpFour[1]);
                     pumpFourTimer.Start();
                     Console.WriteLine($"{activeTimer} started");
                     break;
                 case "pumpFive":
-                    pumpFiveTimer.Interval = (int)Pump.GenerateInterval(carOnPumpFive[1]);
+                    pumpFiveTimer.Interval = (int)Pump.GenerateInterval(vehOnPumpFive[1]);
                     pumpFiveTimer.Start();
                     Console.WriteLine($"{activeTimer} started");
                     break;
                 case "pumpSix":
-                    pumpSixTimer.Interval = (int)Pump.GenerateInterval(carOnPumpSix[1]);
+                    pumpSixTimer.Interval = (int)Pump.GenerateInterval(vehOnPumpSix[1]);
                     pumpSixTimer.Start();
                     Console.WriteLine($"{activeTimer} started");
                     break;
                 case "pumpSeven":
-                    pumpSevenTimer.Interval = (int)Pump.GenerateInterval(carOnPumpSeven[1]);
+                    pumpSevenTimer.Interval = (int)Pump.GenerateInterval(vehOnPumpSeven[1]);
                     pumpSevenTimer.Start();
                     Console.WriteLine($"{activeTimer} started");
                     break;
-                    
+
                 case "pumpEight":
-                    pumpEightTimer.Interval = (int)Pump.GenerateInterval(carOnPumpEight[1]);
+                    pumpEightTimer.Interval = (int)Pump.GenerateInterval(vehOnPumpEight[1]);
                     pumpEightTimer.Start();
                     Console.WriteLine($"{activeTimer} started");
                     break;
                 case "pumpNine":
-                    pumpNineTimer.Interval = (int)Pump.GenerateInterval(carOnPumpNine[1]);
+                    pumpNineTimer.Interval = (int)Pump.GenerateInterval(vehOnPumpNine[1]);
                     pumpNineTimer.Start();
                     Console.WriteLine($"{activeTimer} started");
                     break;
@@ -386,10 +380,23 @@ namespace GasStationForms
             DisplayRefresh();
             // Start the runtimeTimer
             runtimeTimer.Start();
-            CarSpawner();
+            // Call the vehSpawner method to start the vehspawner timer
+            VehicleSpawner();
             // Set the lblQueue text value to be empty, to prevent erroneous returns
             lblQueue.Text = "";
+            // Make sure all pumps on the forecourt are enabled
             EnablePumps();
+        }
+
+        /// <summary>
+        /// Run when the exit button on the form is pressed
+        /// </summary>
+        private void Form1_Close(object sender, FormClosingEventArgs e)
+        {
+            // Set the form's visible property to false; to make it disapear
+            MessageBox.Show("Thank you for using my Program, Closing now.", "Closing", MessageBoxButtons.OK);
+            // Close the application
+            Application.Exit();
         }
 
         /// <summary>
@@ -397,7 +404,7 @@ namespace GasStationForms
         /// </summary>
         private void DisplayRefresh()
         {
-            // Change the vehicleServiced variable to show how many have been serviced
+            // Give the labels text values to their respective data values
             lblVehServiced.Text = $"Vehicles Serviced: {vehServiced} ";
             lblTakings.Text = $"Takings: £{Pump.totalTakings}";
             lblCommision.Text = $"1% Commision: £{Pump.commision}";
@@ -409,19 +416,19 @@ namespace GasStationForms
 
 
         /// <summary>
-        /// Car Spawned Timer Tick Event
+        /// veh Spawned Timer Tick Event
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void carSpawnedTimer_Tick(object sender, EventArgs e)
+        private void vehSpawnedTimer_Tick(object sender, EventArgs e)
         {
-            // Call the generate car method and put it's return into the carinfo label
-            lblCarInfo.Text = GenerateCar();
-            // Change the carWaiting flag to be true, showing a car is waiting
-            carWaiting = true;
+            // Call the generate veh method and put it's return into the vehinfo label
+            lblVehInfo.Text = GenerateVehicle();
+            // Change the vehWaiting flag to be true, showing a veh is waiting
+            vehWaiting = true;
 
-            // If there is a car waiting
-            if (carWaiting)
+            // If there is a veh waiting
+            if (vehWaiting)
             {
                 // Enable all of the buttons on the form
             }
@@ -432,7 +439,7 @@ namespace GasStationForms
         /// <summary>
         /// Generates the random integer for the timer interval
         /// </summary>
-        void CarSpawner()
+        void VehicleSpawner()
         {
 
             // Instantiating a new random class
@@ -441,12 +448,13 @@ namespace GasStationForms
             // Integer to hold the new random integer between 1500 and 2200
             int rndInterval = random.Next(1500, 2200);
 
-            // Setting the carSpawnedTimer interval to the rndInterval value
-            carSpawnedTimer.Interval = rndInterval;
+            // Setting the vehSpawnedTimer interval to the rndInterval value
+            vehSpawnedTimer.Interval = rndInterval;
 
-            // Start the carSpawnedTimer
-            carSpawnedTimer.Start();   
+            // Start the vehSpawnedTimer
+            vehSpawnedTimer.Start();   
         }
+        
 
         /// <summary>
         /// Generates the random integer for the timer interval
@@ -468,18 +476,18 @@ namespace GasStationForms
         #endregion
 
         /// <summary>
-        /// Generates a car with all the information
+        /// Generates a veh with all the information
         /// </summary>
         /// <returns></returns>
-        private string GenerateCar()
+        private string GenerateVehicle()
         {
-            // Get the current car label and put it into a variable
-            string curlblCarInfo = lblCarInfo.Text;
+            // Get the current veh label and put it into a variable
+            string curlblvehInfo = lblVehInfo.Text;
 
-            if (carWaiting)
+            if (vehWaiting)
             {
-                // Return the carinfo prior to editing
-                return curlblCarInfo;
+                // Return the vehinfo prior to editing
+                return curlblvehInfo;
             }
             else {
 
@@ -491,10 +499,13 @@ namespace GasStationForms
                     string fuelType = Fuel.GenerateFuelText();
                     float currentFuelLevel = vehicle.GenerateFuelLevel(vehType);
 
-                    carToBeServiced = new string[] { brand, vehType, fuelType, Convert.ToString(currentFuelLevel) };
-                    // Car waiting
+                    // initialise the vehtobeserviced array with strings with the data below
+                    vehToBeServiced = new string[] { brand, vehType, fuelType, Convert.ToString(currentFuelLevel) };
+                    
+                    // veh waiting
                     log.CreateArrivedLog(brand, vehType, fuelType);
 
+                    // Call the addvehicletoqueue and give it the current vehicle type and fuel type
                     AddVehicleToQueue(vehType, fuelType);
 
                     // Calls the wait time generator method
@@ -503,7 +514,7 @@ namespace GasStationForms
                     // return the brand, vehicle type and fueltype in a string
                     return $"Where should a {brand} {vehType} with {fuelType} fuel go? Please click the pump number.";
                 }
-
+                // Return that the vehicle queue is full
                 return "Vehicle Queue Full; please service queue first";
             }
 
@@ -575,7 +586,7 @@ namespace GasStationForms
         }
 
         /// <summary>
-        /// Generates a random number and then matches it with Car, Van or HGV
+        /// Generates a random number and then matches it with veh, Van or HGV
         /// </summary>
         /// <param name="brand">The type of the Vehicle</param>
         /// <returns></returns>
@@ -592,7 +603,7 @@ namespace GasStationForms
             switch (brand)
             {
                 case "Ford":
-                    // random generated numbers decide if car or van
+                    // random generated numbers decide if veh or van
                     if (random == 0) vehicleType = "Car";
                     if (random == 1) vehicleType = "Van"; 
                     break;
@@ -630,21 +641,26 @@ namespace GasStationForms
         void AddVehicleToQueue(string vehType, string fuel)
         {
             
+            // If the vehicle wait list is less than 5, then do the following
             if (vehWaitList.Count < 5)
             {
+                // Add the vehicle type and fuel to the vehicle wait list
                 vehWaitList.Add($"{vehType} with {fuel}\n");
-
-                Console.WriteLine($"{vehType} with {fuel}\n");
-
+                
+                // create a string and join the vehwaitlist                
                 string queueText = string.Join("", vehWaitList);
 
+                // set the lblQueue.text to the value of Queue text
                 lblQueue.Text = queueText;
 
-
+            // else do this
             } else
             {
-                lblCarInfo.Text = "Vehicle Waiting List is currently full.";
+                // Set the lblvehInfo text to tell the user the vehicle wait list is full
+                lblVehInfo.Text = "Vehicle Waiting List is currently full.";
+                // Write that information to the Command Line
                 Console.WriteLine("Vehicle Waiting List is currently full.");
+                // Set the vehicle queue full boolean to be true
                 vehQueueFull = true;
             }
 
@@ -656,8 +672,7 @@ namespace GasStationForms
         /// <param name="pumpPressed"></param>
         void BlockedLanes(string pumpPressed)
         {
-            Console.WriteLine(pumpPressed);
-
+            // Switch statement based on what pump was passed into the method
             switch (pumpPressed)
             {
                 case "pumpOne":
@@ -740,21 +755,6 @@ namespace GasStationForms
             btnPumpEight.Enabled = true;
             btnPumpNine.Enabled = true;
         }
-        
-        //// Disable all the pump buttons on the form
-        //void DisablePumps()
-        //{
-        //    btnPumpOne.Enabled = false;
-        //    btnPumpTwo.Enabled = false;
-        //    btnPumpThree.Enabled = false;
-        //    btnPumpFour.Enabled = false;
-        //    btnPumpFive.Enabled = false;
-        //    btnPumpSix.Enabled = false;
-        //    btnPumpSeven.Enabled = false;
-        //    btnPumpEight.Enabled = false;
-        //    btnPumpNine.Enabled = false;
-        //}
-        //#endregion
         
     }
 }

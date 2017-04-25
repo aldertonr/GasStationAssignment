@@ -50,7 +50,7 @@
             this.lblPumpEight = new System.Windows.Forms.Label();
             this.lblPumpNine = new System.Windows.Forms.Label();
             this.lblVehServiced = new System.Windows.Forms.Label();
-            this.lblCarInfo = new System.Windows.Forms.Label();
+            this.lblVehInfo = new System.Windows.Forms.Label();
             this.runtimeTimer = new System.Windows.Forms.Timer(this.components);
             this.pumpOneTimer = new System.Windows.Forms.Timer(this.components);
             this.pumpTwoTimer = new System.Windows.Forms.Timer(this.components);
@@ -63,7 +63,7 @@
             this.pumpNineTimer = new System.Windows.Forms.Timer(this.components);
             this.lblTakings = new System.Windows.Forms.Label();
             this.lblCommision = new System.Windows.Forms.Label();
-            this.carSpawnedTimer = new System.Windows.Forms.Timer(this.components);
+            this.vehSpawnedTimer = new System.Windows.Forms.Timer(this.components);
             this.driveOffTimer = new System.Windows.Forms.Timer(this.components);
             this.lblPetrolDispensed = new System.Windows.Forms.Label();
             this.lblDieselDispensed = new System.Windows.Forms.Label();
@@ -270,13 +270,13 @@
             this.lblVehServiced.TabIndex = 20;
             this.lblVehServiced.Text = "Vehicles Serviced:";
             // 
-            // lblCarInfo
+            // lblVehInfo
             // 
-            this.lblCarInfo.Location = new System.Drawing.Point(78, 270);
-            this.lblCarInfo.Name = "lblCarInfo";
-            this.lblCarInfo.Size = new System.Drawing.Size(237, 59);
-            this.lblCarInfo.TabIndex = 21;
-            this.lblCarInfo.Text = "Waiting for a car to appear...";
+            this.lblVehInfo.Location = new System.Drawing.Point(78, 270);
+            this.lblVehInfo.Name = "lblVehInfo";
+            this.lblVehInfo.Size = new System.Drawing.Size(237, 59);
+            this.lblVehInfo.TabIndex = 21;
+            this.lblVehInfo.Text = "Waiting for a veh to appear...";
             // 
             // runtimeTimer
             // 
@@ -353,9 +353,9 @@
             this.lblCommision.TabIndex = 24;
             this.lblCommision.Text = "1% Commision: £";
             // 
-            // carSpawnedTimer
+            // vehSpawnedTimer
             // 
-            this.carSpawnedTimer.Tick += new System.EventHandler(this.carSpawnedTimer_Tick);
+            this.vehSpawnedTimer.Tick += new System.EventHandler(this.vehSpawnedTimer_Tick);
             // 
             // driveOffTimer
             // 
@@ -399,7 +399,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BackgroundImage = global::GasStationForms.Properties.Resources.bg;
+            this.BackgroundImage = global::GasStationAssignment.Properties.Resources.bg;
             this.ClientSize = new System.Drawing.Size(539, 338);
             this.Controls.Add(this.lblQueue);
             this.Controls.Add(this.lblLpgDispensed);
@@ -407,7 +407,7 @@
             this.Controls.Add(this.lblPetrolDispensed);
             this.Controls.Add(this.lblCommision);
             this.Controls.Add(this.lblTakings);
-            this.Controls.Add(this.lblCarInfo);
+            this.Controls.Add(this.lblVehInfo);
             this.Controls.Add(this.lblVehServiced);
             this.Controls.Add(this.lblPumpNine);
             this.Controls.Add(this.lblPumpEight);
@@ -434,6 +434,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Petrol Somewhat Unlimited M25 Demo";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_Close);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
@@ -461,7 +462,7 @@
         private System.Windows.Forms.Label lblPumpEight;
         private System.Windows.Forms.Label lblPumpNine;
         private System.Windows.Forms.Label lblVehServiced;
-        private System.Windows.Forms.Label lblCarInfo;
+        private System.Windows.Forms.Label lblVehInfo;
         private System.Windows.Forms.Timer runtimeTimer;
         private System.Windows.Forms.Timer pumpTwoTimer;
         private System.Windows.Forms.Timer pumpThreeTimer;
@@ -474,7 +475,7 @@
         private System.Windows.Forms.Timer pumpOneTimer;
         private System.Windows.Forms.Label lblTakings;
         private System.Windows.Forms.Label lblCommision;
-        private System.Windows.Forms.Timer carSpawnedTimer;
+        private System.Windows.Forms.Timer vehSpawnedTimer;
         private System.Windows.Forms.Timer driveOffTimer;
         private System.Windows.Forms.Label lblPetrolDispensed;
         private System.Windows.Forms.Label lblDieselDispensed;

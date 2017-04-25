@@ -25,3 +25,4 @@ C:\Users\Ryan\Documents\University\GasStationAssignment\GasStationForms\obj\Debu
 C:\Users\Ryan\Documents\University\GasStationAssignment\GasStationForms\obj\Debug\GasStationForms.csproj.GenerateResource.Cache
 C:\Users\Ryan\Documents\University\GasStationAssignment\GasStationForms\bin\Debug\GasStationForms.exe
 C:\Users\Ryan\Documents\University\GasStationAssignment\GasStationForms\bin\Debug\GasStationForms.pdb
+C:\Users\Ryan\Documents\University\GasStationAssignment\GasStationForms\bin\Debug\GasStationAssignment.exe.config
