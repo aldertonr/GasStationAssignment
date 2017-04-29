@@ -384,6 +384,8 @@ namespace GasStationForms
             VehicleSpawner();
             // Set the lblQueue text value to be empty, to prevent erroneous returns
             lblQueue.Text = "";
+            // Set the lblVehInfo
+            lblVehInfo.Text = "Waiting for a vehicle to appear...";
             // Make sure all pumps on the forecourt are enabled
             EnablePumps();
         }
