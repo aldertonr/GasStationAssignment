@@ -1,0 +1,9 @@
+C:\Users\Ryan\Documents\University\GasStationAssignment\GasStationForms\bin\Release\GasStationAssignment.exe.config
+C:\Users\Ryan\Documents\University\GasStationAssignment\GasStationForms\bin\Release\GasStationAssignment.exe
+C:\Users\Ryan\Documents\University\GasStationAssignment\GasStationForms\bin\Release\GasStationAssignment.pdb
+C:\Users\Ryan\Documents\University\GasStationAssignment\GasStationForms\obj\Release\GasStationForms.Form1.resources
+C:\Users\Ryan\Documents\University\GasStationAssignment\GasStationForms\obj\Release\GasStationAssignment.Properties.Resources.resources
+C:\Users\Ryan\Documents\University\GasStationAssignment\GasStationForms\obj\Release\GasStationForms.Welcome.resources
+C:\Users\Ryan\Documents\University\GasStationAssignment\GasStationForms\obj\Release\GasStationAssignment.csproj.GenerateResource.Cache
+C:\Users\Ryan\Documents\University\GasStationAssignment\GasStationForms\obj\Release\GasStationAssignment.exe
+C:\Users\Ryan\Documents\University\GasStationAssignment\GasStationForms\obj\Release\GasStationAssignment.pdb

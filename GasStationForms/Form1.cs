@@ -163,6 +163,9 @@ namespace GasStationForms
 
             // Increment the vehicleServiced variable
             vehServiced++;
+
+            // Strings printed with $ according to Docs.microsoft.com (2017)
+
             lblPetrolDispensed.Text = $"Litres Dispensed: {Pump.petrolLitresDispensed}";
             lblDieselDispensed.Text = $"Litres Dispensed: {Pump.dieselLitresDispensed}";
             lblLpgDispensed.Text = $"Litres Dispensed: {Pump.lpgLitresDispensed}";
@@ -258,6 +261,8 @@ namespace GasStationForms
             // Declaring a button and casting the object sender to a button
             Button activeButton = ((Button)sender);
 
+
+            // Active button tag according to Msdn.microsoft.com (2017)
             // Call the vehOnPump method and cast the activeButton.tag to string
             vehOnPump((string)activeButton.Tag);
 
@@ -272,8 +277,6 @@ namespace GasStationForms
                     vehWaitList.RemoveAt(0);
                 } catch (Exception)
                 {
-                    vehWaitList.RemoveAt(0);
-
                     if (vehWaitList.Count == 0)
                     {
                         vehQueueFull = false;
@@ -413,6 +416,7 @@ namespace GasStationForms
             lblPetrolDispensed.Text = $"Petrol Litres Dispensed: {Pump.petrolLitresDispensed}";
             lblDieselDispensed.Text = $"Diesel Litres Dispensed: {Pump.dieselLitresDispensed}";
             lblLpgDispensed.Text = $"LPG Litres Dispensed: {Pump.lpgLitresDispensed}";
+            // Joining strings according to Dotnetperls.com (2017)
             lblQueue.Text = string.Join("", vehWaitList);
         }
 
